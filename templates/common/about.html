@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'javascript/about.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="bg-img">
+            <nav class="topnav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{% static 'images/about/logo.png' %}" alt="logo">
+                    </a>
+                </div>
+                <div class="nav-links" id="myLinks">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#" class="active">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <!-- <li><a href="#" class="hide">Sign Up</a></li>
+                        <li><a href="#" class="hide">Login</a></li> -->
+                        <div class="hide">
+                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">Login</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="nav-btn" id="myLinks">
+                    <button class="btn-1"><a href="#">Sign Up</a></button>
+                    <button class="btn-2"><a href="#">Login</a></button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <div class="arrow">
+                <img src="{% static 'images/about/arrow.svg' %}" alt="rect">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="sect-2">
+            <div class="item-a">
+                <h1>About Us</h1>
+                <p>
+                    To help save students from being kicked out of school unexpectedly and to build a healthy connection between schools and parents.
+                    My Debtors was founded with the goal of acting as a bridge between various schools and their students that are owing, in order to achieve the purpose of saving schools from admitting student debtors and help students track how much they owe.
+                    <br>
+                    <br>
+                    Due to a research carried out in December 2020, 75% of students left over 3500 schools bankrupt after being unable to track their payment status and some were unaware.
+                    <br>
+                    <br>
+                    We have also helped schools regulate their cash flows and boosted the confidence of students by being aware of their payment status.
+                    <br>
+                    <br>
+                    At My Debtors, we believe that no school should be forced to shut down due to the debts of students.
+                    Our strong desire to help both schools and students has helped us to solve over 1,670 cases so far which at the end left schools smiling and able to recover every penny of both new and old debts.
+                    <br>
+                    <br>
+                    We also left students thankful for being able to be aware of their debts and pay.
+                    <br>
+                    <br>
+                    We ensure that there is a proper relationship between the schools and students from the beginning of their agreement to the end.
+                    
+                </p>
+            </div>
+            <div class="item-b">
+                <h1>Mission Statement</h1>
+                <p>To help save students from being kicked out of school unexpectedly 
+                    and to build a healthy connection between schools and parents.
+                </p>
+            </div>
+            <div class="item-c">
+                <h1>Vision Statement</h1>
+                <p>Our vision is to build a safe and welcoming platform for 
+                    all our users (schools and parents), where nobody will be 
+                    judged but fully accepted. We strive to create better and 
+                    easier methods of accessing our platform and also ensure 
+                    parties involved are satisfied throughout the transaction process. <br><br>
+                    As we move towards our goal of being a world-class platform, 
+                    we will ensure that nothing but excellence will be delivered. 
+                    We strongly believe that by 2030, cases of students debts 
+                    causing the shutdown of schools will be reduced and the knowledge 
+                    of parents being aware of how much they owe will be increased.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="main">
+            <div class="sect-3">
+                <div class="item-1">
+                    <div class="blur">
+                        <img src="{% static 'images/about/logo.png' %}" alt="logo">
+                        <p>
+                            My Debtors is a searcheable database for
+                            schools to locate or contact their debtors
+                            We serve as middlemen between the schools
+                            and the owing students.
+                        </p>
+                    </div>
+                    <div class="contact-txt">
+                        <h2>Contact Us</h2>
+                        <p>You can contact us via email</p>
+                    </div>
+                    <div class="subscribe">
+                        <form action="">
+                            <input type="text" placeholder="Enter email">
+                            <button>Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="item-2">
+                    <ul>
+                        <h2>Pages</h2>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Post/Comment</a></li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Debtors List</a></li>
+                        <li><a href="#">Debtors Profile</a></li>
+                    </ul>
+                </div>
+                <div class="item-3">
+                    <ul>
+                        <h2>Services</h2>
+                        <li><a href="#">Notify Debtors</a></li>
+                        <li><a href="#">Help Schools Track Their Debtors</a></li>
+                        <li><a href="#">Access To View Other Schools Debtors List</a></li>
+                        <li><a href="#">Debtors Can Contend</a></li>
+                        <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
+                    </ul>
+                </div>
+                <div class="item-4">
+                    <ul>
+                        <h2>Resources</h2>
+                        <li><a href="#">Figma</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2022 All Rights Reserved</p>
+                <div>
+                    <a href="#">Privacy |</a>
+                    <a href="#"> Terms & Conditions |</a>
+                    <a href="#"> Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="{% static '../javascript/about.js' %}"></script> -->
+</body>
+</html>
