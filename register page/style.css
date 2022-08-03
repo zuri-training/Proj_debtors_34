@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: whitesmoke;
+}
+.logo {
+  font-size: 20px;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 12px 20px;
+}
+nav ul li a {
+  color: rgb(19, 18, 18);
+  font-weight: bold;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: rgb(145, 30, 30);
+}
+button {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 20px;
+  border-color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+section {
+  width: 100%;
+  display: flex;
+  height: 500px;
+}
+.first {
+  width: 40%;
+}
+#div1 {
+  background-color: rgba(51, 54, 68, 0.616);
+  height: 20%;
+}
+#div1 .top {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 30px 10px;
+}
+#div2 {
+  background-color: rgb(102, 93, 93);
+}
+.second {
+  background-color: whitesmoke;
+  width: 60%;
+  padding: 25px 30px;
+  color: black;
+  font-family: "sans-serif";
+}
+.second .heading {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.second h2 {
+  font-size: 25px;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.second .p1 {
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+}
+.second form {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  justify-content: space-between;
+}
+.second form .card-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+  color: rgb(17, 16, 16);
+  justify-content: end;
+}
+.second .content {
+  font-size: 15px;
+  padding: 10px 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.second .button1 {
+  border-radius: 10px;
+  background-color: rgb(192, 15, 15);
+  padding: 5px 15px;
+  color: white;
+  border-color: red;
+  font-weight: bold;
+  font-size: 10px;
+}
+.second .button2 {
+  border-radius: 10px;
+  background-color: rgb(218, 22, 22);
+  padding: 10px 50px;
+  border-color: red;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+.second button:hover {
+  background-color: rgb(95, 9, 9);
+  color: white;
+  cursor: pointer;
+}
+footer {
+  background-image: url(footer-background-image.svg);
+  height: 25%;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  color: beige;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.footer-content h3 {
+  color: yellowgreen;
+}
+.footer-content p {
+  color: blanchedalmond;
+  font-size: 10px;
+}
+.footer-content .information {
+  padding: 7px 40px;
+  text-align: center;
+  font-size: 14px;
+  height: 40px;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+.footer-content .Contact {
+  padding: 10px 0px;
+  align-items: center;
+  font-size: 14px;
+  height: 20px;
+  padding-bottom: 0px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  flex: wrap;
+  width: 55%;
+}
+.socials li {
+  margin: 0 20 px;
+  font-size: 12px;
+}
+.socials .social1 {
+  margin: 0 20 px;
+  padding-right: 50px;
+}
+.socials .social2 {
+  margin: 0 20 px;
+  padding-right: 50px;
+}
+.footer-bottom {
+  background-color: black;
+  padding: 20px 0;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.footer-bottom span {
+  float: right;
+}
+.footer-content form .button {
+  border-radius: 10px;
+  background-color: rgb(192, 15, 15);
+  padding: 5px 20px;
+  color: white;
+  border-color: red;
+  font-weight: bold;
+  font-size: 10px;
+}
+.footer-content button:hover {
+  background-color: rgb(95, 9, 9);
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:700px){
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100%;
+    align-items: center;
+  }
+  nav {
+    padding-top: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .logo {
+    font-size: 15px;
+  }
+  nav ul li {
+    padding: 10px 15px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  section {
+    width: 100%;
+  }
+  #div1 {
+    height: 100px;
+  }
+  #div1 .top {
+    font-size: 15px;
+    padding: 20px 5px;
+  }
+  .second {
+    padding: 20px 25px;
+  }
+  .second .heading {
+    font-size: 15px;
+    padding: 0 0 10px 0;
+  }
+  .second h2 {
+    font-size: 15px;
+  }
+  .second .p1 {
+    font-size: 12px;
+  }
+  .second form {
+    margin-top: 7px;
+    padding: 7px 7px;
+  }
+  .second form .card-details {
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+  .second .content {
+    font-size: 12px;
+    padding: 7px 5px;
+    margin-top: 10px;
+  }
+  .second .button1 {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .second .button2 {
+    border-radius:5px;
+    padding: 7px 20px;
+    font-size: 13px;
+  }
+  .footer-content p {
+    font-size: 10px;
+  }
+  .footer-content .information {
+    border-width: 0px;
+  }
+  .footer-bottom {
+    padding: 15px 0;
+  }
+  textarea{
+    padding: 15px 5px;
+  }
+  footer .button2{
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+   #div2 img{
+    width:270px;
+   }
+}
+  
+    
