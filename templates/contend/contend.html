@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contend</title>
+</head>
+<body>
+    <h1>Do you wish to contend? If yes, fill in your details below.</h1>
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <input type="text" placeholder="Student name" name="student_name" id="student_name" width="60px">
+        <input type="text" placeholder="Student ID" name="student_id" id="student_id" width="60px">
+        <button>Contend</button>
+    </form>
+</body>
+</html>
