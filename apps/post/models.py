@@ -1,7 +1,6 @@
 import uuid
 from unicodedata import name
 from .utils import generate_random_id
-# from django.utils.translation import ugettext_lazy as _
 from django.db import models  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
@@ -14,22 +13,6 @@ class Student_Id(models.Model):
 
 class Email(models.Model):
     Email = models.EmailField(max_length=245)
-
-
-# class post(models.Model):
-#     student_id = models.IntegerField(blank=True, unique=True)
-    
-
-# def save(self, *args, **kwargs):
-#     global random_slug
-#         random_slug = slugify(self.first_name + self.last_name + generate_random_id())
-
-#         while CustomUser.objects.filter(slug=random_slug).exists():
-#             random_slug = slugify(self.first_name + self.last_name + generate_random_id())
-
-#         self.slug = random_slug
-    
-# super().save(*args, **kwargs)
 
 
 class Debt(models.Model):
