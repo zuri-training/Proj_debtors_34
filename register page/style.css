@@ -77,9 +77,10 @@ section {
   position: relative;
   text-align: center;
   padding: 0 0 20px 0;
+  color:rgb(172, 15, 15);
 }
 .second h2 {
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   text-align: center;
   padding: 0 0 20px 0;
@@ -90,25 +91,34 @@ section {
   text-align: center;
 }
 .second form {
-  margin-top: 10px;
-  display: flex;
+  margin-top: 5px;
   flex-wrap: wrap;
+  display: flex;
   padding: 20px 20px;
   justify-content: space-between;
 }
 .second form .card-details {
-  display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 40%;
+  padding-right: 10%;
   width: 50%;
   padding-bottom: 15px;
   color: rgb(17, 16, 16);
-  justify-content: end;
+  justify-content: space-between;
+}
+.second form .textarea{
+  height:80px;
+  margin-left: 280px;
+  text-align: center;
+  background-color:rgb(189, 174, 174);
+  font-size: 13px;
 }
 .second .content {
   font-size: 15px;
   padding: 10px 5px;
   margin-top: 10px;
   margin-bottom: 5px;
+  margin-left:100px;
 }
 .second .button1 {
   border-radius: 10px;
@@ -122,13 +132,12 @@ section {
 .second .button2 {
   border-radius: 10px;
   background-color: rgb(218, 22, 22);
-  padding: 10px 50px;
+  padding: 7px 50px;
   border-color: red;
   font-weight: bold;
   color: white;
-  font-size: 14px;
-  margin-left: 10px;
-  margin-top: 0px;
+  font-size: 12px;
+  margin-left: 200px;
 }
 .second button:hover {
   background-color: rgb(95, 9, 9);
@@ -231,13 +240,13 @@ footer {
     padding-right: 2%;
   }
   .logo {
-    font-size: 15px;
+    font-size: 12px;
   }
   nav ul li {
-    padding: 10px 15px;
+    padding: 10px 10px;
   }
   nav ul li a {
-    font-size: 15px;
+    font-size: 14px;
   }
   button {
     border-radius: 5px;
@@ -258,14 +267,14 @@ footer {
     padding: 20px 25px;
   }
   .second .heading {
-    font-size: 15px;
+    font-size: 20px;
     padding: 0 0 10px 0;
   }
   .second h2 {
-    font-size: 15px;
+    font-size: 18px;
   }
   .second .p1 {
-    font-size: 12px;
+    font-size: 13px;
   }
   .second form {
     margin-top: 7px;
@@ -274,11 +283,16 @@ footer {
   .second form .card-details {
     padding-bottom: 10px;
     justify-content: center;
+    padding-left: 20%;
+  }
+  .second form .textarea{
+    margin-left:20%;
   }
   .second .content {
     font-size: 12px;
     padding: 7px 5px;
     margin-top: 10px;
+    margin-left: 10px;
   }
   .second .button1 {
     border-radius: 5px;
@@ -287,8 +301,9 @@ footer {
   }
   .second .button2 {
     border-radius:5px;
-    padding: 7px 20px;
+    padding: 7px 15px;
     font-size: 13px;
+    margin-left: 100px;
   }
   .footer-content p {
     font-size: 10px;
