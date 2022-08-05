@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.container {
+    position: relative;
+    width: 1728px;
+    height: 1117px;
+    background: #E5E5E5;
+}
+.sidebar{
+    position: fixed;
+    width: 307px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #ffff;
+    box-shadow: 2px 0px 45px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    z-index: 2;
+}
+.image{
+    position: absolute;
+    width: 144px;
+    height: 44px;
+    left: 82px;
+    top: 40px;
+}
+/* .items{
+    position: absolute;
+    width: 307px;
+    height: 220px;
+    left: 0px;
+    top: 164px;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 14px;
+} */
+.items{
+    position: relative;
+    width: 307px;
+    height: 220px;
+    left: 0px;
+    top: 164px;
+    gap: 14px;
+}
+
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(165, 165, 164);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li img{
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+    float: left;
+}
+.sidebar ul li a:hover{
+    background-color: rgb(219, 24, 24);
+    color: white;
+}
+.log{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+    position: absolute;
+    width: 120px;
+    height: 38px;
+    left: 58px;
+    top: 90%;
+}
+.log ul li{
+    width: 100%;
+}
+.log ul li a{
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    display: flex;
+    align-items: center;
+}
+/* .sidebar-image{
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 12.5%;
+    bottom: 12.5%;
+   
+} */
+.log ul li a:hover{
+    background-color: rgb(219, 24, 24);
+    color: white;
+}
+
+/* styling for topbar */
+/* .topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    position: absolute;
+    width: 900px;
+    height: 78px;
+    left: 290px;
+    top: 25px;
+}
+.people-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+
+.search-bar{
+    position: relative;
+    display: flex;
+    width: 300px;
+    border-radius: 8px;
+}
+.search {
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background: #F8F8F8;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 50px;
+    height: 50px;
+}
+.user .message-icon{
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 90px;
+    margin-left: 50px;
+}
+.user .image-2{
+    width: 70px;
+    height: 70px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.add-school {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    position: absolute;
+    width: 900px;
+    height: 78px;
+    left: 290px;
+    top: 100px;
+}
+.add-school .school-name{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+.add-school .add {
+    width: 70px;
+    height: 40px;
+    background-color: #ffff;
+}
+.add-school ul li {
+    width: 100%;
+    list-style: none;
+}
+.add-school ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.add-school ul li a img{
+    width: 15px;
+    color: rgb(0, 0, 0);
+}
+.add-school ul li a:hover{
+    background-color: rgb(219, 24, 24);
+    color: white;
+} */
