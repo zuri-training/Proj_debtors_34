@@ -25,6 +25,7 @@ body{
 
 nav {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 30px;
@@ -44,6 +45,7 @@ nav ul li {
 
 .nav-links {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
@@ -170,6 +172,11 @@ nav ul li {
     background-color: rgba(48, 28, 28, 0.829);
     background-blend-mode: darken;
     margin-top: 80px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .sect-3 {
