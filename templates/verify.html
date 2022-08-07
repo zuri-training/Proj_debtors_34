@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{% url 'verify' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="">School Name:</label>
+        <input type="text" name="name" placeholder="School name" required><br>
+
+        <label for="">School Administrator's Name:</label>
+        <input type="text" name="admin_name" placeholder="School admin name" required><br>
+
+        <label for="">School Address:</label>
+        <input type="text" name="address" placeholder="Schooladdress" required><br>
+
+        <label for="">Phone Number:</label>
+        <input type="number" name="number" placeholder="school phone number" required><br>
+
+        <label for="">Zip code:</label>
+        <input type="number" name="zip_code" placeholder="zip code" required><br>
+
+        <label for="">C.A.C Code:</label>
+        <input type="number" name="code" placeholder="valid C.A.C code" required><br>
+
+        <label for="">School Image:</label>
+        <input type="file" name="photo" required><br>
+
+        <label for="">School Cerificate of Approval:</label>
+        <input type="file" name="cerificate_img" required><br>
+
+        <button type="submit">Create Account</button>
+    </form>
+{% endblock %}
