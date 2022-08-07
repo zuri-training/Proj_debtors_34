@@ -5,7 +5,9 @@ from django.contrib import messages
 
 # Create your views here.
 
-def ContactView(request):
+def AboutView(request):
+    return render(request, "common/about.html")
+    def ContactView(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
@@ -28,3 +30,4 @@ def ContactView(request):
     form = ContactForm()
     context = {'form': form}
     return render(request, 'common/contact.html', context)
+

@@ -1,0 +1,872 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ********************** HEADER ************************ */
+
+.bg-img {
+    background-image: url("../images/about/rect_1.png");
+    width: 100%;
+    min-height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+/* *********************** NAVBAR ************************** */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px 45px;
+}
+
+.topnav a.icon {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links ul li a {
+    color: rgb(102, 81, 81);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btn-1 {
+    background-color: rgba(208, 0, 0, 1);
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.btn-2 {
+    background-color: rgb(199, 199, 199);
+    border: none;
+    border: 3px rgba(208, 0, 0, 1) solid;
+    border-radius: 15px;
+    padding: 8px;
+    margin-left: 60px;
+}
+
+.nav-btn button a {
+    color: rgb(102, 81, 81);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.nav-btn .btn-1 a {
+    color: white;
+    padding: 20px;
+}
+
+.nav-btn .btn-2 a {
+    color: black;
+    padding: 20px;
+}
+
+.hide, .hidden {
+    display: none;
+}
+
+/* *********************** MAIN SECTION ******************* */
+
+.arrow img {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.sect-2 {
+    background-image: url("../images/about/body_bg.png");
+    width: 100%;
+    min-height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'a a a b b'
+    'a a a b b'
+    'a a a c c'
+    'a a a c c'
+    'a a a c c'
+    ;
+    padding-top: 50px;
+}
+
+.item-a{
+    grid-area: a;
+    padding: 20px;
+    margin: 50px;
+    text-align: center;
+}
+
+.item-a p, .item-b p, .item-c p {
+    border: 4px black solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    text-align: left;
+}
+
+.item-b{
+    grid-area: b;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.item-c{
+    grid-area: c;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.main {
+    background-image: url("../images/about/rect 2.png");
+    width: 100%;
+    min-height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(48, 28, 28, 0.829);
+    background-blend-mode: darken;
+    margin-top: 80px;
+}
+
+/* *********************** FOOTER ********************** */
+
+.sect-3 {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'w x y z'
+    'w x y z'
+    'w x y z'
+    'w x y z'
+    'w x y z'
+    ;
+    padding-top: 50px;
+}
+
+.item-1 {
+    grid-area: w;
+    margin: 20px;
+}
+
+.item-1 p {
+    color: white;
+}
+
+.item-2 {
+    grid-area: x;
+    margin: 20px;
+}
+
+.item-2 ul li {
+    list-style-type: none;
+}
+
+.item-2 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.item-3 {
+    grid-area: y;
+    margin: 20px;
+}
+
+.item-3 ul li {
+    list-style-type: none;
+}
+
+.item-3 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.item-4 {
+    grid-area: z;
+    margin: 20px;
+}
+
+.item-4 ul li {
+    list-style-type: none;
+}
+
+.item-4 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.blur {
+    width: 580px;
+    height: auto;
+    left: 138px;
+    top: 106px;
+    background: rgba(119, 106, 106, 0.021);
+    backdrop-filter: blur(50px);
+    border: 3px rgba(255, 255, 255, 0.568) solid;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.contact-txt {
+    margin-top: 120px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+.contact-txt h2{
+    color: rgb(255, 166, 0);
+    font-weight: normal;
+    text-align: center;
+}
+
+.contact-txt p {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subscribe {
+    margin-left: 120px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    width: 340px;
+    height: 57px;
+    background: #8E8686;
+    border: 1px solid #8E8686;
+    border-radius: 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.subscribe button {
+    background-color: rgba(208, 0, 0, 1);
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    color: white;
+    margin-left: 31px;
+}
+
+.subscribe form input {
+    padding: 12px;
+    border: none;
+    background-color: #8E8686;
+}
+
+.item-2 h2, .item-3 h2, .item-4 h2 {
+    color: rgb(255, 166, 0);
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+.item-2 li a, .item-3 li a, .item-4 li a {
+    line-height: 2.5em;
+}
+
+.item-2 li, .item-3 li, .item-4 li {
+    font-weight: lighter;
+}
+
+.copy {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+    padding: 30px;
+}
+
+.copy a {
+    text-decoration: none;
+    color: white;
+}
+
+/* **************TABLET SCREEN *********************** */
+
+@media screen and (max-width: 1160px) {
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 35px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .sect-2 {
+        background-image: none;
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'a a a a a'
+        'a a a a a'
+        'b b b b b'
+        'c c c c c'
+        'c c c c c'
+        ;
+        padding-top: 50px;
+    }
+
+    .item-a {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-b {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-c {
+        margin: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav ul li {
+        padding: 14px 16px;
+    }
+
+    #myLinks {
+        display: none;
+        padding: 10px 5px;
+    }
+
+    #myLinks ul {
+        position: fixed;
+        background: rgba(119, 106, 106, 0);
+        backdrop-filter: blur(50px);
+        width: 100%;
+        height: 55vh;
+        top: 80px;
+        left: 0;
+        transition: all 20s;
+    }
+
+    #myLinks ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #myLinks .hide {
+        display: block;
+        text-align: center;
+    }
+
+    .hide {
+        margin-top: 20px;
+    }
+
+    .hide li {
+        margin: 10px;
+    }
+
+    .hide li a {
+        background-color: rgba(208, 0, 0, 1);
+        padding: 15px;
+        border-radius: 20px;
+    }
+    
+    .nav-links ul li a {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .topnav a.icon {
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        color: beige;
+    }
+
+    .sect-2 {
+        background-image: none;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'a a a a a'
+        'a a a a a'
+        'b b b b b'
+        'c c c c c'
+        'c c c c c'
+        ;
+        padding-top: 50px;
+    }
+
+    .item-a {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-b {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-c {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .sect-3 {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'w w w w'
+        'x x y y'
+        'x x y y'
+        'z z z z'
+        ;
+        padding-top: 10px;
+    }
+
+    .blur {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 15px;
+    }
+
+    .subscribe {
+        margin-left: 210px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        width: 140px;
+        height: 27px;
+        background: none;
+        border: none;
+    }
+
+    .subscribe button {
+        padding: 12px;
+        color: white;
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+
+    .contact-txt {
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .item-1, .item-2, .item-3, .item-4 {
+        margin: 15px;
+    }
+
+    .copy {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .bg-img {
+        background-image: url("../images/about/mobile_bg.png");
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav ul li {
+        padding: 14px 16px;
+    }
+
+    #myLinks {
+        display: none;
+        padding: 10px 5px;
+    }
+
+    #myLinks ul {
+        position: fixed;
+        background: rgba(119, 106, 106, 0.021);
+        backdrop-filter: blur(50px);
+        width: 100%;
+        height: 55vh;
+        top: 80px;
+        left: 0;
+        transition: all 20s;
+    }
+
+    #myLinks ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #myLinks .hide {
+        display: block;
+        text-align: center;
+    }
+
+    .hide {
+        margin-top: 20px;
+    }
+
+    .hide li {
+        margin: 10px;
+    }
+
+    .hide li a {
+        background-color: rgba(208, 0, 0, 1);
+        padding: 10px;
+        border-radius: 20px;
+    }
+    
+    .nav-links ul li a {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .topnav a.icon {
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        color: beige;
+    }
+
+    .sect-2 {
+        background-image: none;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'a a a a a'
+        'a a a a a'
+        'b b b b b'
+        'c c c c c'
+        'c c c c c'
+        ;
+        padding-top: 50px;
+    }
+
+    .item-a {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-b {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-c {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .sect-3 {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'w w w w'
+        'x x x x'
+        'y y y y'
+        'z z z z'
+        ;
+        padding-top: 10px;
+    }
+
+    .blur {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 15px;
+    }
+
+    .subscribe {
+        margin-left: 90px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        width: 140px;
+        height: 27px;
+        background: none;
+        border: none;
+    }
+
+    .subscribe button {
+        padding: 12px;
+        color: white;
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+
+    .contact-txt {
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .item-1, .item-2, .item-3, .item-4 {
+        margin: 15px;
+    }
+
+    .copy {
+        display: block;
+        text-align: center;
+    }
+    
+}
+
+/* ************** MOBILE SCREEN ********************** */
+
+@media screen and (max-width: 375px) {
+    .bg-img {
+        background-image: url("../images/about/mobile_bg.png");
+        width: 100%;
+        /* min-height: 600px; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav ul li {
+        padding: 14px 16px;
+    }
+
+    #myLinks {
+        display: none;
+        padding: 10px 5px;
+    }
+
+    #myLinks ul {
+        position: fixed;
+        background: rgba(119, 106, 106, 0.021);
+        backdrop-filter: blur(50px);
+        width: 100%;
+        height: 55vh;
+        top: 80px;
+        left: 0;
+    }
+
+    #myLinks ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #myLinks .hide {
+        display: block;
+        text-align: center;
+    }
+
+    .hide {
+        margin-top: 20px;
+    }
+
+    .hide li {
+        margin: 10px;
+    }
+
+    .hide li a {
+        background-color: rgba(208, 0, 0, 0.842);
+        padding: 15px;
+        border-radius: 25px;
+    }
+    
+    .nav-links ul li a {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .topnav a.icon {
+        /* background: black; */
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        color: beige;
+    }
+
+    .sect-2 {
+        background-image: none;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'a a a a a'
+        'a a a a a'
+        'b b b b b'
+        'c c c c c'
+        'c c c c c'
+        ;
+        padding-top: 50px;
+    }
+
+    .item-a {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-b {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .item-c {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .sect-3 {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        'w w w w'
+        'x x x x'
+        'y y y y'
+        'z z z z'
+        ;
+        padding-top: 10px;
+    }
+
+    .blur {
+        width: 300px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .subscribe {
+        margin-left: 40px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 16px;
+        width: 140px;
+        height: 27px;
+        background: none;
+        border: none;
+    }
+
+    .subscribe button {
+        padding: 12px;
+        color: white;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .contact-txt {
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .item-1, .item-2, .item-3, .item-4 {
+        margin: 15px;
+    }
+
+    .copy {
+        display: block;
+        text-align: center;
+    }
+    
+}
