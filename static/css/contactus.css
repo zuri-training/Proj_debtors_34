@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        font-family: 'Open Sans', sans-serif;
+        max-width: 100%;
+    }
+
+    .form-section{
+            display: flex !important;
+            max-height: 1200px;
+            margin-bottom: 28px;
+            flex-direction: column;
+    }
+
+    span{
+        color: #d00000;
+    }
+
+    .form-area{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .hidden-hero-img{
+        display: none;
+    }
+
+    .hero-img{
+        display: inline;
+        width: 500px;
+    }
+
+    label{
+        display: block !important;
+    }
+    textarea{
+        display: block !important;
+        resize: none;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+    }
+
+    .suggestion{
+        margin-bottom: 20px;
+    }
+
+    input[type=email]{
+        display: block !important;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        padding: 10px 14px;
+        width: 20rem;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    input[type=button]{
+        padding: 10px 100px;
+        background: #d00000;
+        color: #fff;
+        border: none;
+        border-radius: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partners{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .partners .logo{
+        width: 40px;
+    }
+
+    .partners .textlogo{
+        width: 80px;
+    }
+
+    @media screen and (max-width: 802px) {
+        .form-area{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        .hidden-hero-img{
+            display: block;
+            width: 300px;
+        }
+        .hero-img{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 520px){
+        .partners{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .form-area{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
