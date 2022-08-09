@@ -57,14 +57,7 @@ body{
     padding: 8px 4px 8px 58px;
     gap: 8px;
 }
-.item-image{
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-            filter: grayscale(100%); 
-}
-.items ul li a:hover{
+.items ul li a:hover {
     background-color: #9D0208;
     width: 97%;
     color: white;
@@ -111,11 +104,11 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 88px;
+    gap: 340px;
     position: absolute;
     width: 985px;
     height: 78px;
-    left: 650px;
+    left: 330px;
     top: 30px;
 }
 /* .people-name {
@@ -131,7 +124,7 @@ body{
 .search-bar{
     position: relative;
     display: flex;
-    width: 300px;
+    width: 350px;
     gap: 8px;
     height: 33px;
     border-radius: 8px;
