@@ -7,7 +7,7 @@ User = get_user_model()
 
 
 class Room(models.Model):
-    room_name = models.CharField(max_length=1000)
+    room_name = models.CharField(max_length=4)
 
 
 class Message(models.Model):

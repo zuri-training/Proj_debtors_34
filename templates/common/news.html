@@ -1,0 +1,217 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg nav-fill w-100">
+        <div class="colour"></div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="{% static './images/registration/debtors-logo.svg' %}"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'FAQs' %}">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" id="signup-btn"><a class="nav-link" href="#">Contend</a></button>
+              </li>
+              <li class="nav-item">
+                <button type="button" id="login-btn"><a class="nav-link" href="#">Login</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class ="main">
+    <!-- <nav>
+        <h2 class ="logo"><img src="{% static './images/registration/debtors-logo.svg' %}"></h2>
+            <ul>
+                <li><a href = "#">Home</a></li>
+                <li><a href = "#">About Us</a></li>
+                <li><a href = "#">FAQs</a></li>
+                <li><a href = "#">Contact Us</a></li>
+            </ul>
+            <button type ="button">Sign up</button>
+            <button type ="button">Log in</button>
+    </nav> -->
+    <div class = "wrapper">
+        <div class = "sidebar">
+          <ul>
+            <li><a href= "#">Finance</a></li>
+            <li><a href= "#">Business</a></li>
+            <li><a href= "#">Education</a></li>
+            <li><a href= "#">Technology</a></li>
+          </ul>
+        </div>
+        <div class ="main_content">
+            <header>Latest News<input type="text" style="height:30px"style="width:50px"placeholder="Search.."></header>
+        </div>
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 48.png">
+        </div>  
+        <div class = "title">
+            <p>Finance news</p>
+        </div>
+        <div class ="content">
+            <p> Democracy and money police</p>
+          <button>Read more..</button>
+        </div>        
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 49.png">
+        </div>  
+        <div class = "title">
+            <p>Finance news</p>
+        </div>
+        <div class ="content">
+            <p>12 things you should know about<br>the eNaire</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 50.png">
+        </div>  
+        <div class = "title">
+            <p>Business news</p>
+        </div>
+        <div class ="content">
+            <p>AFCFTA secretariat commences pilot</p>
+            <p>trading with seven countries</p>
+            <button>Read more..</button>
+        </div>  
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 51.png">
+        </div>  
+        <div class = "title">
+            <p>Business news</p>
+        </div>
+        <div class ="content">
+            <p>Providus bank retain "A" </p>
+            <p>rating</p>
+            <p>with stable outlook</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 52.png">
+        </div>  
+        <div class = "title">
+            <p>Education news</p>
+        </div>
+        <div class ="content">
+            <p>Strike destroy the system,<br>CONUA<br>warns.</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 53.png">
+        </div>  
+        <div class = "title">
+            <p>Education news</p>
+        </div>
+        <div class ="content">
+            <p>UK school trains Nigeria special needs students on life skills</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 54.png">
+        </div>  
+        <div class = "title">
+            <p>Technology news</p>
+        </div>
+        <div class ="content">
+            <p>Twitter music get october dare <br>for<br>$44b deal trial.</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    <div class ="container">
+        <div class="image">
+            <img src = "Rectangle 55.png">
+        </div>  
+        <div class = "title">
+            <p>Education news</p>
+        </div>
+        <div class ="content">
+            <p>Uk school trains Nigeria special<br> needs students on life skills.</p>
+            <button>Read more..</button>
+        </div>    
+    </div>
+    </div>
+    <footer>
+        <div class = "footer-content">
+            <div class="information"> 
+            <h3> My Debtors</h3>
+            <p>My Debtors is a searchable database for schools to locate or contact their debtors.</p>
+            <p>We serve as middlemen between the schools and the owing students.</p>
+            <form>
+                <div class ="Contact">
+                <h3>Contact Us</h3>
+                <p>You can contact us via email</p>
+                <input type="text" id="Email" name="name" style="height:20px" placeholder="Email">
+                <button type="button" class= "button">Subscribe</button>
+            </div>
+            </form>
+        </div>
+        <ol class="socials">
+            <div class = "social1">
+            <h3>Pages</h3>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>FAQ</li>
+            <li>post/comment</li>
+            <li>Registration</li>
+            <li>Debtors list</li>
+            <li>Debtors profile</li>
+            </div>
+            <div class = "social2">
+                <h3>Services</h3>
+                <li>Notify Debtors</li>
+                <li>Help schools track their debtors</li>
+                <li>Access to view other schools debtors list</li>
+                <li>Debtors can contend</li>
+                <li>Schools can comment other schools post</li>
+            </div>
+            <div class = "social3">
+                <h3>Resources</h3>
+                <li>Figma</li>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </div>          
+        </ol>
+        </div>
+        <div class = "footer-bottom">
+            <p>@2022 All Rights Reserved.<span>Privacy | Terms & Conditions | Disclaimer</span></p>
+        </div>
+    </footer>
+
+</body>
+</html> 

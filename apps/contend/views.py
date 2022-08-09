@@ -18,8 +18,8 @@ def RoomView(request, room_name):
     })
 
 def CheckView(request):
-    username = request.POST['student_name']
-    room_name = request.POST['student_id']
+    username = request.POST.get('student_name')
+    room_name = request.POST.get('student_id')
 
     if Room.objects.filter(room_name=room_name).exists():
         return redirect(reverse('conversations', kwargs={'room_name': room_name}), {

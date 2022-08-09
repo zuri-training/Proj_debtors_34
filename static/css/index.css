@@ -20,6 +20,7 @@ header{
 .img img{
     width: 200px;
     height: 50px;
+    margin-left: 30px;
 }
 .nav{
     width: 70%;
@@ -43,7 +44,7 @@ nav{
 }
 a button, button{
     border-radius: 16px;
-    width: 110px;
+    /* width: 110px; */
     height: 37px;
     font-size: 16px;
     border: 1.5px solid hsla(0, 100%, 41%, 1);
@@ -56,6 +57,17 @@ a button, button{
     color: hsla(0, 100%, 41%, 1);
     background-color: rgb(253, 253, 253);
 }
+.btn1{
+    max-width: max-content;
+}
+.btn1 .one{
+    width: 150px;
+}
+
+.two{
+    width: 150px;
+}
+
 button:hover{
     cursor: pointer;
 }

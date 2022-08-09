@@ -15,12 +15,12 @@
         <div class="img"><img src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
         <div class="nav">
             <nav>
-                <a href="">Home</a>
+                <a href="{% url 'homepage'%}">Home</a>
                 <a href="{% url 'about_us'%}">About Us</a>
                 <a href="" style="color: hsla(358, 97%, 31%, 1);">FAQs</a>
                 <a href="">Contact Us</a>
-                <a href=""><button class="one">Sign Up</button></a>
-                <a href=""><button class="two">Log in</button></a>
+                <a href="{% url 'register'%}"><button class="one">Sign Up</button></a>
+                <a href="{% url 'login'%}"><button class="two">Log in</button></a>
             </nav>
         </div>
         <div id="mySidebar" class="sidebar left">

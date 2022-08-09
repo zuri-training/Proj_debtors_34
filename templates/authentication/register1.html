@@ -1,0 +1,202 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type='text/javascript'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
+    <link rel = "stylesheet" href = "{% static 'css/register.css' %}">
+</head>
+<body>
+  <nav class="navbar d-flex flex-row align-items center g-0" id="mainNav">
+    <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+    <ul class="mainMenu">
+        <li><a href="#">Home</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="#">About Us</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="#">FAQs</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
+
+        <button class="hidden1"><a href="#">Sign Up</a></button>
+        <button class="hidden2"><a href="#">log in</a></button>
+
+        <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
+    </ul>
+    <button class="signUp-button"><a href="#">Sign Up</a></button>
+    <button class="navigation-button"><a href="#">log in</a></button>
+    <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
+</nav>
+    <div class = "main">
+
+        <section>
+            <div class="first">
+                <div id="div1"><p class = "top">A few click away to get your school registered to have full access to our platform in other to track your school's debtors</p></div>
+                <div id="div2"><img src="{% static './images/registration/login-background.png' %}" height="auto" width="100%" margin-top: 0px;></div>
+            </div> 
+            <div class="second">
+                <div class = "heading">Begin Registration</div>
+                <h2>Manage all your school cash flow efficiently</h2>
+                <p class = "p1">Input the verification code sent to your email then proceed</p>
+                <form>
+                <div id="email_div" class="card-details">
+                    <div id="sent_text_div"></div>
+                    <form action="">
+                      <spam class = "details">School email:</spam><br>
+                      <div class="card-1">
+                        <input type="text" name="email" id="email" style ="height:30px" placeholder="Enter school email">
+                        <button style="font-family: 'Open Sans';" onclick="ajax_send_otp()" type="button" class="button1">Get code</button>
+                    </div>
+                    <div class="card-2">
+                        <spam class = "details">Verification Code:</spam><br>
+                        <div id="verify_text_div"></div>
+                        <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code">
+                    </div>
+                    </form>
+                    
+                </div>
+                <div class = "content">
+                <button onclick="verify_otp()" type ="button"class ="button2"><a href="{% url 'register' %}" style="text-decoration: none; color: white; font-family: 'Open Sans';">Next</a></button>
+                </div>
+                </form>    
+            </div>
+        </section>
+    </div>
+    
+</body>
+<footer>
+    <div class="mains">
+        <div class="sect-3">
+            <div class="item-1">
+                <div class="blur">
+                    <img src="{% static 'images/about/logo.png' %}" alt="logo">
+                    <p>
+                        My Debtors is a searcheable database for
+                        schools to locate or contact their debtors
+                        We serve as middlemen between the schools
+                        and the owing students.
+                    </p>
+                </div>
+                <div class="contact-txt">
+                    <h2>Contact Us</h2>
+                    <p>You can contact us via email</p>
+                </div>
+                <div class="subscribe">
+                    <form action="{ url 'contact' %}" method="POST">
+                        <input type="text" name="email" id="email" placeholder="Enter email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="item-2">
+                <ul>
+                    <h2>Pages</h2>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Post/Comment</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Debtors List</a></li>
+                    <li><a href="#">Debtors Profile</a></li>
+                </ul>
+            </div>
+            <div class="item-3">
+                <ul>
+                    <h2>Services</h2>
+                    <li><a href="#">Notify Debtors</a></li>
+                    <li><a href="#">Help Schools Track Their Debtors</a></li>
+                    <li><a href="#">Access To View Other Schools Debtors List</a></li>
+                    <li><a href="#">Debtors Can Contend</a></li>
+                    <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
+                </ul>
+            </div>
+            <div class="item-4">
+                <ul>
+                    <h2>Resources</h2>
+                    <li><a href="#">Figma</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Python</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2022 All Rights Reserved</p>
+            <div>
+                <a href="#">Privacy |</a>
+                <a href="#"> Terms & Conditions |</a>
+                <a href="#"> Disclaimer</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const mainMenu = document.querySelector('.mainMenu');
+    const closeMenu = document.querySelector('.closeMenu');
+    const openMenu = document.querySelector('.openMenu');
+    const menu_items = document.querySelectorAll('nav .mainMenu li a .signUp-button .login-button');
+
+    openMenu.addEventListener('click',show);
+    closeMenu.addEventListener('click',close);
+
+    // close menu when you click on a menu item 
+    menu_items.forEach(item => {
+        item.addEventListener('click',function(){
+            close();
+        })
+    })
+
+    function show(){
+        mainMenu.style.display = 'flex';
+        mainMenu.style.top = '0';
+    }
+    function close(){
+        mainMenu.style.top = '-1500px';
+    } 
+
+    var otp_from_back="";
+    function ajax_send_otp(){
+    //    document.getElementById("email_div").style.display='none';
+       email = document.getElementById("email");
+    $.post("/auth/send_otp",
+        {
+            "email":email.value,
+            "csrfmiddlewaretoken":"{{csrf_token}}"
+        },
+        function(data, status){
+            if(status=="success"){
+                otp_from_back = data;
+                alert(data)
+                document.getElementById("sent_text_div").style.color="green";            
+                document.getElementById("sent_text_div").innerHTML="OTP Sent";
+                // document.getElementById("otp_div").style.display='block';
+            }
+            else{
+                document.getElementById("sent_text_div").style.color="red";
+                document.getElementById("sent_text_div").innerHTML="Try Again!!";
+        }
+    }
+    );
+    }
+   function verify_otp(){
+       var user_otp=document.getElementById("otp").value;
+       if (user_otp==otp_from_back){
+           document.getElementById("verify_text_div").style.color="green";            
+           document.getElementById("verify_text_div").innerHTML="OTP Verified";
+        //    document.getElementById("otp_div").style.display="none";
+        //    document.getElementById("form_div").style.display="block";
+       }
+       else{
+           document.getElementById("verify_text_div").style.color="red";
+           document.getElementById("verify_text_div").innerHTML="Try Again!!";
+       }
+   } 
+
+</script>
+</html>

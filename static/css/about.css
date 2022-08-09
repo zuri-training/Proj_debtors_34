@@ -281,7 +281,7 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 8px 16px;
-    width: 340px;
+    max-width: max-content;
     height: 57px;
     background: #8E8686;
     border: 1px solid #8E8686;
@@ -297,7 +297,7 @@ nav {
     border-radius: 15px;
     padding: 12px;
     color: white;
-    margin-left: 31px;
+    /* margin-left: 31px; */
 }
 
 .subscribe form input {

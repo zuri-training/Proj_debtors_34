@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+    <title>Success</title>
+</head>
+<body>
+    <main>
+        <div class="cancel-area">
+            <img src="{% static 'images/error/Cancel.svg' %}" alt="cancel-image" class="cancel">
+        </div>
+        <div class="successful">
+            <p>Success!</p>
+            <img src="{% static 'images/error/Ok.svg' %}" alt="check mark">
+        </div>
+        <div class="success-section">
+            <div class="success-message">
+                <p>Your Photo  was</p> 
+                <p>successfully uploded</p>
+            </div>
+        </div>
+        <div class="continue">
+            <input type=button value="Continue" onClick="javascript:history.go(-1);">
+        </div>
+    </main>
+    <script>
+        const clear = document.querySelector('.cancel');
+        const card = document.querySelector('main')
+
+        clear.addEventListener('click', close);
+
+        function close(){
+        card.remove()
+        /*console.log('cleared')*/
+        } 
+    </script>
+</body>
+</html> 
