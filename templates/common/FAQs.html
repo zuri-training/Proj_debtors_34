@@ -1,0 +1,316 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <header class="fq-head">
+        <div class="img"><img src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
+        <div class="nav">
+            <nav>
+                <a href="{% url 'homepage'%}">Home</a>
+                <a href="{% url 'about_us'%}">About Us</a>
+                <a href="" style="color: hsla(358, 97%, 31%, 1);">FAQs</a>
+                <a href="">Contact Us</a>
+                <a href="{% url 'register'%}"><button class="one">Sign Up</button></a>
+                <a href="{% url 'login'%}"><button class="two">Log in</button></a>
+            </nav>
+        </div>
+        <div id="mySidebar" class="sidebar left">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">FAQs</a>
+            <a href="">Contact Us</a>
+            <a href=""><button class="one">Sign Up</button></a>
+                <a href=""><button class="two">Log in</button></a>
+        </div>
+        <div id="main">
+            <button class="openbtn" onclick="openNav()"><img src="{% static 'images/index/Menu_Rounded.svg' %}" alt="" srcset=""></button>
+        </div>
+    </header>
+    <main>
+        <section class="pg-image">
+            <!-- <img src="fe/bg-faqs.png" alt=""> -->
+            <figure>
+                <img src="{% static 'images/index/FAQs-image.svg' %}" alt="faqs">
+            </figure>
+        </section>
+        <section class="questions">
+            <div class="faqs">
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">1</div>
+                    </div>
+                    <div class="quest">
+                            <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Will I be able to track a debt record from 5 years ago?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                Yes you can. With our website, records not more than 10 years can be tracked.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">2</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Can the website be accessed by schools located in lagos only?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                No, the website can be acessed by schools in every state in Nigeria.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">3</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                I tried signing up a few times but the verification link was not sent to my email, please how do I go about this?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                Kindly confirm that your email address is correct, hit re-send if it's correct.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">4</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Is this platform meant for all forms of school?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                Yes. Primary, Secondary and Tertiary institutions are welcome.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">5</div>
+                    </div>
+                    <div class="quest">
+                            <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Is this website an affiliation with the government?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                No, we are a non-profit organisation.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">6</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                What is the application process for a school that wants to register on this platform?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                By clicking the sign in button and filling the info required there.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">7</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Was the website formed by a group of schools?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                No, we are not in affiliation with any school
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">8</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Can Parents contend on behalf of their children?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                Yes you can contend on behalf of your children.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div style="margin-bottom: 60px;" class="numbr">9</div>
+                    </div>
+                    <div class="quest">
+                            <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Can I edit my debt details?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                No you can't. You can only view it.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="numbr">10</div>
+                    </div>
+                    <div class="quest">
+                        <div class="person1"><img src="{% static 'images/index/sender-faqs.png' %}" alt="send"></div>
+                        <div class="msg">
+                            <p>
+                                Can a parent view the post feed about debtors on the platform?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <div class="msg">
+                            <p>
+                                No you can't. It's available to just schools.
+                            </p>
+                        </div>
+                        <div class="person2"><img src="{% static 'images/index/respondent-faqs.png' %}" alt="recp"></div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="ft">
+            <div class="foot">
+                <div class="footer-txt">
+                    <div class="img" style="float: left;"><img style="width: 120px;" src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
+                    <br>
+                    <p class="foot-txt">My Debtors is a searcheable database for schools to locate or contact their debtors. <br>We serve as middlemen between the school and the owing students.</p>
+                </div>
+                <div class="conct">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Contact Us</p>
+                    You can contacts us via email
+                
+                    <p></p>
+                    <div class="sub">
+                        <input type="text" placeholder="Enter email">
+                        <button class="one" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="others">
+                <div class="pages">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Pages</p>
+                    <p><a href="">Home</a></p>
+                    <p><a href="">About Us</a></p>
+                    <p><a href="">FAQs</a></p>
+                    <p><a href="">Registration</a></p>
+                </div>
+                <div class="services">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Services</p>
+                    <p>Notify debtors</p>
+                    <p>Help school track their debtors</p>
+                    <p>Access to view other school debtors</p>
+                    <p>Debtors can contend</p>
+                    <p>Schools can comment on other school's post</p>
+                </div>
+                <div class="resources">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Resources</p>
+                    <p>Figma</p>
+                    <p>Html</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Python</p>
+                </div>
+            </div>
+        </div>
+        <div class="t-and-c">
+            <div class="rights"><p><span>&copy;</span>2022 All Right Reserved</p></div>
+            <div class="privacy">
+                <a href="">Privacy |</a>
+                <a href="">Terms & Conditions |</a>
+                <a href="">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'javascript/index.js' %}"></script>
+</body>
+</html>

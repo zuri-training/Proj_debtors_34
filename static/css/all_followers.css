@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans';
+}
+
+section{
+    display: flex;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px;
+    min-height: 100vh;
+}
+
+.sidebar h1{
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar p{
+    text-align: center;
+    background: linear-gradient(to right, red 97%, black 5%);
+    padding: 10px;
+    color: white;
+}
+
+.logo{
+    padding: 20px;
+}
+
+.profile_img{
+    border-radius: 30px;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    max-height: 130px;
+    margin-left: 450px;
+}
+
+.search{
+    background-color: rgb(230, 230, 230);
+    padding: 2px;
+    border-radius: 10px;
+    display: flex;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.search img{
+    margin-left: 20px;
+}
+.search input[type=text]{
+    width: 400px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+}
+
+.others{
+    display: flex;
+    gap: 1em;
+}
+
+.icons{
+    border: 1px grey solid;
+    border-radius: 8px;
+    padding: 7px;
+    width: 30px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.msg{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    right: 30px;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    padding: 10px;
+    flex-basis: 100%;
+    min-width: 50ch;
+}
+
+.msg p{
+    flex: 3;
+    min-width: 33ch;
+    margin-left: 30px;
+}
+small{
+    flex: 5;
+    text-align: right;
+    margin-right: 10px;
+}
+
+small a{
+    text-decoration: none;
+    color: red;
+}
+
+.msg img{
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    .top{
+        margin-left: 0;
+        gap: 0.5em;
+    }
+
+    .sidebar{
+        min-height: 160vh;
+    }
+
+    .search input[type=text]{
+        width: 200px;
+        padding: 8px;
+        border: none;
+        background-color: rgb(230, 230, 230);
+        border-radius: 15px;
+    }
+
+    .msg{
+        left: 230px;
+    }
+
+    .icons{
+        border: 1px grey solid;
+        border-radius: 8px;
+        padding: 4px;
+        /* width: 25px; */
+    }
+}

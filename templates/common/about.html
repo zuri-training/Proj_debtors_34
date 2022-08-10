@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{% static 'javascript/about.js' %}"></script>
@@ -14,7 +15,7 @@
 <body>
     <header>
         <div class="bg-img">
-            <nav class="topnav">
+            <nav class="topnav nav-fill w-100">
                 <div class="logo">
                     <a href="#">
                         <img src="{% static 'images/about/logo.png' %}" alt="logo">
@@ -22,15 +23,15 @@
                 </div>
                 <div class="nav-links" id="myLinks">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#" class="active">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="{% url 'homepage'%}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}" class="active">About Us</a></li>
+                        <li><a href="{% url 'FAQs' %}">FAQs</a></li>
                         <li><a href="#">Contact Us</a></li>
                         <!-- <li><a href="#" class="hide">Sign Up</a></li>
                         <li><a href="#" class="hide">Login</a></li> -->
                         <div class="hide">
-                            <li><a href="#">Sign Up</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="{% url 'register' %}">Sign Up</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
                         </div>
                     </ul>
                 </div>
@@ -47,7 +48,7 @@
             </div>
         </div>
     </header>
-
+        
     <section>
         <div class="sect-2">
             <div class="item-a">
@@ -115,9 +116,9 @@
                         <p>You can contact us via email</p>
                     </div>
                     <div class="subscribe">
-                        <form action="">
-                            <input type="text" placeholder="Enter email">
-                            <button>Subscribe</button>
+                        <form action="{ url 'contact' %}" method="POST">
+                            <input type="text" name="email" id="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
                         </form>
                     </div>
                 </div>

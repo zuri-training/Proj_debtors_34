@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - contend</title>
+    <link rel="stylesheet" href="{% static 'css/contend_page.css' %}">
+</head>
+<body>
+    <style>
+        main{
+            gap: 60px;
+        }
+        .wrap{
+            width: 80%;
+            margin: 20px 0 70px;
+        }
+        .menu{
+            height: 100px;
+            margin-bottom: 350px;
+        }
+        @media (max-width:800px){
+            main{
+                gap: 0;
+            }
+            .msgbox{
+                margin-top: -40;
+            }
+            .nav{
+                height:120px;
+            }
+            .wrap{
+                width: 100%;
+            }
+            .menu{
+                height: 100px;
+            }
+        }
+    </style>
+    <main>
+        <section class="nav">
+            <div id="logo">
+                <img src="{% static 'images/contend/debtors-logo.svg' %}" alt="">
+                <div id="logout1">
+                    <div class="icon"><img src="{% static 'images/contend/logout-icon.svg' %}" alt=""><a href="" style="color: hsla(0, 100%, 41%, 1);">Log out</a></div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div onclick="chatInterface()" style="background-color: hsla(358, 97%, 31%, 1);" class="icon contend"><img src="{% static 'images/contend/View Stream.svg' %}" alt=""><a href="" style=" color: #fff;">Contend</a></div>
+            </div>
+            <div style="color: hsla(0, 100%, 41%, 1);" id="logout">
+                <div class="icon"><img src="{% static 'images/contend/logout-icon.svg' %}" alt=""><a href="" style="color: hsla(0, 100%, 41%, 1);">Log out</a></div>
+            </div>
+        </section>
+        <section class="msgbox">
+        </section>
+    </main>
+    <script src="{% static 'javascript/studentContend.js' %}"></script>
+</body>
+</html> 
