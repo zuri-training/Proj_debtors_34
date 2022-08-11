@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* ********************** HEADER ************************ */
@@ -25,6 +25,7 @@ body{
 
 nav {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 30px;
@@ -44,6 +45,7 @@ nav ul li {
 
 .nav-links {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
@@ -156,6 +158,8 @@ nav ul li {
     text-align: center;
 }
 
+/* *********************** FOOTER ********************** */
+
 .main {
     background-image: url("../images/about/rect 2.png");
     width: 100%;
@@ -170,7 +174,10 @@ nav ul li {
     margin-top: 80px;
 }
 
-/* *********************** FOOTER ********************** */
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .sect-3 {
     width: 90%;
@@ -242,8 +249,8 @@ nav ul li {
     height: auto;
     left: 138px;
     top: 106px;
-    background: rgba(119, 106, 106, 0.021);
-    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(23.9931px);
     border: 3px rgba(255, 255, 255, 0.568) solid;
     border-radius: 8px;
     padding: 30px;
@@ -274,7 +281,7 @@ nav ul li {
     display: flex;
     flex-direction: column;
     padding: 8px 16px;
-    width: 340px;
+    max-width: max-content;
     height: 57px;
     background: #8E8686;
     border: 1px solid #8E8686;
@@ -290,7 +297,7 @@ nav ul li {
     border-radius: 15px;
     padding: 12px;
     color: white;
-    margin-left: 31px;
+    /* margin-left: 31px; */
 }
 
 .subscribe form input {
@@ -368,7 +375,7 @@ nav ul li {
     }
 
     .item-a {
-        margin: 10px;
+        margin: 5px;
         padding: 5px;
     }
 
@@ -378,7 +385,7 @@ nav ul li {
     }
 
     .item-c {
-        margin: 10px;
+        margin: 5px;
         padding: 5px;
     }
 }
@@ -447,7 +454,7 @@ nav ul li {
         position: absolute;
         right: 20px;
         top: 40px;
-        color: beige;
+        color: rgb(34, 31, 31);
     }
 
     .sect-2 {
@@ -464,19 +471,34 @@ nav ul li {
         ;
         padding-top: 50px;
     }
+    .item-a p, .item-b p, .item-c p {
+        border: 2px #03071E solid;
+        border-radius: 10px;
+        padding: 15px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .item-a h1, .item-b h1, .item-c h1 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16.1372px;
+        line-height: 22px;
+    }
 
     .item-a {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
     }
 
     .item-b {
-        margin: 10px;
+        margin: 30px;
         padding: 5px;
     }
 
     .item-c {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
     }
 
@@ -613,7 +635,7 @@ nav ul li {
         position: absolute;
         right: 20px;
         top: 40px;
-        color: beige;
+        color: rgb(34, 31, 31);
     }
 
     .sect-2 {
@@ -631,19 +653,49 @@ nav ul li {
         padding-top: 50px;
     }
 
+    .item-a p, .item-b p, .item-c p {
+        border: 2px #03071E solid;
+        border-radius: 10px;
+        padding: 15px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .item-a h1, .item-b h1, .item-c h1 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16.1372px;
+        line-height: 22px;
+    }
+
     .item-a {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
     }
 
     .item-b {
-        margin: 10px;
+        margin: 30px;
         padding: 5px;
     }
 
     .item-c {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
+    }
+
+    .main {
+        background-image: url("../images/about/mobile_rect2.png");
+        width: 100%;
+        /* min-height: 600px; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(48, 28, 28, 0.829);
+        background-blend-mode: darken;
+        margin-top: 80px;
     }
 
     .sect-3 {
@@ -777,12 +829,12 @@ nav ul li {
 
     .topnav a.icon {
         /* background: black; */
-        font-size: 25px;
+        font-size: 35px;
         display: block;
         position: absolute;
         right: 20px;
         top: 40px;
-        color: beige;
+        color: rgb(34, 31, 31);
     }
 
     .sect-2 {
@@ -800,32 +852,95 @@ nav ul li {
         padding-top: 50px;
     }
 
+    .item-a p, .item-b p, .item-c p {
+        border: 2px #03071E solid;
+        border-radius: 10px;
+        padding: 15px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .item-a h1, .item-b h1, .item-c h1 {
+        font-style: normal;
+        font-weight: 1000;
+        font-size: 25px;
+        line-height: 40px;
+        color: #03071E;
+    }
+
     .item-a {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
     }
 
     .item-b {
-        margin: 10px;
+        margin: 30px;
         padding: 5px;
     }
 
     .item-c {
-        margin: 10px;
+        margin: 2px;
         padding: 5px;
     }
 
-    .sect-3 {
+    .main {
+        background-image: url("../images/about/mobile_rect2.png");
+        width: 100%;
+        /* min-height: 600px; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(48, 28, 28, 0.829);
+        background-blend-mode: darken;
+        margin-top: 80px;
+    }
+
+    /* .sect-3 {
         width: 90%;
         margin: auto;
         display: grid;
         grid-template-areas: 
-        'w w w w'
-        'x x x x'
-        'y y y y'
-        'z z z z'
+        'w x y z'
+        'w x y z'
+        'w x y z'
+        'w x y z'
+        'w x y z'
         ;
-        padding-top: 10px;
+        padding-top: 50px;
+    } */
+    
+    .item-1 {
+        grid-area: w;
+        margin: 20px;
+    }
+    
+    .item-1 p{
+        color: white;
+        font-size: 13px;
+    }
+    
+    .item-2 {
+        grid-area: x;
+        margin: 20px;
+    }
+   
+    .item-2 ul li a, .item-3 ul li a, .item-4 ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+    }
+    
+    .item-3 {
+        grid-area: y;
+        margin: 20px;
+    }
+
+    .item-4 {
+        grid-area: z;
+        margin: 20px;
     }
 
     .blur {

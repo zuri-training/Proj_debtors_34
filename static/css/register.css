@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto !important;
+}
+
+nav {
+    background: linear-gradient(
+        to right,
+        #4F5162 0%,
+        #4F5162 45%,
+        #fff 45%,
+        #fff 100%
+    );
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly !important;
+    padding: 0.2rem;
+}
+
+.logo-img{
+    width: 120px;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li{
+    padding: 0 0.5rem !important;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 2rem;
+    text-decoration: none;
+    color:  #d00000;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+}
+
+nav .mainMenu li a:hover{
+    color: #d00000 !important;
+}
+
+.hidden1 .hidden2{
+    padding: 1.5rem !important;
+}
+
+.signUp-button, .navigation-button, .hidden1, .hidden2{
+    margin-left: 0.5rem;
+    padding: 10px;
+    background-color: #d00000;
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.navigation-button, .hidden2{
+  background-color: #fff;
+  padding: 8px;
+  border: 2px solid #d00000;
+}
+
+button a{
+  padding: 20px;
+  text-decoration: none;
+}
+
+.signUp-button a, .hidden1 a{
+  color: #fff;
+} 
+.navigation-button a, .hidden2 a{
+  color: #d00000;
+}
+
+.signUp-button a:hover, .navigation-button a:hover, .hidden1 a:hover, .hidden2 a:hover{
+  color: #4F5162;
+}
+
+.hidden1, .hidden2{
+  display: none !important;
+}
+  /*nav .mainMenu li a:active::after {
+    background-color: red;
+    border-radius: 5%;
+    content: '';
+    display: block;
+    height: 0.2rem;  
+    margin: 0.4rem auto 0 auto;
+    width: 3.5rem;
+  }*/
+
+nav .openMenu, .closeMenu {
+  font-size: 2rem;
+  margin: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+section {
+  flex-basis: 100%;
+  display: flex;
+}
+.first {
+  width: 49.4%;
+}
+#div1 {
+  /* position: relative;
+  top: -70px; */
+  background-color: #4F5162;
+  height: 20%;
+}
+#div1 .top {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 70px;
+}
+#div2 {
+  background-color: rgb(102, 93, 93);
+  margin-top: 0px;
+}
+
+/* .first{
+  display: flex;
+  flex-direction: column;
+} */
+.second {
+  /* background-color: whitesmoke; */
+  width: 60%;
+  padding: 25px 30px;
+  color: black;
+  font-family: "sans-serif";
+}
+.second .heading {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+  color:rgb(172, 15, 15);
+}
+.second h2 {
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.second .p1 {
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+}
+.second form {
+  margin-top: 5px;
+  /* flex-wrap: wrap;
+  display: flex; */
+  padding: 20px 20px;
+  justify-content: space-between;
+}
+.card-details {
+  align-items: center;
+  padding-left: 30%;
+  padding-right: 10%;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 15px;
+  color: rgb(17, 16, 16);
+  justify-content: space-between;
+  border-radius: 20px;
+  margin: 20px;
+}
+.card-1{
+  border: 1px grey solid;
+  border-radius: 15px;
+  padding: 5px;
+  min-width: max-content;
+}
+.card-2 input{
+  border: 1px grey solid;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+}
+.card-1 input{
+  border: none;
+  /* border-radius: 20px; */
+}
+.second form .textarea{
+  height:80px;
+  margin-left: 280px;
+  text-align: center;
+  background-color:rgb(189, 174, 174);
+  font-size: 13px;
+}
+.second .content {
+  font-size: 15px;
+  padding: 10px 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left:100px;
+}
+.second .button1 {
+  border-radius: 10px;
+  background-color: rgb(192, 15, 15);
+  padding: 5px 15px;
+  color: white;
+  border-color: red;
+  font-weight: bold;
+  font-size: 10px;
+}
+.second .button2 {
+  border-radius: 10px;
+  background-color: rgb(218, 22, 22);
+  padding: 7px 50px;
+  border-color: red;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  margin-left: 200px;
+}
+/* .second button:hover {
+  background-color: rgb(95, 9, 9);
+  color: white;
+  cursor: pointer;
+} */
+
+.form-group{
+  max-width: 400px;
+  position: absolute;
+  right: 220px;
+}
+
+.heading p{
+  font-family: 'Open Sans';
+}
+
+@media screen and (max-width: 660px){
+  nav .mainMenu li a{
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  nav {
+      background: #4F5162 !important;
+      justify-content: space-between !important;
+    }
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:  #4F5162;
+        transition: top 1s ease 0s;
+        display: none;
+    }
+
+    nav .mainMenu li a{
+        font-size: 1.5rem;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        color: #212127;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu {
+        display: block;
+        color: #212127;
+    }
+
+    .hidden1, .hidden2{
+        display: block !important;
+        margin: 1rem !important;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color: #d00000;
+    }
+
+    .signUp-button, .navigation-button{
+        display: none;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .second{
+      position: absolute;
+      width: 80%;
+      margin-top: 600px;
+      left: 80px;
+    }
+}
+
+/* *********************** FOOTER ********************** */
+
+.mains {
+  background-image: url("../images/about/rect 2.png");
+  width: 100%;
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(48, 28, 28, 0.829);
+  background-blend-mode: darken;
+  margin-top: 80px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sect-3 {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 
+  'w x y z'
+  'w x y z'
+  'w x y z'
+  'w x y z'
+  'w x y z'
+  ;
+  padding-top: 50px;
+}
+
+.item-1 {
+  grid-area: w;
+  margin: 20px;
+}
+
+.item-1 p {
+  color: white;
+}
+
+.item-2 {
+  grid-area: x;
+  margin: 20px;
+}
+
+.item-2 ul li {
+  list-style-type: none;
+}
+
+.item-2 ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.item-3 {
+  grid-area: y;
+  margin: 20px;
+}
+
+.item-3 ul li {
+  list-style-type: none;
+}
+
+.item-3 ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.item-4 {
+  grid-area: z;
+  margin: 20px;
+}
+
+.item-4 ul li {
+  list-style-type: none;
+}
+
+.item-4 ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.blur {
+  width: 580px;
+  height: auto;
+  left: 138px;
+  top: 106px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(23.9931px);
+  border: 3px rgba(255, 255, 255, 0.568) solid;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.contact-txt {
+  margin-top: 120px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: 200px;
+}
+
+.contact-txt h2{
+  color: rgb(255, 166, 0);
+  font-weight: normal;
+  text-align: center;
+}
+
+.contact-txt p {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subscribe {
+  margin-left: 120px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  max-width: max-content;
+  height: 57px;
+  background: #8E8686;
+  border: 1px solid #8E8686;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.subscribe button {
+  background-color: rgba(208, 0, 0, 1);
+  border: none;
+  border-radius: 15px;
+  padding: 12px;
+  color: white;
+  margin-bottom: 5px;
+  /* margin-left: 31px; */
+}
+
+.subscribe form input {
+  padding: 12px;
+  border: none;
+  background-color: #8E8686;
+}
+
+.item-2 h2, .item-3 h2, .item-4 h2 {
+  color: rgb(255, 166, 0);
+  font-weight: normal;
+  margin-top: 100px;
+}
+
+.item-2 li a, .item-3 li a, .item-4 li a {
+  line-height: 2.5em;
+}
+
+.item-2 li, .item-3 li, .item-4 li {
+  font-weight: lighter;
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-weight: lighter;
+  padding: 30px;
+}
+
+.copy a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 227) {
+  .logo-img{
+      width: 40px;
+    }
+  .openMenu{
+      font-size: 1.6rem !important;
+    }
+
+}
+  
+@media only screen and (max-width:700px){
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 100%;
+      align-items: center;
+    }
+    nav {
+      padding-top: 5px;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .logo {
+      font-size: 12px;
+    }
+    
+    section {
+      width: 100%;
+    }
+    .colour{
+      width: 100%;
+    }
+    #div1 {
+      height: 100px;
+      width: 100%;
+    }
+    #div1 .top {
+      font-size: 15px;
+      padding: 20px 5px;
+    }
+    .second {
+      padding: 20px 25px;
+    }
+    .second .heading {
+      font-size: 20px;
+      padding: 0 0 10px 0;
+    }
+    .second h2 {
+      font-size: 18px;
+    }
+    .second .p1 {
+      font-size: 13px;
+    }
+    .second form {
+      margin-top: 7px;
+      padding: 7px 7px;
+    }
+    .second form .card-details {
+      padding-bottom: 10px;
+      justify-content: center;
+      padding-left: 20%;
+    }
+    .second form .textarea{
+      margin-left:20%;
+    }
+    .second .content {
+      font-size: 12px;
+      padding: 7px 5px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .second .button1 {
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+    .second .button2 {
+      border-radius:5px;
+      padding: 7px 15px;
+      font-size: 13px;
+      margin-left: 100px;
+    }
+    .footer-content p {
+      font-size: 10px;
+    }
+    .footer-content .information {
+      border-width: 0px;
+    }
+    .footer-bottom {
+      padding: 15px 0;
+    }
+    textarea{
+      padding: 15px 5px;
+    }
+    footer .button2{
+      border-radius: 7px;
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+     #div2 img{
+      width:270px;
+     }
+  }

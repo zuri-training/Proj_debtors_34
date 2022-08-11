@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
+</head>
+<body>
+
+    <header>
+        <nav class="navbar d-flex flex-row align-items center g-0" id="mainNav">
+            <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+            <ul class="mainMenu">
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'about_us' %}">About Us</a></li>
+                <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'FAQs' %}">FAQs</a></li>
+                <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
+        
+                <button class="hidden1"><a href="{% url 'OTP' %}">Sign Up</a></button>
+                <button class="hidden2"><a href="{% url 'login' %}">log in</a></button>
+        
+                <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
+            </ul>
+            <button class="signUp-button"><a href="{% url 'OTP' %}">Sign Up</a></button>
+            <button class="navigation-button"><a href="{% url 'login' %}">log in</a></button>
+            <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div id="info">
+
+            <p class="first_info">Log in to get started and upload your school's debtors list or view other schools' debtors lists and have access to our post and comment section.</p>
+
+            <p><img src="{% static './images/registration/login-background.png' %}" alt="a female on a suit"></p>
+
+        </div>
+
+        <div id="form">
+
+            <h2 class="red">Log in</h2>
+
+            <h4>Manage all your school cash flow efficiently</h4>
+
+            <p><small>Login and gain access</small></p>
+
+            <form action="action_page.php" method="post" id="form_login">
+
+                <div id="form_container">
+
+                  <label for="username">Enter User Name/Email</label>
+                  <input type="text" placeholder="Enter school email" name="username" required><br>
+
+                  <label for="password">Password</label>
+                  <input type="password" placeholder="Enter password" name="password" required>
+
+                  <label class="remember">
+                    <input class="unchecked" type="checkbox" unchecked="checked" name="remember"> Remember me
+                  </label>
+
+                  <span class="forgotPassword red">Forgot password?</span><br>
+
+                  <button type="submit" class="login">Log in</button>
+
+                  <span class="noAccount">Dont have an account?</span>
+
+                  <button type="submit" class="account">Create account</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="main">
+            <div class="sect-3">
+                <div class="item-1">
+                    <div class="blur">
+                        <img src="{% static 'images/about/logo.png' %}" alt="logo">
+                        <p>
+                            My Debtors is a searcheable database for
+                            schools to locate or contact their debtors
+                            We serve as middlemen between the schools
+                            and the owing students.
+                        </p>
+                    </div>
+                    <div class="contact-txt">
+                        <h2>Contact Us</h2>
+                        <p>You can contact us via email</p>
+                    </div>
+                    <div class="subscribe">
+                        <form action="">
+                            <input type="text" placeholder="Enter email">
+                            <button>Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="item-2">
+                    <ul>
+                        <h2>Pages</h2>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Post/Comment</a></li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Debtors List</a></li>
+                        <li><a href="#">Debtors Profile</a></li>
+                    </ul>
+                </div>
+                <div class="item-3">
+                    <ul>
+                        <h2>Services</h2>
+                        <li><a href="#">Notify Debtors</a></li>
+                        <li><a href="#">Help Schools Track Their Debtors</a></li>
+                        <li><a href="#">Access To View Other Schools Debtors List</a></li>
+                        <li><a href="#">Debtors Can Contend</a></li>
+                        <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
+                    </ul>
+                </div>
+                <div class="item-4">
+                    <ul>
+                        <h2>Resources</h2>
+                        <li><a href="#">Figma</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2022 All Rights Reserved</p>
+                <div>
+                    <a href="#">Privacy |</a>
+                    <a href="#"> Terms & Conditions |</a>
+                    <a href="#"> Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a .signUp-button .login-button');
+
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click',function(){
+                close();
+            })
+        })
+
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close(){
+            mainMenu.style.top = '-1500px';
+        } 
+    </script>
+
+</body>
+</html> 

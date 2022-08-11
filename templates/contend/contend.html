@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" 
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contend.css' %}">
+    <title>Debtor's detail</title>
+</head>
+<body>
+
+    <nav class="d-flex flex-row align-items center g-0" id="mainNav">
+        <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+        <ul class="mainMenu">
+            <li><a href="#">Home</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="#">About Us</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="#">FAQs</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
+
+            <button class="hidden1"><a href="#">Sign Up</a></button>
+            <button class="hidden2"><a href="#">log in</a></button>
+
+            <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
+        </ul>
+        <button class="signUp-button"><a href="#">Sign Up</a></button>
+        <button class="navigation-button"><a href="#">log in</a></button>
+        <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
+    </nav>
+
+    <!--<div class="container g-0">-->
+        <main class="row g-0">
+<!--col-12 col-sm-6 col-md-4-->
+            <div class="col-sm-6 d-flex align-items-center g-0">
+                <div class="leftside">
+                    <article>
+                        <section class="avatar-img_section">
+                            <div class="avatar-img_container">
+                                <div class="avatar-img">
+                                    <img src="{% static 'images/contend/Ellipse 5.png' %}" alt="avatar-img">
+                                </div>
+                                <div class="greetings">
+                                    Good Morning,<br>
+                                    Mary!
+                                </div>
+                            </div>
+                        </section>
+                        <div class="school-name-on-card">
+                            <p>From Goodness International College<br>
+                            <strong>Unsettled Debt</strong></p></div>
+                        <section class="chart-section">
+                            <div class="chart">
+                                <div class="chart-card">
+                                    <div class="chart-container">
+                                        <h5>Debt Owed (1 item)</h5>
+                                        $300,000,000.00
+                                    </div>
+                                        <div class="chart-img">
+                                    <img src="{% static 'images/contend/chart logo.png' %}" alt="chart">
+                                    </div>
+                                    <div class="chart-container">
+                                        School Fees <br>
+                                        Development Fees <br>
+                                        Project Fees <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <div class="col-sm-6 g-0">
+                <div class="rightside">
+                    <aside>
+                        <section class="form-section">
+                        <h1>Contend</h1>
+                        <p>Do you wish to <span>contend?</span> If yes, fill this form, if no <span> Log out</span></p>
+                        <form id="post-form" method="POST" action="checkview">
+                            {% csrf_token %}
+                            <label>Enter Name</label>
+                            <input type="text" name="student_name" id="student_name" placeholder="convicted student's name">
+                            <label>Enter ID</label>
+                            <input type="text" name="student_id" id="student_id" placeholder="Debtor ID">
+                            <label>Enter Email</label>
+                            <input type="email" name="email"  id="big-input_box" placeholder="maryik@gmail.com">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone"  id="big-input_box" placeholder="0803323232">
+                            <label class="label">Who's contending?</label>
+                            <input type="radio" name="contender"> Student<br>
+                            <input type="radio" name="contender"> Guardian<br>
+                            <input type="radio" name="contender"> Sibling<br>
+                            <input type="radio" name="contender" checked> Parent<br>
+                            <label class="last-label">Contender's Name</label>
+                            <input type="text" name="username" id="big-input_box" placeholder="contender's fullname">
+                            <p class="formP last-formP">Confirm details</p>
+                            <input type="submit" value="Contend">
+                            <input type="submit" value="Exit" id="logout">
+                        </form>
+                    </section>
+                    </aside>
+                </div>
+            </div>
+        </main>
+        <div class="cta">
+            <div class="cta-container">
+                <div class="cta-row">
+                    <div class="cta_about">
+                        <div class="cta-card">
+                                <p><a><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="logo"></a></p>
+                            <p>My Debtors is a searchable database for schools to locate or contact their debtors.
+                                We serve as middlemen between the school and the owing students.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cta_col">
+                        <ul>
+                            <h3>Pages</h3>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Post/comment</a></li>
+                            <li><a href="#">Registration</a></li>
+                            <li><a href="#">Debtors list</a></li>
+                            <li><a href="#">Debtors Profile</a></li>
+                        </ul>
+                    </div>
+                    <div class="cta_col">
+                        <ul>
+                            <h3>Services</h3>
+                            <li><a href="#">Notify debtors</a></li>
+                            <li><a href="#">Help Schools track their debtors</a></li>
+                            <li><a href="#">Access to view other schools' debtors list</a></li>
+                            <li><a href="#">Debtors can contend</a></li>
+                            <li><a href="#">Schools can comment on each others post</a></li>
+                        </ul>
+                    </div>  
+                    <div class="cta_col">
+                        <ul>
+                            <h3>Resources</h3>
+                            <li><a href="#">Figma</a></li>
+                            <li><a href="#">Html</a></li>
+                            <li><a href="#">Css</a></li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">Python</a></li>
+                        </ul>
+                    </div>
+                    <div class="cta_col empty">
+
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <div class="last_col">
+                        <h3>Contact us</h3>
+                        <p>You can contact us via email</p>
+                        <div class="search-box">
+                            <input type="text" class="email-box" placeholder="Enter email">
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>&#169 2022 All Right Reserved</div>
+            <div>Privacy | Terms & Coditions | Disclaimer</div>
+        </footer>
+
+    <!--</div>-->
+    <!-- <script src="contend.js"></script> -->
+    <script>
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a .signUp-button .login-button');
+
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click',function(){
+                close();
+            })
+        })
+
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close(){
+            mainMenu.style.top = '-1500px';
+        } 
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contend</title>
+</head>
+<body>
+    <h1>Do you wish to contend? If yes, fill in your details below.</h1>
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <input type="text" placeholder="Student name" name="student_name" id="student_name" width="60px">
+        <input type="text" placeholder="Student ID" name="student_id" id="student_id" width="60px">
+        <button>Contend</button>
+    </form>
+</body>
+</html> -->
