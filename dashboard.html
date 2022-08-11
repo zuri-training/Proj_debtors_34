@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style-2.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="image">
+                <a href="#"><img src="./img/debtors-logo.svg" alt="debtors-logo"></a>
+                
+            </div>
+            <div class="items">
+                <ul>
+                    <li><a href="#" class="active"><img src="./design resources (2)/Vector.svg" alt="Dashboard-icon" class="item-image">Dashboard</a></li>
+                    <li><a href="./feed.html"><img src="./design resources (2)/News.svg" alt="feed-icon" class="item-image">Feed</a></li>
+                    <li><a href="#"><img src="./design resources (2)/View Stream.svg" alt="contend-icon" class="item-image">Contend</a></li>
+                    <li><a href="#"><img src="./design resources (2)/eva_settings-2-fill.svg" alt="eva_settings-2-fill" class="item-image"> Settings</a></li>
+                </ul>
+            </div>
+            <div class="log">
+                <ul><li><a href="#"><img src="./design resources (2)/Group.svg" alt="logout-icon">Log out</a></li></ul>
+            </div>
+        </div>
+        <div class="topbar">
+            <div class="search-bar" id="search-id"><img src="./design resources (2)/search.png" alt="search-bar" class="search-icon">
+                <input type="text"  class="search" id="search-text" placeholder="Search nearby schools">  
+            </div>
+            <div class="user">
+                <img src="./design resources (2)/message-icon.png" alt="message-icon" class="message-icon">
+                <img src="./design resources (2)/dashboard user image.png" alt="dashboard-user" class="image-2">
+            </div>
+        </div>
+        <div class="add-school">
+            <div class="steph">
+                <h3>Good Morning, Steph!</h3>
+            </div>
+            <div class="school-container">
+                <div class="school-name">
+                    <h2>Goodness International College.</h2>
+                </div>
+                <div class="school-input">
+                    <ul>
+                        <li><a href="#"><img src="./design resources (2)/add-icon.svg" alt="">Add Student</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="list">
+            <div class="student-list">
+                <a href="#">All Student</a>
+                <a href="#">Active</a>
+                <a href="#">Pending</a>
+                <a href="#">Resolved</a>
+            </div>
+            <div class="filter">
+                <div class="search-main" id="search-result"><img src="./design resources (2)/Filter and Sort (1).svg" alt="search-bar" class="search-icon">
+                    <input type="text"  class="search-tools" id="search-table" placeholder="Filter by students ID">  
+                </div>
+                <div class="calender">
+                <img src="./design resources (2)/calendar-icon.svg" alt="calendar-icon" class="calender-icon">
+                    <select id="select-all" class="calender-tools">
+                        <option value="may">May-June</option>
+                        <option value="august">July-August</option>
+                        <option value="october">September-October</option>
+                        <option value="december">November-December</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="heading">
+            <p class="name">NAME</p>
+            <P class="student-id">STUDENT ID</P>
+            <P class="email">EMAIL</P>
+            <P class="debt">DEBT</P>
+            <P class="amount-paid">AMOUNT PAID</P>
+            <P class="status">STATUS</P>
+            <P class="edit ">EDIT</P>
+        </div>
+        <div class="students" id="result">
+            <table frame=void rules=rows>
+                    <tbody>
+                        <tr class="active-student">
+                            <td class="name">Esther Howard</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">estherhoward@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="active">Active</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="pending-student">
+                            <td class="name">Brooklyn Simmons</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">brooklynsim@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="pending">Pending</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="resolved-student">
+                            <td class="name">Guy Hawkins</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">ghawkin@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="resolved">Resolved</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="active-student">
+                            <td class="name">Esther Howard</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">estherhoward@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="active">Active</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="pending-student">
+                            <td class="name">Brooklyn Simmons</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">brooklynsim@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="pending">Pending</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="resolved-student">
+                            <td class="name">Guy Hawkins</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">ghawkin@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="resolved">Resolved</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="active-student">
+                            <td class="name">Esther Howard</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">estherhoward@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="active">Active</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="pending-student">
+                            <td class="name">Brooklyn Simmons</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">brooklynsim@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="pending">Pending</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="resolved-student">
+                            <td class="name">Guy Hawkins</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">ghawkin@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="resolved">Resolved</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="active-student">
+                            <td class="name">Esther Howard</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">estherhoward@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="active">Active</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="pending-student">
+                            <td class="name">Brooklyn Simmons</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">brooklynsim@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="pending">Pending</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                        <tr class="resolved-student">
+                            <td class="name">Guy Hawkins</td>
+                            <td class="student-id">GIC123456789</td>
+                            <td class="email">ghawkin@gmail.com</td>
+                            <td class="debt">#200,000</td>
+                            <td class="amount-paid">#30,000</td>
+                            <td class="resolved">Resolved</td>
+                            <td class="edit-image"><img src="./design resources (2)/edit icon.png" alt="edit-icon"></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            <div class="table">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
