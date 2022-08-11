@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
@@ -23,12 +23,12 @@
                 <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'FAQs' %}">FAQs</a></li>
                 <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
         
-                <button class="hidden1"><a href="{% url 'OTP' %}">Sign Up</a></button>
+                <button class="hidden1"><a href="{% url 'register' %}">Sign Up</a></button>
                 <button class="hidden2"><a href="{% url 'login' %}">log in</a></button>
         
                 <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
             </ul>
-            <button class="signUp-button"><a href="{% url 'OTP' %}">Sign Up</a></button>
+            <button class="signUp-button"><a href="{% url 'register' %}">Sign Up</a></button>
             <button class="navigation-button"><a href="{% url 'login' %}">log in</a></button>
             <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
         </nav>
@@ -36,47 +36,43 @@
     </header>
 
     <main>
-
         <div id="info">
-
             <p class="first_info">Log in to get started and upload your school's debtors list or view other schools' debtors lists and have access to our post and comment section.</p>
-
             <p><img src="{% static './images/registration/login-background.png' %}" alt="a female on a suit"></p>
-
         </div>
-
+        
         <div id="form">
-
             <h2 class="red">Log in</h2>
-
             <h4>Manage all your school cash flow efficiently</h4>
-
             <p><small>Login and gain access</small></p>
-
-            <form action="action_page.php" method="post" id="form_login">
-
-                <div id="form_container">
-
+            {% if messages %}
+            <ul class="messages" style="text-align: center;">
+                {% for message in messages %}
+                    <p style="font-size: 20px; color: red; margin-top: 20px;">{{ message }}</p>
+                {% endfor %}
+            </ul>
+        {% endif %}
+            <form action="{% url 'login' %}" method="POST" id="form_login">
+                {% csrf_token %}
+                <!-- <div id="form_container">
                   <label for="username">Enter User Name/Email</label>
-                  <input type="text" placeholder="Enter school email" name="username" required><br>
+                  <input class="form-control" type="text" placeholder="Enter school email" name="username" required><br>
 
                   <label for="password">Password</label>
-                  <input type="password" placeholder="Enter password" name="password" required>
+                  <input class="form-control" type="password" placeholder="Enter password" name="password" required> -->
+                {{ form.as_p }}
+                <label class="remember">
+                <input class="unchecked" type="checkbox" unchecked="checked" name="remember"> Remember me
+                </label>
 
-                  <label class="remember">
-                    <input class="unchecked" type="checkbox" unchecked="checked" name="remember"> Remember me
-                  </label>
+                <span class="forgotPassword red">Forgot password?</span><br>
 
-                  <span class="forgotPassword red">Forgot password?</span><br>
+                <button type="submit" class="login">Log in</button>
 
-                  <button type="submit" class="login">Log in</button>
+                <span class="noAccount">Dont have an account?</span>
 
-                  <span class="noAccount">Dont have an account?</span>
-
-                  <button type="submit" class="account">Create account</button>
-
-                </div>
-
+                <button type="submit" class="account">Create account</button>
+                <!-- </div> -->
             </form>
         </div>
 

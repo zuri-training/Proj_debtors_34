@@ -42,27 +42,56 @@
                 <div class = "heading">Begin Registration</div>
                 <h2>Manage all your school cash flow efficiently</h2>
                 <p class = "p1">Input the verification code sent to your email then proceed</p>
-                <form>
                 <div id="email_div" class="card-details">
                     <div id="sent_text_div"></div>
-                    <form action="">
-                      <spam class = "details">School email:</spam><br>
-                      <div class="card-1">
-                        <input type="text" name="email" id="email" style ="height:30px" placeholder="Enter school email">
-                        <button style="font-family: 'Open Sans';" onclick="ajax_send_otp()" type="button" class="button1">Get code</button>
-                    </div>
-                    <div class="card-2">
+                    <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                      <span class = "details">School email:</span><br>
+                        <div class="card-1">
+                            <input type="text" name="email" id="email" style ="height:30px" placeholder="Enter school email">
+                            <button style="font-family: 'Open Sans';" onclick="ajax_send_otp()" type="button" class="button1">Get code</button>
+                        </div>
                         <spam class = "details">Verification Code:</spam><br>
                         <div id="verify_text_div"></div>
-                        <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code">
-                    </div>
-                    </form>
+                        <div class="card-1">
+                            <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code">
+                            <button onclick="verify_otp()" type ="button" class="button1">Verify</button>
+                        </div>
+                        <div class="show-div">Show more</div>
+                
+                        <div class="form-group" style="display: none;">
                     
+                        <label for="">School Name:</label>
+                        <input class="form-control" type="text" name="name" placeholder="School name" required><br>
+                
+                        <label for="">School Administrator's Name:</label>
+                        <input class="form-control" type="text" name="admin_name" placeholder="School admin name" required><br>
+                
+                        <label for="">School Address:</label>
+                        <input class="form-control" type="text" name="address" placeholder="Schooladdress" required><br>
+                
+                        <label for="">Phone Number:</label>
+                        <input class="form-control" type="number" name="number" placeholder="school phone number" required><br>
+                
+                        <label for="">Zip code:</label>
+                        <input class="form-control" type="number" name="zip_code" placeholder="zip code" required><br>
+                
+                        <label for="">C.A.C Code:</label>
+                        <input class="form-control" type="number" name="code" placeholder="valid C.A.C code" required><br>
+                
+                        <label for="">School Image:</label>
+                        <input class="form-control" type="file" name="photo" required><br>
+                
+                        <label for="">School Cerificate of Approval:</label>
+                        <input class="form-control" type="file" name="certificate_img" required><br>
+                
+                        <button class="btn btn-danger" type="submit">Submit</button>
+                    </form>   
+                    </form> 
                 </div>
                 <div class = "content">
-                <button onclick="verify_otp()" type ="button"class ="button2"><a href="{% url 'register' %}" style="text-decoration: none; color: white; font-family: 'Open Sans';">Next</a></button>
                 </div>
-                </form>    
+                
             </div>
         </section>
     </div>
@@ -184,19 +213,37 @@
     }
     );
     }
-   function verify_otp(){
-       var user_otp=document.getElementById("otp").value;
-       if (user_otp==otp_from_back){
-           document.getElementById("verify_text_div").style.color="green";            
-           document.getElementById("verify_text_div").innerHTML="OTP Verified";
+    function verify_otp(){
+        var user_otp=document.getElementById("otp").value;
+        if (user_otp==otp_from_back){
+            document.getElementById("verify_text_div").style.color="green";            
+            document.getElementById("verify_text_div").innerHTML="OTP Verified";
         //    document.getElementById("otp_div").style.display="none";
         //    document.getElementById("form_div").style.display="block";
-       }
-       else{
+        }
+        else{
            document.getElementById("verify_text_div").style.color="red";
            document.getElementById("verify_text_div").innerHTML="Try Again!!";
-       }
-   } 
+        }
+        return false;
+    } 
 
+    $(document).ready(function(){
+        $('.show-div').click(function(){
+            $('.form-group').show();
+            $(this).hide();
+        });
+    });
+
+    // let btns = document.getElementById('#show_btn')
+    // let divs = document.querySelector('form-group')
+
+    // btns.addEventListener('ckick', () =>{
+    //     if(divs.style.display === 'none'){
+    //         divs.style.display == 'block';
+    //     }else{
+    //         divs.style.display == 'none';
+    //     }
+    // })
 </script>
 </html>

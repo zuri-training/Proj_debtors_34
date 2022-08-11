@@ -170,7 +170,6 @@ font-weight: 600;
 font-weight: 600;
 font-size: 30px;
 line-height: 33px;
-margin-top: 0px;
 }
 
 .red{
@@ -181,9 +180,9 @@ color: #9d0208;
 color: #03071e;
 }
 
-#form_login{
-margin-top: 4em;
-}
+/* #form_login{
+margin-top: 1em;
+} */
 
 input[type="text"], input[type="password"]{
 width: 100%;
@@ -532,35 +531,35 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 3px;
-}
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 3px;
+    }
 
-#leftLinks{
-    padding: 1em;
+    #leftLinks{
+        padding: 1em;
 
-}
+    }
 
-span.noAccount{
-    margin-left: 10em;
-    font-size: 15px;
-}
+    span.noAccount{
+        margin-left: 10em;
+        font-size: 15px;
+    }
 
-.forgotPassword{
-    margin-left: .5em;
-    font-size: 15px;
-}
+    .forgotPassword{
+        margin-left: .5em;
+        font-size: 15px;
+    }
 
 }
   
 @media screen and (max-width: 500px) {
 
 #topnav {
-overflow: hidden;
-background-color: hsla(230, 81%, 6%, 50%);
-position: relative;
+    overflow: hidden;
+    background-color: hsla(230, 81%, 6%, 50%);
+    position: relative;
 }
 
 #topnav #myLinks {

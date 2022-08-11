@@ -1,21 +1,28 @@
-import email
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.mail import send_mail
 import math, random
-from .models import SchoolModel, SchoolEmail, CustomSchoolUser
+from django.contrib.auth import logout
+from .models import SchoolModel, CustomSchoolUser
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib import messages
+from .forms import UserLoginForm
+from django.urls import reverse_lazy, reverse
+from django.contrib.auth import views as auth_views
+from django.views.generic import ListView
+from apps.post.models import Post
+
 # Create your views here.
 
 # from django.contrib.auth import login
 # from django.shortcuts import redirect, render
 # from django.urls import reverse
 # from .forms import CustomUserCreationForm
+        
 
 # ****************** OTP *******************************
-def VerifyEmailView(request):
-    return render(request, 'authentication/register1.html')
+# def VerifyEmailView(request):
+#     return render(request, 'authentication/register1.html')
 
 def generateOTP() :
      digits = "0123456789"
@@ -25,9 +32,8 @@ def generateOTP() :
      return OTP
 
 def send_otp(request):
-    emails = SchoolEmail()
-    emails.email = request.POST['email']
-    emails.save()
+    email = request.POST['email']
+    # email.save()
     # print(email)
     o=generateOTP()
     htmlgen = '<p>Hellp, Your OTP is <strong>o</strong></p>'
@@ -39,8 +45,7 @@ def send_otp(request):
 def verify(request):
     if request.method == "POST":
         school = SchoolModel()
-        emails = SchoolEmail()
-        email = emails.email
+        school.email = request.POST.get('email')
         school.school_name = request.POST.get('name')
         school.administrator_name = request.POST.get('admin_name')
         school.address = request.POST.get('address')
@@ -54,30 +59,61 @@ def verify(request):
 
         school.save()
 
-        # email = sch_email.email
-        # username = school.school_name
         password = BaseUserManager().make_random_password()
-
-        new_school_user = CustomSchoolUser(email=email, password=password)
+        print(password)
+        # zL9PcJFffq blueivy
+        # feraRh4NgN greeengarden
+        email = school.email
+        new_school_user = CustomSchoolUser.objects.create_user(email=email, password=password)
         new_school_user.save()
-        return redirect("authentication/login.html")
+        return redirect("reg_success")
         # return redirect("common/success.html")
-    return render(request, "authentication/register2.html")
+    return render(request, "authentication/register1.html")
+
+def reg_success(request):
+    return render(request, "authentication/reg_success.html")
 
 def waiting_view(request):
     return HttpResponse("Details successfully submitted, An email will be sent to you 24hours after verification of your details")
-
-# def dashboard(request):
-#     return render(request, "users/dashboard.html")
 
 def StudentContend(request):
     return render(request, 'contend/student_contend.html')
 
 
-def login(request):
-   return render(request, 'authentication/login.html')
+class LoginView(auth_views.LoginView):
+    template_name = 'authentication/login.html'
+    success_url = reverse_lazy('dashboard')
 
-def dashboard(request):
-    return render(request, 'authentication/dashboard.html')
+# def LoginView(request):
+#     context = {}
+#     if request.method == 'POST':
+#         # form = UserLoginForm(request.POST)
+#         email = request.POST.get('email')
+#         password = request.POST.get('password')
+        
+#         # if form.is_valid():
+#         #     email = request.POST['email']
+#         #     password = request.POST['password']
+
+#         user = authenticate(email=email, password=password)
+
+#         if user is not None:
+#             login(request, user)
+#             return redirect("dashboard")
+#         else:
+#             messages.warning(request, 'Invalid credentials. Please try again.')
+
+#         # else:
+#         #     form = UserLoginForm()
+#         #     context = {'form' : form }
+#     return render(request, 'authentication/login.html', context)
+
+# def LogoutView(request):
+#     return redirect("homepage")
+
+def DashboardView(request):
+    posts = Post.objects.all()
+
+    return render(request, 'authentication/dashboard.html', {'posts': posts})
 
 
