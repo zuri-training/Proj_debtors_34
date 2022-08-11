@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'apps.common',
 
     # Third party apps
+    'formtools',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -140,6 +142,11 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR/'static'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
 
 
 # Default primary key field type

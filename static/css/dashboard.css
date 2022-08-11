@@ -4,6 +4,7 @@
     font-size: 25px;
     font-family: sans-serif;
     box-sizing: border-box;
+    font-size: 20px;
 }
 body{
     overflow-x: hidden;
@@ -16,7 +17,7 @@ body{
 }
 .sidebar{
     position: fixed;
-    width: 307px;
+    width: 280px;
     height: 100%;
     left: 0px;
     top: 0px;
@@ -32,7 +33,7 @@ body{
     left: 82px;
     top: 40px;
 }
-/* .items{
+.items{
     position: absolute;
     width: 307px;
     height: 220px;
@@ -45,7 +46,7 @@ body{
     align-items: flex-start;
     padding: 5px;
     gap: 14px;
-} */
+}
 .items{
     position: relative;
     width: 307px;
@@ -84,7 +85,6 @@ body{
     padding: 4px;
     gap: 8px;
     position: absolute;
-    width: 120px;
     height: 38px;
     left: 58px;
     top: 90%;
@@ -97,22 +97,26 @@ body{
     color: rgb(5, 5, 5);
     display: flex;
     align-items: center;
+    font-size: 15px;
 }
-/* .sidebar-image{
+.log ul li a img{
+    width: 20px;
+}
+.sidebar-image{
     position: absolute;
     left: 12.5%;
     right: 12.5%;
     top: 12.5%;
     bottom: 12.5%;
    
-} */
+}
 .log ul li a:hover{
     background-color: rgb(219, 24, 24);
     color: white;
 }
 
 /* styling for topbar */
-/* .topbar {
+.topbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,6 +139,9 @@ body{
     display: flex;
     width: 300px;
     border-radius: 8px;
+    background: #F8F8F8;
+    padding: 10px;
+    width: 60%;
 }
 .search {
     border: none;
@@ -145,14 +152,19 @@ body{
     outline: 0;
     background: #F8F8F8;
 }
+.message-icon{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 30px;
+}
 .user{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 16px;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    left: 410px;
 }
 .user .message-icon{
     flex: none;
@@ -174,14 +186,13 @@ body{
 }
 .add-school {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     padding: 0px;
     gap: 20px;
     position: absolute;
     width: 900px;
     height: 78px;
-    left: 290px;
+    left: 300px;
     top: 100px;
 }
 .add-school .school-name{
@@ -194,6 +205,19 @@ body{
     width: 70px;
     height: 40px;
     background-color: #ffff;
+}
+.add-school .school-input{
+    background-color: rgb(202, 0, 0);
+    max-width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 1000px;
+    bottom: 40px;
+    text-align: center;
+}
+.add-school .school-input li a{
+    color: white;
 }
 .add-school ul li {
     width: 100%;
@@ -214,4 +238,68 @@ body{
 .add-school ul li a:hover{
     background-color: rgb(219, 24, 24);
     color: white;
-} */ 
+}
+
+.list{
+    display: flex;
+    position: absolute;
+    top: 270px;
+    left: 300px;
+    align-items: center;
+}
+
+.filter{
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.filter input, .filter select{
+    width: 250px;
+    border: none;
+    background-color: rgb(235, 232, 232);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.heading{
+    display: flex;
+    gap: 3em;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+}
+
+.students{
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 300px;
+}
+
+.student-list a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgb(202, 202, 202);
+}
+
+.student-list .active{
+    color: red;
+}
+.student-list .active hr{
+    width: 10px;
+}
+
+thead td{
+    font-size: 17px;
+    color: rgb(202, 202, 202);
+}
+
+tr td{
+    padding: 27px;
+    font-size: 18px;
+}
