@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  'Open Sans'sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.main-container    {
+    position: relative;
+    width: 1728px;
+    height: 950px;
+    background: #ffff;
+}
+.image{
+    position: absolute;
+    width: 144px;
+    height: 44px;
+    left: 82px;
+    top: 40px;
+}
+.sidebar{
+    position: fixed;
+    width: 307px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #ffff;
+    box-shadow: 2px 0px 45px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    z-index: 2;
+}
+.items{
+    position: absolute;
+    width: 307px;
+    height: 220px;
+    padding: 0px;
+    gap: 14px;
+    left: 0px;
+    top: 164px;
+}
+.items ul li {
+    width: 100%;
+    list-style: none;
+}
+.items ul li a{
+    width: 100%;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Open Sans';
+    color: rgb(165, 165, 164);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 8px 4px 8px 58px;
+    gap: 8px;
+}
+.items ul li a .active{
+    background-color: #9D0208;
+    width: 100%;
+    color: white; 
+}
+.items ul li a:hover{
+    background-color: #9D0208;
+    width: 100%;
+    color: white;
+    /* filter: drop-shadow(#000) */
+}
+.log {
+    position: absolute;
+    width: 120px;
+    height: 38px;
+    left: 58px;
+    top: 90%;
+}
+.log ul li {
+    width: 100%;
+    list-style: none;
+}
+.log ul li a{
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+    color: #D00000;
+    font-size: 22px;
+}
+.log ul li a img::after{
+    color: #D00000;
+}
+.container-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 56px;
+    position: absolute;
+    width: 900px;
+    height: auto;
+    left: 332px;
+    top: 40px;
+}
+.topbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+    position: absolute;
+    width: 900px;
+    height: 78px;
+}
+.people-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 17px;
+    color: #000000;
+    width: 270px;
+    height: 33px;
+    font-weight: 600;
+    line-height: 33px;
+}
+.search-bar{
+    position: relative;
+    display: flex;
+    width: 300px;
+    gap: 8px;
+    height: 33px;
+    border-radius: 8px;
+}
+.search {
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 23px 2px 30px;
+    /* padding: 12px 20px; */
+    outline: 0;
+    background: #F8F8F8;
+}
+.search-icon {
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    width: 14.58px;
+  }
+
+.search:hover, .search:focus {
+    border: 1px solid #F8F8F8;
+    background-color: white;
+}
+.user{
+    display: flex;;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 256px;
+    height: 78px;
+    
+}
+.comment-session{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 48px;
+    width: 900px;
+    height: 945px;
+    margin-top: 120px;
+        
+}
+.comment-box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    padding: 0px;
+    gap: 40px;
+    width: 900px;
+    height: 276.72px;
+}
+.chat-box{
+    box-sizing: border-box;
+    width: 257.57px;
+    height: 276.72px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 4px solid #9D0208;
+    border-radius: 7.66009px;
+}
+.chat-box:hover{
+    border: 4px solid #ffff;
+    transition: 0.6s;
+}
+
+/*********************** styling for profile picture ************************/
+.profile{
+    display: flex;
+}
+.profile img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px;
+}
+.profile .profile-names{
+    width: 150px;
+    height: 50px;
+    font-size: 11px;
+    font-family: 'Open Sans'sans-serif;
+    margin-top: 10px;
+}
+
+/*********************** styling for main content and image ************************/
+.add-page{
+    width: 220px;
+    height: 150px;
+    margin-left: 80px;
+}
+.add-page img{
+    width: 130px;
+    height: 130px;
+}
+.add-page p{
+    font-size: 11px;
+}
+
+/*********************** ending of styling the inside content ************************/
+.chat-box-main {
+    position: absolute;
+    width: 238.42px;
+    height: 209.69px;
+    left: 9.57px;
+    margin-top: 5px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+}
+.chat-box-input button img{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 197.5px;
+    top: 7px;
+}
+.chat-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 172.34px;
+    height: 37.34px;
+    left: 15.43px;
+    top: 7.51px;
+}
+/*************************  ***********************/
+.chat-box-2{
+    width: 257.57px;
+    height: 276.72px;
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF;
+    border: 4px solid #9D0208;
+    border-radius: 7.66009px;
+}
+.chat-box-2:hover{
+    border: 4px solid #ffff;
+    transition: 0.6s;
+}
+.chat-box-input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 9.59039px;
+    gap: 6.85px;
+    isolation: isolate;
+    position: relative;
+    width: 235.55px;
+    height: 34.47px;
+    left: 10.63px;
+    top: 232.2px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+    
+    
+}
+.chat-box-input input{
+    border: none;
+    width: 100%;
+    outline: none;
+    align-items: center;
+    font-size: 10.9604px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.chat-box-input button {
+    background: none;
+	color: inherit;
+	border: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.box-2{
+    /* position: absolute; */
+    width: 238.42px;
+    height: 209.69px;
+    margin-left: 3px;
+    margin-top: 5px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+}
+
+.box-2-input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 9.59039px;
+    gap: 6.85px;
+    isolation: isolate;
+    position: relative;
+    width: 235.55px;
+    height: 34.47px;
+    margin-left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+}
+.box-2-input input{
+    border: none;
+    width: 100%;
+    outline: none;
+    align-items: center;
+    font-size: 10.9604px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.box-2-input button {
+    background: none;
+	color: inherit;
+	border: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.box-2-input button img{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 197.5px;
+    top: 7px;
+}
+.chat-main-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 189.34px;
+    height: 37.34px;
+    left: 34.43px;
+    top: 114.51px;
+}
+
+
+.chat-box-3{
+    width: 257.57px;
+    height: 276.72px;
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF;
+    border: 4px solid #9D0208;
+    border-radius: 7.66009px;
+}
+.chat-box-3:hover{
+    border: 4px solid #ffff;
+    transition: 0.6s;
+}
+.box-3{
+    /* position: absolute; */
+    width: 238.42px;
+    height: 209.69px;
+    margin-left: 3px;
+    margin-top: 5px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+}
+
+.box-3-input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 9.59039px;
+    gap: 6.85px;
+    isolation: isolate;
+    position: relative;
+    width: 235.55px;
+    height: 34.47px;
+    margin-left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7.66009px;
+}
+.box-3-input input{
+    border: none;
+    width: 100%;
+    outline: none;
+    align-items: center;
+    font-size: 10.9604px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.box-3-input button {
+    background: none;
+	color: inherit;
+	border: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.box-3-input button img{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 197.5px;
+    top: 7px;
+}
