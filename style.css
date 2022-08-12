@@ -17,7 +17,6 @@ nav {
   padding-left: 5%;
   padding-right: 5%;
   background-image: url(about-us-bg-image.png);
-  height:150px;
 }
 .logo {
   font-size: 15px;
@@ -49,6 +48,11 @@ button:hover {
   background-color: red;
   color: white;
   cursor: pointer;
+}
+.icon{
+  align-items: center;
+  padding-left: 40%;
+  background-image: url(about-us-bg-image.png);
 }
 .content{
   font-size: 13px;
@@ -90,6 +94,9 @@ button:hover {
   }
   .content ol{
     padding-left:2%;
+  }
+  .icon{
+    padding-left: 35%;
   }
 }
   
