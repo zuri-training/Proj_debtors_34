@@ -31,7 +31,15 @@
         </div>
         <div class="topbar">
             <div class="search-bar" id="search-id"><img src="{% static 'images/dashboard/search.svg' %}" alt="search-bar" class="search-icon">
-                <input type="text"  class="search" id="search-text" placeholder="Search nearby schools">  
+                
+                <!-- CREATED A FORM FOR USER TO PERFORM THEIR SEARCH -->
+                <form action="{% url 'search_students' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text"  class="search" id="search-text" placeholder="Search Students" name="searched">  
+                <!-- CREATED A BUTTON FOR THE SEARCH BAR -->
+                    <button type="submit">search</button>
+                </form>
+
             </div>
             <div class="user">
                 <img src="{% static 'images/dashboard/message.svg' %}" alt="message-icon" class="message-icon" style="width: 40px; margin: 5px; padding: 10px;">
@@ -108,7 +116,7 @@
                         <td class="student-id">{{ post.Student_id }}</td>
                         <td class="email">{{ post.Email }}</td>
                         <td class="debt">#{{ post.Debt }}</td>
-                        <td class="amount-paid">#{{ post.AmoutntPaid }}</td>
+                        <td class="amount-paid">#{{ post.AmountPaid }}</td>
                         <td class="active">{{ post.status }}</td>
                         <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
                     </tr>
