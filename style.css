@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+main{
+  width:100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url(about-us-bg-image.png);
+}
+.logo {
+  font-size: 15px;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px 20px;
+  padding-top: 5px;
+}
+nav ul li a {
+  color: rgb(19, 18, 18);
+  font-weight: bold;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: rgb(145, 30, 30);
+}
+nav button {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 50px;
+  border-color: red;
+  font-weight: bold;
+  font-size: 14px;
+  border-width: 1px;
+}
+button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.icon{
+  align-items: center;
+  padding-left: 40%;
+  background-image: url(about-us-bg-image.png);
+}
+.content{
+  font-size: 13px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top:40px;
+}
+.content ol{
+  padding-left:1%;
+  padding-right: 1%;
+}
+@media only screen and (max-width:700px){
+  body {
+    width: 100%;
+    align-items: center;
+  }
+  nav {
+    padding-top: 5px;
+    padding-left: 2%;
+    padding-right: 1%;
+  }
+  .logo {
+    font-size: 10px;
+  }
+  nav ul li {
+    padding: 3px 3px;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  nav button {
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+  .content{
+    font-size: 11px;
+    padding-top:40px;
+  }
+  .content ol{
+    padding-left:2%;
+  }
+  .icon{
+    padding-left: 35%;
+  }
+}
+  
+
