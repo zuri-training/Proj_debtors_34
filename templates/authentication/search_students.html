@@ -29,18 +29,16 @@
                 <ul><li><a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon">Log out</a></li></ul>
             </div>
         </div>
-        <div class="topbar">
+        <!-- <div class="topbar">
             <div class="search-bar" id="search-id"><img src="{% static 'images/dashboard/search.svg' %}" alt="search-bar" class="search-icon">
-                
-                <!-- CREATED A FORM FOR USER TO PERFORM THEIR SEARCH -->
-                <form action="{% url 'search_students' %}" method="POST">
+
+                <form action="{ url 'search_students' }" method="POST">
                     {% csrf_token %}
-                    <input type="text"  class="search" id="search-text" placeholder="Search Students" name="searched">  
-                <!-- CREATED A BUTTON FOR THE SEARCH BAR -->
+                    <input type="text"  class="search" id="search-text" placeholder="Search nearby schools">
                     <button type="submit">search</button>
                 </form>
 
-            </div>
+            </div> -->
             <div class="user">
                 <img src="{% static 'images/dashboard/message.svg' %}" alt="message-icon" class="message-icon" style="width: 40px; margin: 5px; padding: 10px;">
                 <img src="{% static 'images/dashboard/notification.svg' %}" alt="message-icon" class="message-icon" style="width: 40px; margin: 5px; padding: 10px;">
@@ -109,19 +107,20 @@
                     <td>EDIT</td>
                 </thead>
                 <tbody>
-                    {% for post in posts %}
-                    {% if post.author == user.id %}
+                    {% if searched %}
+                        {% for student in students %}
+                            <!-- {{ student }} -->
                     <tr class="active-student">
-                        <td class="name">{{ post.name }}</td>
-                        <td class="student-id">{{ post.Student_id }}</td>
-                        <td class="email">{{ post.Email }}</td>
-                        <td class="debt">#{{ post.Debt }}</td>
-                        <td class="amount-paid">#{{ post.AmountPaid }}</td>
-                        <td class="active">{{ post.status }}</td>
+                        <td class="name">{{ student.name }}</td>
+                        <td class="student-id">{{ student.Student_id }}</td>
+                        <td class="email">{{ student.Email }}</td>
+                        <td class="debt">#{{ student.Debt }}</td>
+                        <td class="amount-paid">#{{ student.AmountPaid }}</td>
+                        <td class="active">{{ student.status }}</td>
                         <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
                     </tr>
+                    {% endfor %}      
                     {% endif %}
-                    {% endfor %}
                     <!-- <tr class="pending-student">
                         <td class="name">Brooklyn Simmons</td>
                         <td class="student-id">GIC123456789</td>
