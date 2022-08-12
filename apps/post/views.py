@@ -6,11 +6,11 @@ import math, random
 # Create your views here.
 
 def generate_id() :
-     digits = "0123456789"
-     ID = ""
-     for i in range(4) :
+    digits = "0123456789"
+    ID = ""
+    for i in range(4) :
          ID += digits[math.floor(random.random() * 10)]
-     return 'STD' + ID
+    return 'STD' + ID
 
 def AddDebtorView(request):
     if request.method == 'POST':

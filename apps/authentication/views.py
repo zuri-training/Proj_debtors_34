@@ -116,4 +116,11 @@ def DashboardView(request):
 
     return render(request, 'authentication/dashboard.html', {'posts': posts})
 
+def search_students(request):
+    if request.method == "POST":
+        searched = request.POST['searched']    
+        students = Post.objects.filter(name__contains=searched)
+        return render(request, "authentication/search_students.html", {'searched':searched, 'students':students})
 
+    else:
+        return render(request, "authentication/search_students.html", {})
