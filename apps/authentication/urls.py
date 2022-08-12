@@ -12,4 +12,5 @@ urlpatterns = [
     # path('logout/', views.LogoutView, name="logout"),
     path('student-contend/', views.StudentContend, name="StudentContend"),
     path('dashboard/', views.DashboardView, name="dashboard"),
+    path('search_students/', views.search_students, name="search_students"),
 ]
