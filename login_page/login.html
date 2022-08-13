@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>  
+</head>
+<body>
+
+    <header>
+
+        <div id="navbar">
+    
+            <nav id="topnav">
+    
+                <div id="myLinks">
+    
+                   <div id="leftLinks">
+
+                        <div id="logo">
+
+                            <h1><img src="login_images/debtors-logo.svg" alt="logo"></h1>
+                            
+                        </div>
+
+                        <ul>
+        
+                            <li><a class="home" href="#home">Home</a></li>                    
+        
+                            <li><a class="about" href="#about">About us</a></li>
+        
+                        </ul>      
+
+                   </div> 
+
+                   <div id="rightLinks">
+
+                    <ul>
+    
+                        <li><a class="faqs" href="#faqs">FAQs</a></li>
+    
+                        <li><a class="contact" href="#contact">Contact us</a></li>
+    
+                        <li><a class="active" href="#sign">Sign up</a></li>
+    
+                        <li><a class="contend" href="#contend">Contend</a></li>
+    
+                    </ul>      
+
+                   </div>
+    
+                </div>
+    
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="menu">
+                
+                    <i class="fa fa-bars"></i>
+    
+                </a>
+    
+            </nav>
+
+        </div>
+            
+    </header>
+
+    <main>
+        
+        <div id="info">
+
+            <p class="first_info">Log in to get started and upload your school's debtors list or view other schools' debtors lists and have access to our post and comment section.</p>
+
+            <p><img src="login_images/login-background.png" alt="a female on a suit"></p>
+
+        </div>
+
+        <div id="form">
+
+            <h2 class="red">Log in</h2>
+
+            <h4>Manage all your school cash flow efficiently</h4>
+
+            <p><small>Login and gain access</small></p>
+
+            <form action="action_page.php" method="post" id="form_login">
+              
+                <div id="form_container">
+
+                  <label for="username">Enter User Name/Email</label>
+                  <input type="text" placeholder="Enter school email" name="username" required><br>
+              
+                  <label for="password">Password</label>
+                  <input type="password" placeholder="Enter password" name="password" required>
+
+                  <label class="remember">
+                    <input class="unchecked" type="checkbox" unchecked="checked" name="remember"> Remember me
+                  </label>
+
+                  <span class="forgotPassword red">Forgot password?</span><br>
+              
+                  <button type="submit" class="login">Log in</button>
+
+                  <span class="noAccount">Dont have an account?</span>
+
+                  <button type="submit" class="account">Create account</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        
+        <div id="last_info">
+
+            <div id="about_site">
+
+                <div id="site_info">
+
+                    <div id="more_info">
+        
+                        <h2><img src="login_images/debtors-logo.svg" alt="logo"></h2>
+        
+                        <p>
+        
+                            My Debtors is a searchable database for 
+                            schools to locate or contact their debtors. 
+                            We serve as middlemen between the schools 
+                            and the owing students.
+        
+                        </p>
+        
+                    </div>
+        
+                    <div id="contact_us">
+            
+                        <div id="contact_now">
+
+                            <h2>Contact us</h2>
+                            <p>You can contact us via email</p>
+
+                        </div>
+            
+                        <div>
+
+                            <label for="email" form="form_login">
+                
+                                <input type="email" placeholder="Enter email" name="email">
+                                <button type="submit">Subscribe</button>
+                                
+                            </label>
+                    
+                        </div>
+
+                    </div>
+
+                </div>
+    
+                <div id="links">
+    
+                    <div id="pages">
+    
+                        <h2>Pages</h2>
+            
+                        <ul>
+        
+                            <li><a class="home" href="#home">Home</a></li>
+                
+                            <li><a class="about" href="#about">About us</a></li>
+                
+                            <li><a class="faqs" href="#faqs">FAQs</a></li>
+                
+                            <li><a class="post" href="#post">Post?Comment</a></li>
+                
+                            <li><a class="reg" href="#registration">Registration</a></li>
+                
+                            <li><a class="list" href="#debtorsList">Debtors list</a></li>
+                
+                            <li><a class="profile" href="#debtorsProfile">Debtors profile</a></li>
+        
+                        </ul>
+            
+                    </div>
+            
+                    <div id="services">
+            
+                        <h2>Services</h2>
+            
+                        <ul>
+            
+                            <li><a href="#">Notify Debtors</a></li>
+            
+                            <li><a href="#">Help Schools Track Their Debtors</a></li>
+            
+                            <li><a href="#">Access To View Other Schools Debtors List</a></li>
+            
+                            <li><a href="#">Debtors Can Contend</a></li>
+            
+                            <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
+            
+                        </ul>
+                                
+                    </div>
+             
+                    <div id="resources">
+            
+                        <h2>Resources</h2>
+            
+                        <ul>
+            
+                            <li><a href="#">Figma</a></li>
+            
+                            <li><a href="#">HTML</a></li>
+            
+                            <li><a href="#">CSS</a></li>
+            
+                            <li><a href="#">Javascript</a></li>
+                            
+                            <li><a href="#">Python</a></li>
+            
+                        </ul>
+    
+                    </div>
+    
+                </div>
+                
+            </div>
+            
+            <div id="policy">
+    
+                <p class="rights">&copy; 2022 All Rights Reserved.</p>
+    
+                <a href="#">Privacy | </a>
+                <a href="#"> Terms & Conditions | </a>
+                <a href="#"> Disclaimer</a>
+    
+            </div>
+
+        </div>
+
+    </footer>
+        
+</body>
+</html>

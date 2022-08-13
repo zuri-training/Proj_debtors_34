@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-style: normal;
+  }
+  
+  html{
+    font-size: 1rem;
+  }
+
+  header{
+    background-image: url(terms_images/Rectangle\ 16.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  header{
+    display: flex;
+  }
+  
+  header h1{
+    margin: .5em 2em .5em 1em;
+  }
+  
+  nav{
+    width: 90%;
+  }
+  
+  nav#myLinks ul{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 0;
+    padding-top: 1.5em;
+  }
+  
+  nav#myLinks li{
+    width: max-content;
+    list-style: none;
+    margin: .2em;
+    margin-left: auto;
+  }
+  
+  nav#myLinks a{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  header a.icon{
+    position: relative;
+    right: 1em;
+    top: 1.5em;
+    margin-left: auto;
+  }
+
+  h2#arrow{
+    margin: 3.5em 3em .5em -18em;
+  }
+
+  h2#arrow-text{
+    position: relative;
+    right: 7em;
+    top: 5em;
+  }
+
+  main{
+    padding: 1em 1em 1em 2em;
+  }
+
+  .terms{
+    margin-top: 1em;
+    font-size: small;
+  }
+
+  .lastTerm{
+    margin-bottom: 3em;
+  }
+  
+  @media screen and (min-width: 680px) {
+  
+    header h1 img{
+      padding: 0;
+      width: 70px;
+      margin: 0.7em -2em 0 -.5em;
+    }
+  
+    header a.icon{
+      visibility: hidden;
+    }
+  
+    nav{
+      display: inline;
+    }
+  
+    nav#myLinks ul{
+      flex-direction: initial;
+    }
+  
+    nav#myLinks li{
+      margin: -0.7em 0 1em 2em;
+    }
+  
+    .redNav{
+      color: #9d0208 !important;
+    }
+  
+    .greyNav{
+      color: hsla(230, 81%, 6%, 50%) !important;
+    }
+  
+    .border{
+      border: 1px solid #9d0208;
+      border-radius: 8px;
+      padding: .2em 1em;
+    }
+
+    .bg-red{
+      background-color: #9d0208;
+      color: hsla(230, 81%, 6%, 50%);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    nav#myLinks li{
+      margin: -0.7em 0 1em 3em;
+    }
+  }
+    
+  @media screen and (min-width: 1024px) {
+    nav#myLinks li{
+      margin: -0.7em 0 1em 5em;
+    }
+  
+    h2#arrow{
+      margin: 3.5em 3em .5em -24em;
+    }    
+  }
+  
+  @media screen and (min-width: 1440px) {
+    nav#myLinks li{
+      margin: -0.7em 0 1em 8.5em;
+    }
+
+    h2#arrow{
+      margin: 3.5em 3em .5em -31em;
+    }
+  }
