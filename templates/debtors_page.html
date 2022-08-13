@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/debtors_page.css" />
+
+    <title>Debtors Page</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="img">
+        <img src="/images/Debtors-image.png" alt="My_debtors image" />
+      </div>
+
+      <div class="data_collection">
+        <h1>Hello! Input Your Details</h1>
+
+        <form>
+          <div class="top">
+            <label for="fname">Enter Name</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Student full name"1
+              required
+            /><br />
+            <label for="ID">Enter ID</label><br />
+            <input
+              type="text"
+              id="contend_id"
+              name="contend_id"
+              placeholder="Contend ID"
+              required
+            /><br />
+            <label for="email">Enter Email</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            /><br />
+            <label for="number">Phone Number</label><br />
+            <input
+              type="text"
+              id="number"
+              name="number"
+              placeholder="Phone number"
+              required
+            /><br />
+          </div>
+
+          <div>
+            <p>Who is Contending?</p>
+            <input type="radio" id="Student " name="student" value="student" />
+            <label for="student">Student</label><br />
+            <input type="radio" id="Guardian" name="Guardian" />
+            <label for="Guardian">Guardian</label><br />
+            <input type="radio" id="Sibling" name="sibling" />
+            <label for="Sibling">Sibling</label><br />
+            <input type="radio" id="Parent" name="Parent" />
+            <label for="Parent">Parent</label>
+          </div>
+
+          <div class="bottom">
+            <p>Contender Name</p>
+            <input
+              type="text"
+              id="cname"
+              name="cname"
+              placeholder="Full name of contender"
+              required
+            /><br />
+            </div>
+            <div class="link">
+            <a href="#">Confirm Details</a><br />
+            <a href="#"><button class="btn-1">Enter</button></a><br />
+            <a href="#"><button class="btn-2">Exit</button></a><br />
+          </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
