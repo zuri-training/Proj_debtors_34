@@ -74,119 +74,10 @@
     margin-top: 1em;
     font-size: small;
   }
-  
-  footer{
-    display: grid;
-    color: #fff;
-    width: 100%;
-    background-image: url(terms_images/footer-background-image.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  
-  div#more_info{
-    width: 90%;
-    border: thin solid gray;
-    border-radius: 10px;
-    padding: 1.5em;
-    font-size: 15px;
-    margin: 2em auto;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  div#more_info img{
-    width: 80px;
-    height: 20px;
-    position: relative;
-    left: -8px;
-  }
-  
-  div#links{
-    display: flex;
-    font-size: 7px;
-    width: 100%;
-    margin: auto;
-  }
-  
-  div#links li{
-    font-size: xx-small;
-    list-style: none;
-    margin: 1em 1em 1em 1.8em;
-    line-height: 6px;
-    padding: .2em;
-  }
-  
-  div#links h2{
-    margin-top: 3em;
-    margin-left: 1.5em;
-  }
-  
-  div#links h2, div#contact_us h2{
-    color: #ffba08;
-  }
-  
-  div#links li>a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  div#contact_us h2{
-    margin: 4em 16em .5em;
-    font-size: 10px;
-  }
-  
-  div#contact_us p{
-    text-align: center;
-    font-size: 8px;
-    margin-bottom: .3em;
-  }
-  
-  div#contact_us input{
-    width: 140px;
-    padding: .3em;
-    border-radius: 7px;
-    font-size: 10px;
-    color: #564a4a;
-    background-color: #c7bfbf;
-  }
-  
-  div#contact_us button{
-    width: 45px;
-    border-radius: 5px;
-    padding: .5em;
-    font-size: 5px;
-    margin-top: 1em;
-    margin-left: -10.1em;
-  }
 
-  .bg-red{
-    color: #fff;
-    background-color: #9d0208;
-    border: none;
+  .lastTerm{
+    margin-bottom: 3em;
   }
-    
-  div#trade-mark{
-    display: flex;
-    font-size: 8px;
-    background-color: #000;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
-  }
-  
-  p#rights{
-    margin-left: 2em;
-    margin-right: 10em;
-  }
-  
-  div#trade-mark a{
-    text-decoration: none;
-    margin-right: .3em;
-    color: #fff;
-  }
-  
   
   @media screen and (min-width: 680px) {
   
@@ -225,81 +116,19 @@
       border-radius: 8px;
       padding: .2em 1em;
     }
-    
-    div#more_info{
-      width: 35%;
-      padding: 1.5em;
-      margin: 2em;
-    }
-    
-    div#links{
-      width: 60%;
-      display: flex;
-      font-size: 9px;
-      width: 100%;
-      margin: -20em 20em 0 32em;
-    }
-    
-    div#links li{
-      margin: 1em 1em 2em 2em;
-    }
-    
-    div#contact_us h2{
-      margin: -3em 1em 1em 8em;
-      font-size: 15px;
-    }
-    
-    div#contact_us p{
-      margin: 1em 45em 1em 1em;
-      font-size: 9px;
-    }
-    
-    div#trade-mark{
-      margin-top: 3em;
-      padding: 4em;
-    }
-    
-    p#rights{
-      margin-right: 45em;
-    }
-    
-    div#trade-mark a{
-      text-decoration: none;
-      margin-right: .3em;
-      color: #fff;
+
+    .bg-red{
+      background-color: #9d0208;
+      color: hsla(230, 81%, 6%, 50%);
     }
   }
-  
-  
   
   @media screen and (min-width: 768px) {
     nav#myLinks li{
       margin: -0.7em 0 1em 3em;
     }
-  
-    div#more_info{
-      width: 32%;
-      margin: 2em 4em;
-    }
-    
-    div#links{
-      margin: -18em 20em 0 35em;
-    }
-    
-    div#links li{
-      margin: 3em 2em -1em 2em;
-    }
-    div#contact_us p{
-      margin: 1em 52em 1em 1em;
-      font-size: 9px;
-    }
-  
-    p#rights{
-      margin-left: 3em;
-      margin-right: 55em;
-    }
   }
-  
+    
   @media screen and (min-width: 1024px) {
     nav#myLinks li{
       margin: -0.7em 0 1em 5em;
@@ -307,38 +136,7 @@
   
     h2#arrow{
       margin: 3.5em 3em .5em -24em;
-    }
-  
-    div#more_info{
-      width: 33%;
-      margin: 2em 5em;
-    }
-  
-    div#links h2{
-      margin-left: 1.5em;
-    }
-    
-    div#links{
-      margin: -18em 20em 0 48em;
-    }
-    
-    div#links li{
-      margin: 3em 7em 2em 2em;
-    }
-    
-    div#contact_us h2{
-      margin: -3em 1em 1em 10em;
-      font-size: 20px;
-    }
-    
-    div#contact_us p{
-      margin: 1em 37em 1em 1em;
-      font-size: 15px;
-    }
-    
-    p#rights{
-      margin-right: 75em;
-    }
+    }    
   }
   
   @media screen and (min-width: 1440px) {
@@ -348,34 +146,5 @@
 
     h2#arrow{
       margin: 3.5em 3em .5em -31em;
-    }
-  
-  
-    div#more_info{
-      width: 35%;
-    }
-  
-    div#links h2{
-      margin-left: 5.5em;
-    }
-    
-    div#links{
-      margin: -18em 20em 0 68em;
-    }
-    
-    div#links li{
-      margin: 3em 7em 2em 8em;
-    }
-    
-    div#contact_us h2{
-      margin: -3em 1em 1em 15em;
-    }
-    
-    div#contact_us p{
-      margin: 1em 50em 1em 1em;
-    }
-    
-    p#rights{
-      margin-right: 115em;
     }
   }
