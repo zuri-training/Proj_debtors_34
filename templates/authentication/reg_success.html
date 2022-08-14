@@ -7,23 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/success.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <title>Success</title>
 </head>
 <body>
     <main>
-        <div class="cancel-area">
+        <!-- <div class="cancel-area">
             <img src="{% static 'images/error/Cancel.svg' %}" alt="cancel-image" class="cancel">
-        </div>
+        </div> -->
         <div class="successful">
             <p>Success! Your details has been successfully submitted.</p>
             <p>You'll get an email with your login details in less than 24hrs</p>
             <img src="{% static 'images/error/Ok.svg' %}" alt="check mark">
-        </div>
-        <div class="success-section">
-            <div class="success-message">
-                <p>Your Photo  was</p> 
-                <p>successfully uploded</p>
-            </div>
         </div>
         <div class="continue">
             <input type=button value="Continue" onClick="javascript:history.go(-1);">

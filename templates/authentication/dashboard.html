@@ -6,33 +6,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
     <title>Dashboard</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
+    <section class="body-1">
     <div class="main-container">
         <div class="sidebar">
             <div class="image">
                 <a href="#"><img src="{% static 'images/dashboard/logo.png' %}" alt="debtors-logo"></a>
-
             </div>
             <div class="items">
                 <ul>
-                    <li style="background-color: rgb(199, 0, 0);"><a href="#" class="active"><img src="{% static 'images/dashboard/Vector.svg' %}" alt="Dashboard-icon" class="item-image">Dashboard</a></li>
-                    <li><a href="./feed.html"><img src="{% static 'images/dashboard/News.svg' %}" alt="feed-icon" class="item-image">Feed</a></li>
-                    <li><a href="#"><img src="{% static 'images/dashboard/View Stream.svg' %}" alt="contend-icon" class="item-image">Contend</a></li>
-                    <li><a href="#"><img src="{% static 'images/dashboard/eva_settings-2-fill.svg' %}" alt="eva_settings-2-fill" class="item-image"> Settings</a></li>
+                    <li style="background-color: rgb(199, 0, 0);"><a href="#" class="active"><img src="{% static 'images/dashboard/Dashboard-icon.svg' %}" alt="Dashboard-icon" class="icons">Dashboard</a></li>
+                    <li><a href="{% url 'feed' %}"><img src="{% static 'images/dashboard/feed-icon.svg' %}" alt="feed-icon" class="icon">Feed</a></li>
+                    <li><a href="#"><img src="{% static 'images/dashboard/contend-icon.svg' %}" alt="contend-icon" class="icon">Contend</a></li>
+                    <li><a href="{% url 'settings' %}"><img src="{% static 'images/dashboard/settings-icon.svg' %}" alt="eva_settings-2-fill" class="icon">Settings</a></li>
                 </ul>
             </div>
             <div class="log">
-                <ul><li><a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon">Log out</a></li></ul>
+                <ul><li><a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon"><span style="color: white;">...</span>Log out</a></li></ul>
             </div>
         </div>
         <div class="topbar">
-            <div class="search-bar" id="search-id"><img src="{% static 'images/dashboard/search.svg' %}" alt="search-bar" class="search-icon">
-                <input type="text"  class="search" id="search-text" placeholder="Search nearby schools">  
-            </div>
+                <!-- CREATED A FORM FOR USER TO PERFORM THEIR SEARCH -->
+                <form class="search-forms" action="{% url 'search_students' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text"  class="search" id="search-text" placeholder="Search Students" name="searched">  
+                <!-- CREATED A BUTTON FOR THE SEARCH BAR -->
+                    <button type="submit">search</button>
+                </form>
+            <!-- </div> -->
             <div class="user">
                 <img src="{% static 'images/dashboard/message.svg' %}" alt="message-icon" class="message-icon" style="width: 40px; margin: 5px; padding: 10px;">
                 <img src="{% static 'images/dashboard/notification.svg' %}" alt="message-icon" class="message-icon" style="width: 40px; margin: 5px; padding: 10px;">
@@ -40,12 +47,13 @@
             </div>
         </div>
         <div class="add-school">
+            <br>
             <div class="steph">
-                <h3>Good Morning, {{ user.administrator_name }}</h3>
+                <h3>Welcome, {{ user.first_name }}</h3>
             </div>
             <div class="school-container">
                 <div class="school-name">
-                    <h2>{{ user.email }}</h2>
+                    <h2>{{ user.last_name }}</h2>
                 </div>
                 <div class="school-input">
                     <ul>
@@ -79,15 +87,7 @@
 
 
         </div>
-        <!-- <div >
-            <p class="name">NAME</p>
-            <P class="student-id">STUDENT ID</P>
-            <P class="email">EMAIL</P>
-            <P class="debt">DEBT</P>
-            <P class="amount-paid">AMOUNT PAID</P>
-            <P class="status">STATUS</P>
-            <P class="edit ">EDIT</P>
-        </div> -->
+        
         <hr style="color: grey;">
         <div class="students" id="result">
             <table frame=void rules=rows>
@@ -114,114 +114,88 @@
                     </tr>
                     {% endif %}
                     {% endfor %}
-                    <!-- <tr class="pending-student">
-                        <td class="name">Brooklyn Simmons</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">brooklynsim@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="pending">Pending</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="resolved-student">
-                        <td class="name">Guy Hawkins</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">ghawkin@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="resolved">Resolved</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="active-student">
-                        <td class="name">Esther Howard</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">estherhoward@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="active">Active</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="pending-student">
-                        <td class="name">Brooklyn Simmons</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">brooklynsim@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="pending">Pending</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="resolved-student">
-                        <td class="name">Guy Hawkins</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">ghawkin@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="resolved">Resolved</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="active-student">
-                        <td class="name">Esther Howard</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">estherhoward@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="active">Active</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="pending-student">
-                        <td class="name">Brooklyn Simmons</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">brooklynsim@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="pending">Pending</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="resolved-student">
-                        <td class="name">Guy Hawkins</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">ghawkin@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="resolved">Resolved</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="active-student">
-                        <td class="name">Esther Howard</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">estherhoward@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="active">Active</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="pending-student">
-                        <td class="name">Brooklyn Simmons</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">brooklynsim@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="pending">Pending</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr>
-                    <tr class="resolved-student">
-                        <td class="name">Guy Hawkins</td>
-                        <td class="student-id">GIC123456789</td>
-                        <td class="email">ghawkin@gmail.com</td>
-                        <td class="debt">#200,000</td>
-                        <td class="amount-paid">#30,000</td>
-                        <td class="resolved">Resolved</td>
-                        <td class="edit-image"><img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
-                    </tr> -->
                 </tbody>
 
                 </table>
             <div class="table">
-
             </div>
         </div>
     </div>
+</section>
 
-    <!-- <script src="script.js"></script> -->
+<section class="body-2">
+    <nav class="navbar-2">
+        <div class="g-0"><img class="logo-2" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+        <img src="{% static 'images/dashboard/dashboard user image.png' %}" alt="dashboard-user" style="width: 50px; height: 50px;">
+    </nav>
+    <div class="logout">
+        <a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon"><span style="color: white;">...</span>Log out</a>
+    </div>
+    <div class="links" style="padding-top: 20px;">
+        <ul>
+            <span style="color: white;">---</span><li><a  href="#">Dashboard</a></li>
+            <li><a href="{% url 'feed' %}">Feed</a></li>
+            <li><a href="#">Contend</a></li>
+            <li><a href="{% url 'settings' %}">Settings</a></li>
+        </ul>
+    </div>
+    <div style="padding-top: 40px; width: 80%; margin: auto;">
+        <form class="search-forms" action="{% url 'search_students' %}" method="POST">
+            {% csrf_token %}
+            <input type="text"  class="search" id="search-text" placeholder="Search Students" name="searched">  
+        <!-- CREATED A BUTTON FOR THE SEARCH BAR -->
+            <button type="submit">search</button>
+        </form>
+    </div>
+    <div class="next">
+        <br>
+        <div>
+            <h3>Welcome, {{ user.first_name }}</h3>
+        </div>
+        <div>
+            <div>
+                <h2>{{ user.last_name }}</h2>
+            </div>
+            <div>
+                <ul>
+                    <li style="background-color: rgb(192, 0, 0); align-items: center; margin-left: 10px; border-radius: 10px; max-width: max-content; list-style-type: none; padding: 10px;"><a style="text-decoration: none; color: white; font-size: 10px;" href="{% url 'add-debtor' %}"><img style="width: 20px;" src="{% static 'images/dashboard/add-icon.svg' %}" alt="">Add Student</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="status">
+        <a style="color: red;" href="#">All Student</a>
+        <a href="#">Active</a>
+        <a href="#">Pending</a>
+        <a href="#">Resolved</a>
+    </div>
+    <br>
+    <br>
+    <hr style="color: grey;">
+        <div class="" id="">
+            <ul style="list-style-type: none;">
+                {% for post in posts %}
+                {% if post.author == user.id %}
+                    <li class="name">NAME: {{ post.name }}</li>
+                    <li class="student-id">STUDENT'S ID: {{ post.Student_id }}</li>
+                    <li class="email">EMAIL: {{ post.Email }}</li>
+                    <li class="debt">DEBT: #{{ post.Debt }}</li>
+                    <li class="amount-paid">AMOUNT PAID: #{{ post.AmoutntPaid }}</li>
+                    <li class="active">STATUS: {{ post.status }}</li>
+                    <li class="edit-image">EDIT: <img src="{% static 'images/dashboard/edit icon.png' %}" alt="edit-icon"></td>
+                {% endif %}
+                {% endfor %}
+            </ul>      
+</section>
+{% else %}
+    <h1>You are not logged in</h1>
+{% endif %}
+    <script>
+        $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
+        });
+    </script>
 </body>
 </html> 

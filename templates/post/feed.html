@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+    <title>Feeds</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="image">
+                <a href="#"><img src="{% static 'images/dashboard/logo.png' %}" alt="debtors-logo"></a>
+
+            </div>
+            <div class="items">
+                <ul>
+                    <li><a href="{% url 'dashboard' %}"><img src="{% static 'images/dashboard/Dashboard-icon.svg' %}" alt="Dashboard-icon">Dashboard</a></li>
+                    <li><a href="#" class="active"><img src="{% static 'images/dashboard/feed-icon.svg' %}" alt="feed-icon">Feed</a></li>
+                    <li><a href="#"><img src="{% static 'images/dashboard/contend-icon.svg' %}" alt="contend-icon">Contend</a></li>
+                    <li><a href="#"><img src="{% static 'images/dashboard/settings-icon.svg' %}" alt=""> Settings</a></li>
+                </ul>
+            </div>
+            <div class="log">
+                <ul><li><a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon">Log out</a></li></ul>
+            </div>
+        </div>
+        <div class="container-page">
+            <div class="topbar">
+                <div class="people-name">
+                    <h2>Hi, {{ user.first_name }}</h2>
+                </div>
+                    <div class="search-bar" id="search-id"><img src="{% static 'images/dashboard/search.svg' %}" alt="search-bar" class="search-icon">
+                    <input type="text"  class="search" id="search-text" placeholder="Search nearby schools">  
+                </div>
+                <div class="user">
+                    <img src="{% static 'images/dashboard/message.svg' %}" alt="message-icon" class="message-icon">
+                    <img src="{% static 'images/dashboard/dashboard user image.png' %}" alt="dashboard-user" class="image-2">
+                </div>
+            </div>
+            <div class="comment-session">
+            
+                {% for post in posts %}
+                <div class="main-box">
+                    <ul class="list" style="list-style-type: none;">
+                        <li>
+                            <div class="content-box" style="margin: 10px;">
+                                <p>School: {{ user.profile.school_name }}</p>
+                                <p>Name: {{ post.name }}</p>
+                                <p>Student ID: {{ post.Student_id }}</p>
+                                <p>Debt: #{{ post.Debt }}</p>
+                                <img src="{{ post.image.url }}" alt="" style="width: 150px;">
+                            </div>
+                            <div class="comment-box">
+                                <form id="comment-form" action="" method="POST">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <!-- <input type="hidden" placeholder="Add Comment" name="name" id="name" class="chat-text">
+                                    <input type="text" placeholder="Add Comment" name="body" id="body" class="chat-text">
+                                    <button type="submit"><img src="{% static 'images/dashboard/Email Send.svg' %}" alt="email-send-icon"></button> -->
+                                </form>
+                            </div>
+                            <div class="comment-div" id="comments" style="float: right; position: relative; bottom: 200px; margin-right: 20px;">
+                                <h2>Comments...</h2>
+                                {% if not post.comments.all %}
+                                    No comments yet...
+                                {% else %}
+                                    {% for comment in post.comments.all %}
+                                    <b>{{ comment.name }}</b> -
+                                    {{ comment.body }}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+                    
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="body-2">
+        <nav class="navbar-2">
+            <div class="g-0"><img class="logo-2" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+            <img src="{% static 'images/dashboard/dashboard user image.png' %}" alt="dashboard-user" style="width: 50px; height: 50px;">
+        </nav>
+        <div class="logout">
+            <a href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout-icon.svg' %}" alt="logout-icon"><span style="color: white;">...</span>Log out</a>
+        </div>
+        <div class="links" style="padding-top: 20px;">
+            <ul>
+                <span style="color: white;">---</span><li><a  href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'feed' %}">Feed</a></li>
+                <li><a href="#">Contend</a></li>
+                <li><a href="{% url 'settings' %}">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="comment-session">
+            
+            {% for post in posts %}
+            <div class="main-box">
+                <ul class="list" style="list-style-type: none;">
+                    <li>
+                        <div class="content-box" style="margin: 10px;">
+                            <p>School: {{ user.profile.school_name }}</p>
+                            <p>Name: {{ post.name }}</p>
+                            <p>Student ID: {{ post.Student_id }}</p>
+                            <p>Debt: #{{ post.Debt }}</p>
+                            <img src="{{ post.image.url }}" alt="" style="width: 150px;">
+                        </div>
+                        <div class="comment-box">
+                            <form id="comment-form" action="" method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="hidden" placeholder="Add Comment" name="name" id="name" class="chat-text">
+                                <input type="text" placeholder="Add Comment" name="body" id="body" class="chat-text">
+                                <button type="submit"><img src="{% static 'images/dashboard/Email Send.svg' %}" alt="email-send-icon"></button>
+                            </form>
+                        </div>
+                        <div class="comment-div" id="comments" style="float: right; position: relative; bottom: 200px; margin-right: 20px;">
+                            <h2>Comments...</h2>
+                            {% if not post.comments.all %}
+                                No comments yet...
+                            {% else %}
+                                {% for comment in post.comments.all %}
+                                <b>{{ comment.name }}</b> -
+                                {{ comment.body }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            {% endfor %}   
+        </div>
+    </section>
+    {% else %}
+        <h1>You are not logged in</h1>
+    {% endif %}
+    <script>
+        var sender_name = "{{ user.first_name }}";
+        
+        $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
+        });
+    </script>
+</body>
+</html> 

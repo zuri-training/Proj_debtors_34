@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from .models import Room, Message
 from django.http import HttpResponse, JsonResponse
+from apps.post.models import Post
 
 # Create your views here.
 
@@ -20,15 +21,17 @@ def RoomView(request, room_name):
 def CheckView(request):
     username = request.POST.get('student_name')
     room_name = request.POST.get('student_id')
-
-    if Room.objects.filter(room_name=room_name).exists():
-        return redirect(reverse('conversations', kwargs={'room_name': room_name}), {
-            "username": username
-        })
+    if  Post.objects.filter(Student_id=room_name).exists():
+        if Room.objects.filter(room_name=room_name).exists():
+            return redirect(reverse('conversations', kwargs={'room_name': room_name}), {
+                "username": username
+            })
+        else:
+            new_room = Room.objects.create(room_name=room_name)
+            new_room.save()
+            return redirect(reverse('conversations', kwargs={'room_name': room_name}))
     else:
-        new_room = Room.objects.create(room_name=room_name)
-        new_room.save()
-        return redirect(reverse('conversations', kwargs={'room_name': room_name}))
+        return redirect('error')
 
 def send(request):
     message = request.POST['message']

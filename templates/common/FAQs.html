@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQs</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -15,22 +16,22 @@
         <div class="img"><img src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
         <div class="nav">
             <nav>
-                <a href="{% url 'homepage'%}">Home</a>
-                <a href="{% url 'about_us'%}">About Us</a>
-                <a href="" style="color: hsla(358, 97%, 31%, 1);">FAQs</a>
-                <a href="">Contact Us</a>
+                <a href="{% url 'homepage' %}">Home</a>
+                <a href="{% url 'about_us' %}">About Us</a>
+                <a href="{% url 'FAQs' %}" style="color: hsla(358, 97%, 31%, 1);">FAQs</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
                 <a href="{% url 'register'%}"><button class="one">Sign Up</button></a>
-                <a href="{% url 'login'%}"><button class="two">Log in</button></a>
+                <a href="{% url 'logins'%}"><button class="two">Log in</button></a>
             </nav>
         </div>
         <div id="mySidebar" class="sidebar left">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">FAQs</a>
-            <a href="">Contact Us</a>
-            <a href=""><button class="one">Sign Up</button></a>
-                <a href=""><button class="two">Log in</button></a>
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about_us' %}">About Us</a>
+            <a href="{% url 'FAQs' %}">FAQs</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'register' %}"><button class="one">Sign Up</button></a>
+                <a href="{% url 'logins' %}"><button class="two">Log in</button></a>
         </div>
         <div id="main">
             <button class="openbtn" onclick="openNav()"><img src="{% static 'images/index/Menu_Rounded.svg' %}" alt="" srcset=""></button>
@@ -311,6 +312,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
+        });
+    </script>
     <script src="{% static 'javascript/index.js' %}"></script>
 </body>
 </html>

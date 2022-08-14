@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,16 @@
 }
 body{
     overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+}
+
+.body-1{
+    display: block;
+    font-family: "Open Sans", sans-serif;
+}
+
+.body-2{
+    display: none;
 }
 .container {
     position: relative;
@@ -30,7 +42,7 @@ body{
     position: absolute;
     width: 144px;
     height: 44px;
-    left: 82px;
+    left: 60px;
     top: 40px;
 }
 .items{
@@ -40,8 +52,12 @@ body{
     left: 0px;
     top: 164px;
 }
+.items ul li a img{
+    width: 4px !important;
+}
 .sidebar ul{
     display: flex;
+    align-items: center;
     flex-direction: column;
     align-items: flex-start;
     padding: 5px;
@@ -54,6 +70,15 @@ body{
     left: 0px;
     top: 164px;
     gap: 14px;
+}
+
+.icon{
+    min-width: 40px !important;
+}
+
+.icons{
+    min-width: 30px !important;
+    margin: 5px;
 }
 
 .sidebar ul li {
@@ -74,18 +99,18 @@ body{
     text-align: center;
     float: left;
 }
-.sidebar ul li a:hover{
+/* .sidebar ul li a:hover{
     background-color: rgb(219, 24, 24);
     color: white;
-}
+} */
 .log{
     display: flex;
     /* flex-direction: row; */
     align-items: center;
-    padding: 4px;
+    padding: 10px;
     gap: 8px;
     position: absolute;
-    height: 38px;
+    height: 10px;
     left: 58px;
     top: 90%;
 }
@@ -98,9 +123,10 @@ body{
     display: flex;
     align-items: center;
     font-size: 15px;
+    padding: 14px;
 }
 .log ul li a img{
-    width: 20px;
+    min-width: 10px;
 }
 .sidebar-image{
     position: absolute;
@@ -157,6 +183,27 @@ body{
     border-radius: 10px;
     width: 30px;
 }
+.search-forms{
+    display: flex;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-forms input{
+    padding: 7px;
+    background-color: rgb(219, 219, 219);
+}
+
+.search-forms button{
+    background-color: rgb(168, 0, 0);
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 11px;
+}
 .user{
     display: flex;
     flex-direction: row;
@@ -184,6 +231,7 @@ body{
     left: 0;
     object-fit: cover;
 }
+
 .add-school {
     display: flex;
     flex-direction: column;
@@ -212,7 +260,7 @@ body{
     padding: 5px;
     border-radius: 10px;
     position: relative;
-    left: 1000px;
+    left: 850px;
     bottom: 40px;
     text-align: center;
 }
@@ -249,18 +297,18 @@ body{
 }
 
 .filter{
-    margin-left: 180px;
+    margin-left: 210px;
     display: flex;
     align-items: center;
     gap: 1em;
 }
 
 .filter input, .filter select{
-    width: 250px;
+    width: 200px;
     border: none;
     background-color: rgb(235, 232, 232);
     border-radius: 10px;
-    padding: 10px;
+    padding: 6px;
     align-items: center;
 }
 
@@ -281,10 +329,10 @@ body{
 
 .student-list a{
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 20px;
+    margin-right: 15px;
+    font-size: 15px;
     font-weight: lighter;
-    color: rgb(202, 202, 202);
+    color: rgb(133, 133, 133);
 }
 
 .student-list .active{
@@ -296,10 +344,84 @@ body{
 
 thead td{
     font-size: 17px;
-    color: rgb(202, 202, 202);
+    color: rgb(146, 146, 146);
 }
 
 tr td{
     padding: 27px;
     font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+    .body-1{
+        display: none;
+    }
+
+    .body-2{
+        display: block;
+        font-family: "Open Sans", sans-serif;
+    }
+    nav{
+        display: flex;
+        margin: 15px;
+        justify-content: space-between;
+    }
+
+    .links{
+        display: flex;
+    }
+
+    .links ul{
+        display: flex;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+
+    .links ul li a{
+        color: white;
+        text-decoration: none;
+        background-color: rgb(170, 0, 0);
+        border-radius: 10px;
+        padding: 13px;
+        font-size: 10px;
+        margin-right: 15px;
+    }
+
+    .next{
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .status{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .status a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .logout{
+        display: flex;
+        align-items: center;
+        float: right !important;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .logout a{
+        text-decoration: none;
+        font-size: 15px;
+        color: red;
+    }
+
+    .logout a img{
+        width: 15px !important;
+    }
+
 }

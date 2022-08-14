@@ -30,12 +30,16 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'authentication.CustomSchoolUser'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'project.debtors@gmail.com'
-EMAIL_HOST_PASSWORD = "shakamuhammed1@"
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = '91FuVmZ30gumJTHnPBn8eaLjNAsZMAPr'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'Project.debtors@gmail.com'
+# SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+
+SENDGRID_API_KEY = config('SENDGRID_API_KEY')
 
 # Application definition
 

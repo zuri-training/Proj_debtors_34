@@ -14,12 +14,6 @@ def filepath(request, filename):
     filename = "%s%s" % (timeNow,old_filename)
     return os.path.join('static/images/school_images',filename)
 
-# class SchoolEmail(models.Model):
-#     email = models.EmailField(null=False, unique=True)
-
-#     def __str__(self):
-#         return self.email
-
 
 class CustomSchoolUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
@@ -76,23 +70,3 @@ class SchoolModel(models.Model):
 
     def __str__(self):
         return self.school_name 
-
-# class CustomSchoolUser(AbstractUser):
-#     school_email = models.EmailField(max_length=300, blank=False)
-#     school_name = models.CharField(max_length=200, blank=False)
-#     school_administrator = models.CharField(max_length=500, blank=False)
-#     school_address = models.CharField(max_length=200, blank=True,)
-#     phone_number = models.CharField(max_length=15, blank=True)
-#     zip_code = models.CharField(max_length=200, blank=True)
-#     cac_reg = models.IntegerField(blank=False)
-#     verification_code = models.IntegerField(blank=False, unique=True)
-#     school_photo = models.FileField(max_length=200, blank=False)
-    
-    
-
-
-#     pass
-#     # add additional fields in here
-
-#     def __str__(self):
-#         return self.username

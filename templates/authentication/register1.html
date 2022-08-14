@@ -10,25 +10,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type='text/javascript'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel = "stylesheet" href = "{% static 'css/register.css' %}">
 </head>
 <body>
+    <section class="body-1">
   <nav class="navbar d-flex flex-row align-items center g-0" id="mainNav">
     <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
     <ul class="mainMenu">
-        <li><a href="#">Home</a></li>
-        <li class="text-secondary g-0"><a class="text-secondary" href="#">About Us</a></li>
-        <li class="text-secondary g-0"><a class="text-secondary" href="#">FAQs</a></li>
-        <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'about_us' %}">About Us</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'FAQs' %}">FAQs</a></li>
+        <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'contact' %}">Contact Us</a></li>
 
-        <button class="hidden1"><a href="#">Sign Up</a></button>
-        <button class="hidden2"><a href="#">log in</a></button>
+        <button class="hidden1"><a href="{% url 'contend' %}">Contend</a></button>
+        <button class="hidden2"><a href="{% url 'logins' %}">log in</a></button>
 
         <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
     </ul>
-    <button class="signUp-button"><a href="#">Sign Up</a></button>
-    <button class="navigation-button"><a href="#">log in</a></button>
+    <button class="signUp-button"><a href="{% url 'contend' %}">Contend</a></button>
+    <button class="navigation-button"><a href="{% url 'logins' %}">log in</a></button>
     <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
 </nav>
     <div class = "main">
@@ -54,11 +55,11 @@
                         <spam class = "details">Verification Code:</spam><br>
                         <div id="verify_text_div"></div>
                         <div class="card-1">
-                            <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code">
+                            <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code" required>
                             <button onclick="verify_otp()" type ="button" class="button1">Verify</button>
                         </div>
-                        <div class="show-div">Show more</div>
-                
+                        <div class="show-div" style="background-color: rgb(170, 0, 0); border-radius: 10px; text-align: center; padding: 10px; margin-top: 30px; margin-left: 70px; color: white; min-width: max-content;">Show more</div>
+                        <br>
                         <div class="form-group" style="display: none;">
                     
                         <label for="">School Name:</label>
@@ -164,8 +165,160 @@
         </div>
     </div>
 </footer>
+</section>
+<section class="body-2">
+    <nav class="navbar-2">
+        <div style="margin: 15px;"><img class="logo-2" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+        <a style="margin: 10px;" href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i style="color: rgb(122, 122, 122); font-size: 25px; margin-left: 100px;" class="fa fa-bars"></i>
+        </a>
+        <div style="display: none;" class="nav-links" id="myLinks">
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'about_us' %}" class="active">About Us</a></li>
+                <li><a href="{% url 'FAQs' %}">FAQs</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                
+                <div class="hide">
+                    <li><a href="{% url 'register' %}">Sign Up</a></li>
+                    <li><a href="{% url 'logins' %}">Login</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="next">
+        <div class="first">
+            <div class="info-1"><p class = "top">A few click away to get your school registered to have full access to our platform in other to track your school's debtors</p></div>
+            <div><img src="{% static './images/registration/login-background.png' %}" height="auto" width="100%" margin-top: 0px;></div>
+        </div> 
+    </div>
+    <div class="next-2">
+        <div style="color: red; text-align: center; font-size: 30px; margin-top: 30px; margin-bottom: 20px;">Begin Registration</div>
+        <h2 style="text-align: center; margin-bottom: 10px;">Manage all your school cash flow efficiently</h2>
+        <p style="text-align: center; font-size: 20px; margin-bottom: 20px;">Input the verification code sent to your email then proceed</p>
+        <div id="email_div" >
+            <div id="sent_text_div"></div>
+            <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+              <span class = "details">School email:</span><br>
+                <div class="card-1">
+                    <input type="text" name="email" id="email" style ="height:30px" placeholder="Enter school email">
+                    <button style="font-family: 'Open Sans'; background: rgb(204, 7, 7); border: none; border-radius: 10px; padding: 10px; color: white;" onclick="ajax_send_otp()" type="button">Get code</button>
+                </div>
+                <spam class = "details">Verification Code:</spam><br>
+                <div id="verify_text_div"></div>
+                <div class="card-1">
+                    <input type="text" name="otp" id="otp" style="height:30px" placeholder="Enter code" required>
+                    <button style="font-family: 'Open Sans'; background: rgb(204, 7, 7); border: none; border-radius: 10px; padding: 10px; color: white;" onclick="verify_otp()" type ="button" class="button1">Verify</button>
+                </div>
+                <div class="show-div" style="background-color: rgb(204, 7, 7); border-radius: 10px; text-align: center; padding: 10px; margin-top: 30px; color: white; min-width: max-content;">Show more</div>
+                <br>
+                <div class="form-group" style="display: none; margin-left: 500px;">
+
+                <label for="">School Name:</label>
+                <input class="form-control" type="text" name="name" placeholder="School name" required><br>
+        
+                <label for="">School Administrator's Name:</label>
+                <input class="form-control" type="text" name="admin_name" placeholder="School admin name" required><br>
+        
+                <label for="">School Address:</label>
+                <input class="form-control" type="text" name="address" placeholder="Schooladdress" required><br>
+        
+                <label for="">Phone Number:</label>
+                <input class="form-control" type="number" name="number" placeholder="school phone number" required><br>
+        
+                <label for="">Zip code:</label>
+                <input class="form-control" type="number" name="zip_code" placeholder="zip code" required><br>
+        
+                <label for="">C.A.C Code:</label>
+                <input class="form-control" type="number" name="code" placeholder="valid C.A.C code" required><br>
+        
+                <label for="">School Image:</label>
+                <input class="form-control" type="file" name="photo" required><br>
+        
+                <label for="">School Cerificate of Approval:</label>
+                <input class="form-control" type="file" name="certificate_img" required><br>
+        
+                <button class="btn btn-danger" type="submit">Submit</button>
+            </form>   
+            </form> 
+        </div>
+        <div class = "content">
+        </div>
+        
+    </div>
+</section>
+    <footer>
+        <div class="main" id="mob-footer">
+            <div class="sect-3">
+                <div class="item-1">
+                    <div class="blur">
+                        <img src="{% static 'images/about/logo.png' %}" alt="logo">
+                        <p>
+                            My Debtors is a searcheable database for
+                            schools to locate or contact their debtors
+                            We serve as middlemen between the schools
+                            and the owing students.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="item-2">
+                    <ul>
+                        <h2>Pages</h2>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                        <li><a href="{% url 'FAQs' %}">FAQs</a></li>
+                        <li><a href="#">Post/Comment</a></li>
+                        <li><a href="{% url 'register' %}">Registration</a></li>
+                        <li><a href="#">Debtors List</a></li>
+                        <li><a href="#">Debtors Profile</a></li>
+                    </ul>
+                </div>
+                <div class="item-3">
+                    <ul>
+                        <h2>Services</h2>
+                        <li><a href="#">Notify Debtors</a></li>
+                        <li><a href="#">Help Schools Track Their Debtors</a></li>
+                        <li><a href="#">Access To View Other Schools Debtors List</a></li>
+                        <li><a href="#">Debtors Can Contend</a></li>
+                        <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
+                    </ul>
+                </div>
+                <div class="item-4">
+                    <ul>
+                        <h2>Resources</h2>
+                        <li><a href="#">Figma</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2022 All Rights Reserved</p>
+                <div>
+                    <a href="#">Privacy |</a>
+                    <a href="#"> Terms & Conditions |</a>
+                    <a href="#"> Disclaimer</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
 
 <script>
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
     const mainMenu = document.querySelector('.mainMenu');
     const closeMenu = document.querySelector('.closeMenu');
     const openMenu = document.querySelector('.openMenu');
@@ -234,6 +387,12 @@
             $(this).hide();
         });
     });
+
+    $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
+        });
 
     // let btns = document.getElementById('#show_btn')
     // let divs = document.querySelector('form-group')

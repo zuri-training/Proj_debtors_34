@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,21 +24,21 @@
                 </div>
                 <div class="nav-links" id="myLinks">
                     <ul>
-                        <li><a href="{% url 'homepage'%}">Home</a></li>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
                         <li><a href="{% url 'about_us' %}" class="active">About Us</a></li>
                         <li><a href="{% url 'FAQs' %}">FAQs</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                         <!-- <li><a href="#" class="hide">Sign Up</a></li>
                         <li><a href="#" class="hide">Login</a></li> -->
                         <div class="hide">
                             <li><a href="{% url 'register' %}">Sign Up</a></li>
-                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'logins' %}">Login</a></li>
                         </div>
                     </ul>
                 </div>
                 <div class="nav-btn" id="myLinks">
-                    <button class="btn-1"><a href="#">Sign Up</a></button>
-                    <button class="btn-2"><a href="#">Login</a></button>
+                    <button class="btn-1"><a href="{% url 'register' %}">Sign Up</a></button>
+                    <button class="btn-2"><a href="{% url 'logins' %}">Login</a></button>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
@@ -125,11 +126,11 @@
                 <div class="item-2">
                     <ul>
                         <h2>Pages</h2>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                        <li><a href="{% url 'FAQs' %}">FAQs</a></li>
                         <li><a href="#">Post/Comment</a></li>
-                        <li><a href="#">Registration</a></li>
+                        <li><a href="{% url 'register' %}">Registration</a></li>
                         <li><a href="#">Debtors List</a></li>
                         <li><a href="#">Debtors Profile</a></li>
                     </ul>
@@ -165,7 +166,12 @@
             </div>
         </div>
     </footer>
-
-    <!-- <script src="{% static '../javascript/about.js' %}"></script> -->
+    <script>
+        $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
+        });
+    </script>
 </body>
 </html>

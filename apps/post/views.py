@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import Post
-# from .utils import generate_random_id
 from django.contrib.auth import get_user_model
 import math, random
+from .models import Post, Comment
+from django.views.generic import CreateView
+from .forms import ComentForm
+from django.urls import reverse_lazy
 # Create your views here.
 
 def generate_id() :
@@ -30,3 +33,14 @@ def AddDebtorView(request):
         return redirect("success")
     
     return render(request, 'post/adddebtor.html')
+
+def FeedView(request):
+    posts = Post.objects.all()
+    return render(request, 'post/feed.html', {'posts': posts})
+
+class AddCommentView(CreateView):
+    model = Comment
+    form_class = ComentForm
+    template_name = 'post/feed.html'
+
+    success_url = reverse_lazy('feed')

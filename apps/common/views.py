@@ -2,7 +2,9 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
-from .models import ContactModel
+import sendgrid
+from sendgrid.helpers.mail import *
+from my_debtors.settings import SENDGRID_API_KEY
 
 # Create your views here.
 
@@ -36,8 +38,20 @@ def ContactView(request):
         message = form.cleaned_data['message']
         from_email = form.cleaned_data['email']
 
+        message = Mail(
+            from_email=from_email,
+            to_emails=['Project.debtors@gmail.com'],
+            subject= subject,    
+            html_content= message)
         try:
-            send_mail(subject, message, from_email, ['Project.debtors@gmail.com'])
+            sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
+
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e)
         except BadHeaderError:
             messages.error('Invalid header found')
         messages.success(request, 'Your message has been successfully sent')
