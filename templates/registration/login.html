@@ -14,26 +14,31 @@
 </head>
 <body>
     <section class="body-1">
-    <header>
-        <nav class="navbar d-flex flex-row align-items center g-0" id="mainNav">
-            <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
-            <ul class="mainMenu">
-                <li><a href="{% url 'homepage' %}">Home</a></li>
-                <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'about_us' %}">About Us</a></li>
-                <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'FAQs' %}">FAQs</a></li>
-                <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
-        
-                <button class="hidden1"><a href="{% url 'register' %}">Sign Up</a></button>
-                <button class="hidden2"><a href="{% url 'login' %}">log in</a></button>
-        
-                <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
-            </ul>
-            <button class="signUp-button"><a href="{% url 'register' %}">Sign Up</a></button>
-            <button class="navigation-button"><a href="{% url 'login' %}">log in</a></button>
-            <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
-        </nav>
-
-    </header>
+        <header>
+            <div class="img"><img src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
+            <div class="nav">
+                <nav>
+                    <a href="" style="color: hsla(358, 97%, 31%, 1);">Home</a>
+                    <a href="{% url 'about_us' %}">About Us</a>
+                    <a href="{% url 'FAQs' %}">FAQs</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                    <a class="btn1" href="{% url 'register' %}"><button class="one">Sign Up</button></a>
+                    <a class="btn1" href="{% url 'logins' %}"><button class="two">Log in</button></a>
+                </nav>
+            </div>
+            <!-- <div id="mySidebar" class="sidebar left">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">FAQs</a>
+                <a href="">Contact Us</a>
+                <a href=""><button class="one">Sign Up</button></a>
+                <a href=""><button class="two">Log in</button></a>
+            </div>
+            <div id="main">
+                <button class="openbtn" onclick="openNav()"><img src="{% static 'images/index/Menu_Rounded.svg' %}" alt="" srcset=""></button>
+            </div> -->
+        </header>
 
     <main>
         <div id="info">
@@ -140,69 +145,73 @@
         </div>
     </section>
     <footer>
-        <div class="main">
-            <div class="sect-3">
-                <div class="item-1">
-                    <div class="blur">
-                        <img src="{% static 'images/about/logo.png' %}" alt="logo">
-                        <p>
-                            My Debtors is a searcheable database for
-                            schools to locate or contact their debtors
-                            We serve as middlemen between the schools
-                            and the owing students.
-                        </p>
+        <div class="ft">
+            <div class="foot">
+                <div class="footer-txt">
+                    <div class="img" style="float: left;"><img style="width: 120px;" src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
+                    <br>
+                    <p class="foot-txt">My Debtors is a searcheable database for schools to locate or contact their debtors. <br>We serve as middlemen between the school and the owing students.</p>
+                </div>
+                <div class="conct">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Contact Us</p>
+                    You can contacts us via email
+                
+                    <p></p>
+                    <div class="sub">
+                        <input type="text" placeholder="Enter email">
+                        <button class="one" type="submit">Subscribe</button>
                     </div>
-                    <!-- <div class="contact-txt">
-                        <h2>Contact Us</h2>
-                        <p>You can contact us via email</p>
-                    </div>
-                    <div class="subscribe">
-                        <form action="{ url 'contact' %}" method="POST">
-                            <input type="text" name="email" id="email" placeholder="Enter email">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div> -->
-                </div>
-                <div class="item-2">
-                    <ul>
-                        <h2>Pages</h2>
-                        <li><a href="{% url 'homepage' %}">Home</a></li>
-                        <li><a href="{% url 'about_us' %}">About Us</a></li>
-                        <li><a href="{% url 'FAQs' %}">FAQs</a></li>
-                        <li><a href="#">Post/Comment</a></li>
-                        <li><a href="{% url 'register' %}">Registration</a></li>
-                        <li><a href="#">Debtors List</a></li>
-                        <li><a href="#">Debtors Profile</a></li>
-                    </ul>
-                </div>
-                <div class="item-3">
-                    <ul>
-                        <h2>Services</h2>
-                        <li><a href="#">Notify Debtors</a></li>
-                        <li><a href="#">Help Schools Track Their Debtors</a></li>
-                        <li><a href="#">Access To View Other Schools Debtors List</a></li>
-                        <li><a href="#">Debtors Can Contend</a></li>
-                        <li><a href="#">Schools Can Comment On Other Schools Post</a></li>
-                    </ul>
-                </div>
-                <div class="item-4">
-                    <ul>
-                        <h2>Resources</h2>
-                        <li><a href="#">Figma</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">Javascript</a></li>
-                        <li><a href="#">Python</a></li>
-                    </ul>
                 </div>
             </div>
-            <div class="copy">
-                <p>&copy; 2022 All Rights Reserved</p>
-                <div>
-                    <a href="#">Privacy |</a>
-                    <a href="#"> Terms & Conditions |</a>
-                    <a href="#"> Disclaimer</a>
+            <div class="others">
+                <div class="pages">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Pages</p>
+                    <p><a href="">Home</a></p>
+                    <p><a href="{% url 'about_us' %}">About Us</a></p>
+                    <p><a href="">FAQs</a></p>
+                    <p><a href="">Registration</a></p>
                 </div>
+                <div class="services">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Services</p>
+                    <p>Notify debtors</p>
+                    <p>Help school track their debtors</p>
+                    <p>Access to view other school debtors</p>
+                    <p>Debtors can contend</p>
+                    <p>Schools can comment on other school's post</p>
+                </div>
+                <div class="resources">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Resources</p>
+                    <p>Figma</p>
+                    <p>Html</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Python</p>
+                </div>
+            </div>
+            <div class="foot1">
+                <div class="footer-txt1">
+                    <div class="img" style="float: left;"><img src="{% static 'images/index/debtors-logo.svg' %}" alt="Mydebtors"></div>
+                    <br>
+                    <p class="foot-txt">My Debtors is a searcheable database for schools to locate or contact their debtors. <br>We serve as middlemen between the school and the owing students.</p>
+                </div>
+                <div class="conct1">
+                    <p style="color: hsla(43, 100%, 52%, 1);">Contact Us</p>
+                    You can contacts us via email
+                
+                    <p></p>
+                    <div class="sub">
+                        <input type="text" placeholder="Enter email">
+                        <button class="one" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="t-and-c">
+            <div class="rights"><span>&copy;</span>2022 All Right Reserved</div>
+            <div class="privacy">
+                <a href="">Privacy |</a>
+                <a href="">Terms & Conditions |</a>
+                <a href="">Disclaimer</a>
             </div>
         </div>
     </footer>
