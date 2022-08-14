@@ -23,17 +23,27 @@ class UserLoginForm(forms.ModelForm):
         'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter email'}),
         'password': forms.PasswordInput(attrs={'class': 'form-control'}),
     }
-            
 
-# class CustomUserCreationForm(UserCreationForm):
 
-#     class Meta:
-#         model = CustomUser
-#         fields = ("school_email", "school_name", "school_administrator", "school_address", "phone_number", "zip_code", "cac_reg", "verification_code", "school_photo")
-        
+class EditProfileForm(UserChangeForm):
 
-# class CustomUserChangeForm(UserChangeForm):
+    class Meta:
+        model = CustomSchoolUser()
+        fields = ('first_name', 'email')
 
-#     class Meta:
-#         model = CustomUser
-#         fields = ("school_email", "school_name", "school_address", "phone_number", "zip_code", "cac_reg", "verification_code", "school_photo")
+    widgets ={
+        # 'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter email'}),
+        'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+        'email': forms.EmailInput(attrs={'class': 'form-control'}),
+    }
+
+class EditProfileForm(UserChangeForm):
+
+    class Meta:
+        model = CustomSchoolUser()
+        fields = ('first_name', 'email')
+
+    widgets ={
+        'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+        'email': forms.EmailInput(attrs={'class': 'form-control'}),
+    }

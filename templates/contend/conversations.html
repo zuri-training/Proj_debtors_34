@@ -39,7 +39,7 @@
         body {
             display: flex;
             height: 100vh;
-            background: #666;
+            background: white;
             flex-direction: column;
         }
         .message_area {
@@ -66,6 +66,10 @@
         #send-btn {
             padding: 20px 40px;
             background: gold;
+        }
+
+        .header h1{
+            color: white;
         }
     </style>
 
@@ -110,26 +114,12 @@
             <input type="submit" id="send-btn" value="send">
         </div>
     </form>
-</body>
-<script type="text/javascript">
-    $(document).on('submit', '#post-form', function(e){
-        e.preventDefault();
-
-        $.ajax({
-            type:'POST',
-            url:'/contend/send',
-            data:{
-                username:$('#username').val(),
-                room_id:$('#room_id').val(),
-                message:$('#message-input').val(),
-                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-            },
-            success: function(data){
-                // alert(data)
-            }
+    <script>
+        $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            })
         });
-        document.getElementById('message-input').value = ''
-    });
-</script>
-
+    </script>
+</body>
 </html>

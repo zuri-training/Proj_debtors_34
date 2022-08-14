@@ -13,7 +13,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script> -->
 </head>
 <body>
-
+    <section class="body-1">
     <header>
         <nav class="navbar d-flex flex-row align-items center g-0" id="mainNav">
             <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
@@ -51,7 +51,7 @@
                     <p style="font-size: 20px; color: red; margin-top: 20px;">{{ message }}</p>
                 {% endfor %}
             </ul>
-        {% endif %}
+            {% endif %}
             <form action="{% url 'login' %}" method="POST" id="form_login">
                 {% csrf_token %}
                 <!-- <div id="form_container">
@@ -71,13 +71,74 @@
 
                 <span class="noAccount">Dont have an account?</span>
 
-                <button type="submit" class="account">Create account</button>
+                <button  class="account">Create account</button>
                 <!-- </div> -->
             </form>
         </div>
 
     </main>
+ </section>
 
+    <section class="body-2">
+        <nav class="navbar-2">
+            <div class="g-0"><img class="logo-2" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i style="color: grey; font-size: 25px; margin-left: 100px;" class="fa fa-bars"></i>
+            </a>
+            <div style="display: none;" class="nav-links" id="myLinks">
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'about_us' %}" class="active">About Us</a></li>
+                    <li><a href="{% url 'FAQs' %}">FAQs</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <!-- <li><a href="#" class="hide">Sign Up</a></li>
+                    <li><a href="#" class="hide">Login</a></li> -->
+                    <div class="hide">
+                        <li><a href="{% url 'register' %}">Sign Up</a></li>
+                        <li><a href="{% url 'logins' %}">Login</a></li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="next">
+            <p class="info-1">Log in to get started and upload your school's debtors list or view other schools' debtors lists and have access to our post and comment section.</p>
+            <p><img src="{% static './images/registration/login-background.png' %}" alt="a female on a suit"></p>
+        </div>
+        <div id="form-1">
+            <h2 style="color:red; text-align: center; margin-bottom: 20px;">Log In</h2>
+            <h4 style="text-align: center; margin-bottom: 10px;">Manage all your school cash flow efficiently</h4>
+            <p style="text-align: center; margin-bottom: 10px;"><small>Login and gain access</small></p>
+            {% if messages %}
+            <ul class="messages" style="text-align: center;">
+                {% for message in messages %}
+                    <p style="font-size: 20px; color: red; margin-top: 20px;">{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form style="width: 100%;" action="{% url 'login' %}" method="POST" id="form_login">
+                {% csrf_token %}
+                <!-- <div id="form_container">
+                  <label for="username">Enter User Name/Email</label>
+                  <input class="form-control" type="text" placeholder="Enter school email" name="username" required><br>
+
+                  <label for="password">Password</label>
+                  <input class="form-control" type="password" placeholder="Enter password" name="password" required> -->
+                <p>Email: <span style="color: white;">-----</span>{{ form.username }}</p>
+                <p>Password: {{ form.password }}</p>
+                <input class="" type="checkbox" unchecked="checked" name="remember"> Remember me
+                </label>
+
+                <span style="color:red;">Forgot password?</span><br>
+
+                <button type="submit" style=" width: 160px; background-color: rgb(141, 0, 0); border: none; border-radius: 25px; padding: 15px; color: white; margin-left: 80px; margin-bottom: 10px;">Log in</button>
+
+                <span style="margin-left: 80px; margin-bottom: 10px;">Dont have an account?</span>
+
+                <button  style="background-color: rgb(255, 255, 255); border: 1px rgb(129, 1, 1) solid; border-radius: 25px; padding: 15px; margin-left: 90px;">Create account</button>
+                <!-- </div> -->
+            </form>
+        </div>
+    </section>
     <footer>
         <div class="main">
             <div class="sect-3">
@@ -91,25 +152,25 @@
                             and the owing students.
                         </p>
                     </div>
-                    <div class="contact-txt">
+                    <!-- <div class="contact-txt">
                         <h2>Contact Us</h2>
                         <p>You can contact us via email</p>
                     </div>
                     <div class="subscribe">
-                        <form action="">
-                            <input type="text" placeholder="Enter email">
-                            <button>Subscribe</button>
+                        <form action="{ url 'contact' %}" method="POST">
+                            <input type="text" name="email" id="email" placeholder="Enter email">
+                            <button type="submit">Subscribe</button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="item-2">
                     <ul>
                         <h2>Pages</h2>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                        <li><a href="{% url 'FAQs' %}">FAQs</a></li>
                         <li><a href="#">Post/Comment</a></li>
-                        <li><a href="#">Registration</a></li>
+                        <li><a href="{% url 'register' %}">Registration</a></li>
                         <li><a href="#">Debtors List</a></li>
                         <li><a href="#">Debtors Profile</a></li>
                     </ul>
@@ -146,6 +207,15 @@
         </div>
     </footer>
     <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
         const mainMenu = document.querySelector('.mainMenu');
         const closeMenu = document.querySelector('.closeMenu');
         const openMenu = document.querySelector('.openMenu');

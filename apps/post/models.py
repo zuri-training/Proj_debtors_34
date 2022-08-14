@@ -28,13 +28,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.name + '|' + self.Student_id
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    name = models.CharField(max_length=255)
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.post.name, self.name)
     
-# class DebtorModel(models.Model):
-#     name = models.CharField(max_length=45)
-#     Email = models.EmailField(max_length=245)
-#     Debt = models.DecimalField(max_digits=10, decimal_places=2)
-#     AmountPaid = models.DecimalField(max_digits=10, decimal_places=2)
-#     phone_num = models.IntegerField()
-#     image = models.ImageField()
-#     status = models.CharField(max_length=50, choices=STATUS_LIST)
-#     Student_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

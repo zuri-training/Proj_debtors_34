@@ -114,10 +114,11 @@ nav .openMenu, .closeMenu {
 }
 
 .form-section{
-        display: flex !important;
-        max-height: 1200px;
-        margin-bottom: 28px;
-        flex-direction: column;
+    display: flex !important;
+    max-height: 1200px;
+    margin-bottom: 28px;
+    margin-left: 30px;
+    flex-direction: column;
 }
 
 span{
@@ -309,6 +310,13 @@ padding: 20px;
     flex-wrap: wrap !important;
   }
 
+  .form-section{
+    margin-left: 50px;
+  }
+
+  .form-section img{
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 776px){
@@ -451,6 +459,11 @@ padding: 20px;
     .logo-img{
         width: 120px !important;
     }
+
+    .form-section{
+        width: 80%;
+        margin: auto;
+      }
 
 }
 

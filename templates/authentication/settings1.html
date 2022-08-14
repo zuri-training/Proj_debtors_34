@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Account - settings</title>
+    <link rel="stylesheet" href="{% static 'css/settings1.css' %}">
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <main>
+        <section class="nav">
+            <div id="logo">
+                <img src="{% static 'images/settings/debtors-logo.svg' %}" alt="">
+                <div id="logout1">
+                        <div class="icon"><img src="{% static 'images/settings/Grouplogout.png' %}" alt=""><a href="" style="color: hsla(0, 100%, 41%, 1);">Log out</a></div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="icon"><img src="{% static 'images/settings/Vector.svg' %}" alt=""><a href="{% url 'dashboard' %}">Dashboard</a></div>
+                <div class="icon"><img src="{% static 'images/settings/feed-icon.svg' %}" alt=""><a href="{% url 'feed' %}">Feed</a></div>
+                <div class="icon"><img src="{% static 'images/settings/contend-icon.svg' %}" alt=""><a href="">Contend</a></div>
+                <div style="background-color: hsla(358, 97%, 31%, 1);" class="icon setting"><img src="design_resources/Vectorsett.svg" alt=""><a href="" style=" color: #fff;">Settings</a></div>
+            </div>
+            <div style="color: hsla(0, 100%, 41%, 1);" id="logout">
+                <div class="icon"><img src="{% static 'images/settings/Grouplogout.png' %}" alt=""><a href="" style="color: hsla(0, 100%, 41%, 1);">Log out</a></div>
+            </div>
+        </section>
+        <section class="options">
+            <div class="wrap">
+                <p>Settings</p>
+                <div class="profile-info">
+                    <div class="circle">85%</div>
+                    <div class="txt">
+                        Profile information <br>
+                        <small>Complete your profile to unlock all features</small>
+                        <p></p>
+                        <button>Complete your profile</button>
+                    </div>
+                </div>
+                <div class="profile-options " id="one">
+                    <div class="opt">
+                        <img id="p1" src="{% static 'images/settings/Vector (1).svg' %}" alt="">
+                        <span>
+                            <p>Account Settings</p>
+                            <small>Personal information, Email, Notifications</small>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0)" style="font-weight: 800;">></a>
+                </div>
+                <div class="profile-options" id="three">
+                    <div class="opt">
+                        <img id="lockIcon" src="{% static 'images/settings/lock-icon.svg' %}" alt="">
+                        <span>
+                            <p>Security</p>
+                            <small>Change password, 2FA</small>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0)" style="font-weight: 800;">></a>
+                </div>
+            </div>
+            <div class="wrap2">
+                <div class="container">
+                    <div class="title">Account Settings</div>
+                    <div class="update">
+                        <p>Personal Information</p>
+                        <div class="forms">
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                <p>Admin name: {{ form.first_name }}</p>
+                                <p>Email: {{ form.email }}</p>
+                                <button type="submit">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="notice">
+                        <p>Notification</p>
+                        <small>Choose the type of notification you want to recieve</small>
+                        <div class="fms">
+                            <label>
+                                <input type="checkbox">Weekly report
+                            </label>
+                            <label>
+                                <input type="checkbox">Messages
+                            </label>
+                            <label>
+                                <input type="checkbox">Push notifications
+                            </label>
+                            <label>
+                                <input type="checkbox">Contend report
+                            </label>
+                            <label>
+                                <input type="checkbox">Add debtor
+                            </label>
+                            <label>
+                                <input type="checkbox">User login
+                            </label>
+                        </div>
+                    </div>
+                    <div class="confirm">
+                        <a href="">Discard Changes</a>
+                        <button type="submit">Save changes</button>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="title">Security</div>
+                    <div class="update" style="padding-bottom: 60px;">
+                        <p>Change Password</p>
+                        <h4>Click <a href="{% url 'edit_password' %}">here</a> to edit password...</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% else %}
+        <h1>You are not logged in</h1>
+    {% endif %}
+    <script>
+        let a = document.querySelector(".wrap2").style.display = "none"
+
+        let container = document.querySelector('.wrap2');
+        function show(ele1, ele2, display1, display2){
+            document.querySelector(".wrap2").style.display = "block";
+            document.querySelector(ele1).style.display = display1;
+            document.querySelector(ele2).style.display = display2;
+
+        }
+        document.querySelector("#one").onclick = function(e){
+            e.preventDefault()
+            document.querySelector("#p1").src = 'design_resources/user-icon.svg';
+            document.querySelector("#lockIcon").src = 'design_resources/lock-icon.svg';
+            document.querySelector('#one').style.borderBottomColor = 'hsla(358, 97%, 31%, 1)';
+            document.querySelector('#three').style.borderBottomColor = 'grey';
+            show(".container", ".container2", "block", "none")
+        }
+        document.querySelector("#three").onclick = function(e){
+            e.preventDefault()
+            document.querySelector("#p1").src = 'design_resources/Vector (1).svg';
+            document.querySelector("#lockIcon").src = 'design_resources/Vectorlock.png';
+            document.querySelector('#three').style.borderBottomColor = 'hsla(358, 97%, 31%, 1)';
+            document.querySelector('#one').style.borderBottomColor = 'grey';
+            show(".container", ".container2", "none", "block")
+            let pas = document.querySelector("#newPass");
+            let pas1 = document.querySelector("#oldPass");
+            let pas2 = document.querySelector("#newPass2");
+            let but = document.querySelector("#butt")
+            but.onclick = function(e){
+                e.preventDefault();
+                let old = 'okay' //pass old account here
+                if (pas1.value == old){
+                    if (pas.value.length >= 8 && pas2.value.length >= 8){
+                        if (pas.value == pas2.value){
+                            alert("password changed successfully.");
+                            old = pas.value; //update the database
+                        }
+                        else{
+                            alert("password doesn't match. Try again")
+                        }
+                    }
+                    else{
+                        alert("Password must be greater that 8")
+                    }
+                }
+                else{
+                    alert("Invalid password")
+                }
+            }
+        } 
+    </script>
+</body>
+</html> 

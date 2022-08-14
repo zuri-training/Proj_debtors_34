@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+::before, *::after{
+    box-sizing: inherit;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -48,10 +56,12 @@ a button, button{
     height: 37px;
     font-size: 16px;
     border: 1.5px solid hsla(0, 100%, 41%, 1);
+    border-radius: 10px;
 }
 .one{
     background-color: hsla(0, 100%, 41%, 1);
     color: aliceblue;
+    max-width: 200px;
 }
 .two{
     color: hsla(0, 100%, 41%, 1);
@@ -139,7 +149,7 @@ button:focus{
 .intro{
     display: flex;
     height: fit-content;
-    margin: 40px 0 100px 10px;
+    margin: 40px 10px 100px 40px;
     justify-content: space-between;
 }
 .intro-text{

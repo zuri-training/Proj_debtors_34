@@ -12,12 +12,20 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+#mob-footer{
+  display: none;
+}
 
 body{
   font-family: 'Poppins', sans-serif;
   margin: 0 auto !important;
 }
-
+.body-1{
+  display: block;
+}
+.body-2{
+  display: none !important;
+}
 nav {
     background: linear-gradient(
         to right,
@@ -100,15 +108,6 @@ button a{
 .hidden1, .hidden2{
   display: none !important;
 }
-  /*nav .mainMenu li a:active::after {
-    background-color: red;
-    border-radius: 5%;
-    content: '';
-    display: block;
-    height: 0.2rem;  
-    margin: 0.4rem auto 0 auto;
-    width: 3.5rem;
-  }*/
 
 nav .openMenu, .closeMenu {
   font-size: 2rem;
@@ -504,15 +503,7 @@ nav {
   color: white;
 }
 
-@media screen and (max-width: 227) {
-  .logo-img{
-      width: 40px;
-    }
-  .openMenu{
-      font-size: 1.6rem !important;
-    }
 
-}
   
 @media only screen and (max-width:700px){
     * {
@@ -609,3 +600,162 @@ nav {
       width:270px;
      }
   }
+
+  @media screen and (max-width: 500px) {
+
+    .body-1{
+        display: none;
+    }
+
+    .body-2{
+        display: block !important;
+        max-width: 500px;
+        overflow-x: hidden;
+    }
+
+    #mob-footer{
+      display: block;
+    }
+
+    nav{
+        background: none;
+    }
+
+    .logo-2{
+        text-align: left;
+    }
+
+    .navbar-2{
+      background: none !important;
+    }
+
+    #myLinks{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+
+    #myLinks ul{
+        padding: 30px !important;
+        background: rgba(119, 106, 106, 0.082);
+        backdrop-filter: blur(50px);
+        width: 100% !important;
+        height: 55vh;
+    }
+
+    #myLinks ul li {
+        display: block;
+        text-align: center;
+    }
+
+    #myLinks .hide {
+        display: block;
+        text-align: center;
+    }
+
+    #myLinks ul li a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .next{
+        background-color: #4F5162;
+    }
+
+    .next .info-1{
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .next .info-1{
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .next-2{
+      width: 80%;
+      margin: auto;
+    }
+
+    .form-group{
+      min-width: max-content !important;
+      margin-right: -200px !important;
+    }
+
+    .main {
+      background-image: url("../images/about/mobile_rect2.png");
+      width: 100% !important;
+      position: fixed;
+      top: 800px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+      background-color: rgba(48, 28, 28, 0.829);
+      background-blend-mode: darken;
+      margin-top: 80px;
+  }
+
+  .sect-3 {
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-areas: 
+      'w w w w'
+      'x x x x'
+      'y y y y'
+      'z z z z'
+      ;
+      padding-top: 10px;
+  }
+
+  .blur {
+      margin-top: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      padding: 15px;
+  }
+
+  .subscribe {
+      margin-left: 90px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px;
+      width: 140px;
+      height: 27px;
+      background: none;
+      border: none;
+  }
+
+  .subscribe button {
+      padding: 12px;
+      color: white;
+      margin-left: 60px;
+      margin-top: 10px;
+  }
+
+  .contact-txt {
+      padding-top: 50px;
+      width: 80%;
+      margin: auto;
+  }
+
+  .item-1, .item-2, .item-3, .item-4 {
+      margin: 15px;
+  }
+
+  .copy {
+      display: block;
+      text-align: center;
+  }
+
+}

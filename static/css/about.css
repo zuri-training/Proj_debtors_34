@@ -426,6 +426,10 @@ nav {
         text-align: center;
     }
 
+    #myLinks ul li a{
+        text-decoration: none;
+    }
+
     .hide {
         margin-top: 20px;
     }
