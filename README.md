@@ -15,7 +15,7 @@ static: this holds our static files.
 templates: all HTML files reside here.
 Requirements.txt: has all required dependencies needed to run the project.
 
-Static files directory has been properly configured.
+Static files directory has been properly configured..
 
 Database.
 
