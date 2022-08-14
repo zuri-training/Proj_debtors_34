@@ -9,119 +9,90 @@ max-width: 100%;
 *, *::before, *::after{
     box-sizing: border-box;
 }
-html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
+/********new changes  header  bar by shaks**********/
 body{
-font-family: 'Poppins', sans-serif;
-margin: 0 auto !important;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e5e5e500;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
-
-.body-2{
-    display: none;
-}
-
-nav {
-    background: linear-gradient(
-        to right,
-        #4F5162 0%,
-        #4F5162 45%,
-        #fff 45%,
-        #fff 100%
-    );
-    color: #fff;
-    width: 100%;
+header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly !important;
-    padding: 0.2rem;
+    width: 100%;
+    padding: 10px 10px 10px 0px;
 }
-
-.logo-img{
-    width: 120px;
+.img{
+    height: 20px;
 }
-
-nav .mainMenu {
-    display: flex;
-    list-style: none;
+.img img{
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
 }
-
-nav .mainMenu li{
-    padding: 0 0.5rem !important;
+.nav{
+    width: 70%;
+    margin-top: 20px;
 }
-
-nav .mainMenu li a {
-    display: inline-block;
-    padding: 2rem;
+a{
     text-decoration: none;
-    color:  #d00000;
-    font-size: 1.2rem;
-    transition: 0.2s ease;
+    color: rgba(48, 46, 46, 0.644);
 }
-
-nav .mainMenu li a:hover{
-    color: #d00000 !important;
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.hidden1 .hidden2{
-    padding: 1.5rem !important;
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 10px;
+    width: 20%;
+    justify-content: space-evenly;
 }
-
-.signUp-button, .navigation-button, .hidden1, .hidden2{
-    margin-left: 0.5rem;
-    padding: 10px;
-    background-color: #d00000;
-    border: none;
+a button, button{
     border-radius: 16px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+    /* width: 110px; */
+    height: 37px;
+    font-size: 16px;
+    border: 1.5px solid hsla(0, 100%, 41%, 1);
+    border-radius: 10px;
+}
+.one{
+    background-color: hsla(0, 100%, 41%, 1);
+    color: aliceblue;
+    max-width: 200px;
+}
+.two{
+    color: hsla(0, 100%, 41%, 1);
+    background-color: rgb(253, 253, 253);
+}
+.btn1{
+    max-width: max-content;
+}
+.btn1 .one{
+    width: 150px;
 }
 
-.navigation-button, .hidden2{
-background-color: #fff;
-padding: 8px;
-border: 2px solid #d00000;
+.two{
+    width: 150px;
 }
 
-button a{
-padding: 20px;
-text-decoration: none;
-}
-
-.signUp-button a, .hidden1 a{
-    color: #fff;
-} 
-.navigation-button a, .hidden2 a{
-color: #d00000;
-}
-
-.signUp-button a:hover, .navigation-button a:hover, .hidden1 a:hover, .hidden2 a:hover{
-color: #4F5162;
-}
-
-.hidden1, .hidden2{
-display: none !important;
-}
-/*nav .mainMenu li a:active::after {
-    background-color: red;
-    border-radius: 5%;
-    content: '';
-    display: block;
-    height: 0.2rem;  
-    margin: 0.4rem auto 0 auto;
-    width: 3.5rem;
-}*/
-
-nav .openMenu, .closeMenu {
-    font-size: 2rem;
-    margin: 2rem;
-    display: none;
+button:hover{
     cursor: pointer;
 }
+button:focus{
+    transition: all 300ms ease-out;
+    width: 101px;
+    height: 41px;
+    opacity: 0.8;
+}
 
+    /********new changes  header bar shaks**********/
 div#info{
 background-color: #4F5162;
 color: #fff;
@@ -240,111 +211,189 @@ margin-left: 1.1em;
 font-size: 15px;
 }
 
+    /********new changes  footter bar**********/
 footer{
-height: 40%;
-display: flex;
-color: #fff;
-background-image: url(login_images/footer-background-image.svg);
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #000;
+}
+.ft{
+    display: flex;
+    column-gap: 10px;
+    margin: 0 0 20px 0;
+    background-color: hsla(0, 0%, 4%, 0.856);
+    position: relative;
+    background-blend-mode: darken;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+.ft::before{
+    content: '';
+    background-image: url("../images/index/footer-background-image.svg");
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+.foot{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: fit-content;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    line-height: 25px;
+    row-gap: 90px;
+    color: white;
+    position: relative;
+}
+.foot1{
+    display: none;
+    height: fit-content;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    line-height: 25px;
+    row-gap: 90px;
+    color: white;
+    position: relative;
+}
+input{
+    height: 30px;
+    width: 150px;
+    border: 0 solid antiquewhite;
+    background-color: #8E8686;
+}
+.others{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    color: hsla(0, 0%, 100%, 1);
+    margin-top: 80px;
+    position: relative;
+}
+.footer-txt{
+    text-align: left;
+    border: 1.5px solid bisque;
+    padding: 20px;
+    max-width: 630px;
+    left: 138px;
+    top: 106px;
+    border-radius: 8px;
+    font-family: 600;
+    line-height: 32.68px;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: hsla(0, 0%, 100%, 0.8);
+}
+.conct div{
+    background-color: #8E8686;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 16px;
+    border: 0;
+    margin: auto;
+    font-size: 30px;
+}
+.cont1{
+    display: none;
+}
+.pages, .services, .resources{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.pages a, .privacy a{
+    color: beige;
+}
+.t-and-c{
+    display: flex;
+    justify-content: space-between;
+}
+.rights, .privacy{
+    padding: 15px;
 }
 
-div#more_info{
-width: 45%;
-border: thin solid gray;
-border-radius: 4px;
-padding: 5em;
-font-size: 12px;
-margin-top: 5%;
-margin-left: 5%;
-background-color: rgba(255, 255, 255, 0.2);
-}
 
-div#more_info img{
-width: 80px;
-height: 20px;
-position: relative;
-left: -8px;
-}
+/* stylings for FAQs page */
 
-div#links{
-display: flex;
-font-size: 15px;
-position: relative;
-right: -500px;
-top: -600px;
+.fq-head{
+    background-position: center;
+    background-image: url("../images/index/bg-faqs.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-div#links li{
-list-style: none;
-margin: .5em;
-line-height: 50px
+.pg-image{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-image: url("../images/index/bg-faqs.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
 }
-
-div#links h2{
-margin-top: 5em;
+figure img{
+    width: 100px;
 }
-
-div#links h2, div#contact_us h2{
-color: #ffba08;
+.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    font-size: small;
+    margin: 20px;
 }
-
-div#links li>a {
-text-decoration: none;
-color: #fff;
+.faqs{
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 30px;
 }
-
-div#contact_us{
-margin-top: 8em;
-text-align: center;
-width: 40%;
+.first{
+    width: 18%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    box-shadow: 2px 2px 2px hsla(209, 11%, 55%, 0.664);
 }
-
-div#contact_us h2{
-font-size: 25px;
-padding: .5em;
+/* .first:hover{
+    transition: all 6s ease-in-out 10s, transform 2s;
+    transform: translate3D(2%, 2%, -25px);
+} */
+.numbr{
+    text-align: center;
+    height: 25px;
+    padding-top: 5px;
+    width: 25px;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: rgba(106, 4, 15, 0.9);;
 }
-
-div#contact_us p{
-font-size: 25px;
-padding-bottom: .5em;
+.quest{
+    display: flex;
+    float: left;
+    padding-right: 20px;
 }
-
-div#contact_us input{
-width: 80%;
-padding: 1.5em;
-margin-right: 1em;
-border-radius: 10px;
-font-size: 15px;
-color: #564a4a;
+.answer{
+    display: flex;
+    padding-left: 20px;
+    float: right;
 }
-
-div#contact_us button{
-width: 30%;
-border-radius: 10px;
-padding: 3em;
-font-size: 5px;
-position: relative;
-right: -100px;
-top: -55px;
-color: #fff;
-background-color: #9d0208;
-}
-
-div#policy{
-width: 100%;
-display: flex;
-justify-content: space-between;
-background-color: #000;
-color: #ffffff;
-padding: 60px;
-}
-
-div#policy a{
-color: #ffffff;
-text-decoration: none;
+.person1 img, .person2 img{
+    width: 30px;
 }
 
 /* tablet design */
@@ -539,7 +588,7 @@ nav {
     text-decoration: none;
     color: white;
 }
-
+/********* fot testing only*********/
 @media screen and (max-width: 1000px) {
     nav ul li {
         list-style-type: none;
@@ -566,18 +615,18 @@ nav {
   
 @media screen and (max-width: 500px) {
 
-    .body-1{
+    header{
+        width: 100%;
+    }
+    .buttons, .nav{
         display: none;
     }
-
-    .body-2{
-        display: block;
+    #main button{
+        display: flex;
     }
-
-    nav{
-        background: none;
+    button{
+        width: 143.19px;
     }
-
     .logo-2{
         text-align: left;
     }
@@ -630,6 +679,56 @@ nav {
     .main .sect-3{
         display: flex;
         flex-direction: column;
+    }
+    /********new changes  footter bar**********/
+    .foot1{
+        display: flex;
+    }
+    .footer-txt1{
+        display: none;
+    }
+    .conct1 div{
+        background-color: #8E8686;
+        padding: 5px;
+        width: fit-content;
+        border-radius: 16px;
+        border: 0;
+        margin: auto;
+    }
+    .conct{
+        display: none;
+    }
+    footer{
+        font-size: 13px;
+    }
+    .ft{
+        font-size: 16px;
+        flex-direction: column;
+    }
+    .foot, .others, .foot1{
+        width: 90%;
+        margin: 30px auto;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .others{
+        font-size: 8.14891px;
+        line-height: 11px;
+    }
+    .t-and-c{
+        font-size: 7.06215px;
+        line-height: 10px;
+    }
+    /* media query for FAQs page */
+
+    .first{
+        width: 40%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: center;
+        box-shadow: 2px 2px 2px hsla(209, 11%, 55%, 0.664);
     }
 
 }
