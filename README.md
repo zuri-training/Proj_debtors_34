@@ -3,7 +3,6 @@
 We are building an integrative, user-friendly and responsive platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools.
 
 # Deployment insturctions
-
 Necessary information to deploy our Django project.
 
  - Architecture: Django Templating.
