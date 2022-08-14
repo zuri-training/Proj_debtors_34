@@ -588,7 +588,7 @@ nav {
     text-decoration: none;
     color: white;
 }
-
+/********* fot testing only*********/
 @media screen and (max-width: 1000px) {
     nav ul li {
         list-style-type: none;
