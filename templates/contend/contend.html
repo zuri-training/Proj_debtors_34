@@ -19,18 +19,18 @@
     <nav class="d-flex flex-row align-items center g-0" id="mainNav">
         <div class="g-0"><img class="logo-img" src="{% static 'images/contend/team_logo.png' %}" alt="brand Logo"></div>
         <ul class="mainMenu">
-            <li><a href="#">Home</a></li>
-            <li class="text-secondary g-0"><a class="text-secondary" href="#">About Us</a></li>
-            <li class="text-secondary g-0"><a class="text-secondary" href="#">FAQs</a></li>
-            <li class="text-secondary g-0"><a class="text-secondary" href="#">Contact Us</a></li>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'about_us' %}">About Us</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'FAQs' %}">FAQs</a></li>
+            <li class="text-secondary g-0"><a class="text-secondary" href="{% url 'contact' %}">Contact Us</a></li>
 
-            <button class="hidden1"><a href="#">Sign Up</a></button>
-            <button class="hidden2"><a href="#">log in</a></button>
+            <button class="hidden1"><a href="{% url 'register' %}">Sign Up</a></button>
+            <button class="hidden2"><a href="{% url 'logins' %}">log in</a></button>
 
             <div class="closeMenu g-0"><i class="fa fa-times"></i></div>
         </ul>
-        <button class="signUp-button"><a href="#">Sign Up</a></button>
-        <button class="navigation-button"><a href="#">log in</a></button>
+        <button class="signUp-button"><a href="{% url 'register' %}">Sign Up</a></button>
+        <button class="navigation-button"><a href="{% url 'logins' %}">log in</a></button>
         <div class="openMenu g-0"><i class="fa fa-bars"></i></div>
     </nav>
 
@@ -130,11 +130,11 @@
                     <div class="cta_col">
                         <ul>
                             <h3>Pages</h3>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="{% url 'homepage' %}">Home</a></li>
+                            <li><a href="{% url 'about_us' %}">About us</a></li>
+                            <li><a href="{% url 'FAQs' %}">FAQ</a></li>
                             <li><a href="#">Post/comment</a></li>
-                            <li><a href="#">Registration</a></li>
+                            <li><a href="{% url 'register' %}">Registration</a></li>
                             <li><a href="#">Debtors list</a></li>
                             <li><a href="#">Debtors Profile</a></li>
                         </ul>

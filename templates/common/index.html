@@ -28,12 +28,12 @@
         </div>
         <div id="mySidebar" class="sidebar left">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">FAQs</a>
-            <a href="">Contact Us</a>
-            <a href=""><button class="one">Sign Up</button></a>
-                <a href=""><button class="two">Log in</button></a>
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about_us' %}">About Us</a>
+            <a href="{% url 'FAQs' %}">FAQs</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'register' %}"><button class="one">Sign Up</button></a>
+                <a href="{% url 'logins' %}"><button class="two">Log in</button></a>
         </div>
         <div id="main">
             <button class="openbtn" onclick="openNav()"><img src="{% static 'images/index/Menu_Rounded.svg' %}" alt="" srcset=""></button>
@@ -59,7 +59,7 @@
             <div class="doc-img"><img src="{% static 'images/index/landing-page-image.svg' %}" alt="docimage"></div>
             <div class="doc-img1"><img src="{% static 'images/index/mobile.png' %}" alt="docimage"></div>
             <div class="doc-item">
-                <p style="font-size: 22px;" class="p2">How it works</p>
+                <p style="font-size: 20px;" class="p2">How it works</p>
                 <div class="container1">
                     <div class="item1">
                         <div class="item-one">1</div>
@@ -202,10 +202,10 @@
             <div class="others">
                 <div class="pages">
                     <p style="color: hsla(43, 100%, 52%, 1);">Pages</p>
-                    <p><a href="">Home</a></p>
+                    <p><a href="{% url 'homepage' %}">Home</a></p>
                     <p><a href="{% url 'about_us' %}">About Us</a></p>
-                    <p><a href="">FAQs</a></p>
-                    <p><a href="">Registration</a></p>
+                    <p><a href="{% url 'FAQs' %}">FAQs</a></p>
+                    <p><a href="{% url 'register' %}">Registration</a></p>
                 </div>
                 <div class="services">
                     <p style="color: hsla(43, 100%, 52%, 1);">Services</p>

@@ -1,0 +1,1 @@
+web gunicorn my_debtors.wsgi:application --log-file -

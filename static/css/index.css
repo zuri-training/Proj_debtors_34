@@ -14,6 +14,7 @@ body{
     background-color: #e5e5e500;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 header{
     display: flex;
@@ -581,6 +582,11 @@ figure img{
 }
 
 @media (max-width:500px){
+    body{
+        overflow-x: hidden;
+    }
+
+
     header{
         width: 100%;
     }
@@ -609,17 +615,27 @@ figure img{
     }
     .intro-img img{
         height: 77%;
+        width: 95%;
+        /* margin: auto; */
+        margin-right: 60px;
     }
     .intro-text p{
-        text-align: left;
-        font-size: 32.8px;
+        text-align: center;
+        font-size: 26px;
         line-height: 44.77px;
+        margin-right: 60px;
     }
     .small-div{
         align-items: center;
-        width: 100%;
-        margin: -10px auto 0;
+        width: 90%;
+        margin: -10px auto 10;
     }
+
+    .one{
+       text-align: center;
+       margin-right: 80px;
+    }
+
     small{
         font-size: 19.19px;
     }
@@ -657,6 +673,7 @@ figure img{
     .doc-item{
         width: 100%;
         row-gap: 50px;
+        padding-bottom: 70px;
     }
     .container1{
         flex-direction: row;
@@ -668,23 +685,23 @@ figure img{
         display: flex;
         flex-direction: row;
         column-gap: 10px;
-        min-width: 159px;
-        max-width: 200px;
-        margin: 0;
+        width: 80%;
+        margin: auto;
         font-size: 12px;
         line-height: 16px;
         text-align: left;
         height: fit-content;
         font-size: small;
+        
     }
     .item-one{
         text-align: center;
-        width: 100px;
+        width: 60px;
         height: 30px;
         border-radius: 100%;
         padding-top: 10px;
         position: relative;
-        margin: auto 0;
+        /* margin: auto 0; */
     }
     .testimony{
         padding: 80px 10px;

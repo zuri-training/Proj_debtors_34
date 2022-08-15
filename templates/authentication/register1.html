@@ -202,7 +202,7 @@
                 {% csrf_token %}
               <span class = "details">School email:</span><br>
                 <div class="card-1">
-                    <input type="text" name="email" id="email" style ="height:30px" placeholder="Enter school email">
+                    <input type="text" name="email" id="email" style ="height:30px; border: none;" placeholder="Enter school email">
                     <button style="font-family: 'Open Sans'; background: rgb(204, 7, 7); border: none; border-radius: 10px; padding: 10px; color: white;" onclick="ajax_send_otp()" type="button">Get code</button>
                 </div>
                 <spam class = "details">Verification Code:</spam><br>
@@ -354,7 +354,7 @@
         function(data, status){
             if(status=="success"){
                 otp_from_back = data;
-                alert(data)
+                // alert(data)
                 document.getElementById("sent_text_div").style.color="green";            
                 document.getElementById("sent_text_div").innerHTML="OTP Sent";
                 // document.getElementById("otp_div").style.display='block';
