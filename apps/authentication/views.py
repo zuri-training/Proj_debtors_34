@@ -14,7 +14,8 @@ from django.contrib.auth.views import PasswordChangeView
 import sendgrid
 from sendgrid.helpers.mail import *
 from my_debtors.settings import SENDGRID_API_KEY
-
+from email.message import EmailMessage
+import ssl, smtplib
 # Create your views here.
 
 # ****************** OTP *******************************
@@ -27,24 +28,30 @@ def generateOTP() :
      return OTP
 
 def send_otp(request):
-    email = request.POST['email'].lower()
+    email = request.POST['email']
 
     o=generateOTP()
 
-    message = Mail(
-            from_email='Project.debtors@gmail.com',
-            to_emails=[email],
-            subject='Sending with Twilio SendGrid is Fun',    
-            html_content='<strong>Yoour OTP is </strong>' + o)
-    try:
-        sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
+    html_content='Yoour OTP is ' + o
 
-        response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
-        print(e)
+    email_sender = 'nexusdomains360@gmail.com'
+    email_password = 'rifbznmpwfssrpvp'
+    email_reciever = email
+
+    subject = 'My Debtors OTP request'
+    body = html_content
+
+    em = EmailMessage()
+    em['From'] = email_sender
+    em['To'] = email_reciever
+    em['Subject'] = subject
+    em.set_content(body)
+
+    context = ssl.create_default_context()
+
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+        smtp.login(email_sender, email_password)
+        smtp.sendmail(email_sender, email_reciever, em.as_string())
 
     return HttpResponse(o)
 
@@ -68,13 +75,30 @@ def verify(request):
         school.save()
 
         password = BaseUserManager().make_random_password()
-        # print(password)
-        # zL9PcJFffq blueivy
-        # feraRh4NgN greeengarden
-        # d4P3v6jRXj johndoe
+
         email = school.email
         new_school_user = CustomSchoolUser.objects.create_user(email=email, password=password, first_name=school.administrator_name, last_name=school.school_name)
         new_school_user.save()
+
+        email_sender = 'nexusdomains360@gmail.com'
+        email_password = 'rifbznmpwfssrpvp'
+        email_reciever = email
+
+        subject = 'Your registraton Was Successful'
+        body = 'Hi ' + school.school_name + ', thanks for registering on our website. Here is your password. ' + password + ' We recommend you change the password once you login. Thanks.'
+
+        em = EmailMessage()
+        em['From'] = email_sender
+        em['To'] = email_reciever
+        em['Subject'] = subject
+        em.set_content(body)
+
+        context = ssl.create_default_context()
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+            smtp.login(email_sender, email_password)
+            smtp.sendmail(email_sender, email_reciever, em.as_string())
+
         return redirect("reg_success")
     return render(request, "authentication/register1.html")
 

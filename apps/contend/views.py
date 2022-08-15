@@ -12,6 +12,7 @@ def ContendView(request):
 def RoomView(request, room_name):
     username = request.user.username
     room_details = Room.objects.get(room_name=room_name)
+    
     return render(request, 'contend/conversations.html', {
         'username': username,
         'room_name': room_name,

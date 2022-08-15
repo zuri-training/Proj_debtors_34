@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
   margin: 0px;
@@ -17,7 +17,7 @@ html {
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0 auto !important;
 }
 .body-1{
@@ -122,12 +122,25 @@ section {
 }
 .first {
   width: 49.4%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.first div img{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #div1 {
   /* position: relative;
   top: -70px; */
   background-color: #4F5162;
   height: 20%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 #div1 .top {
   color: white;
@@ -140,10 +153,6 @@ section {
   margin-top: 0px;
 }
 
-/* .first{
-  display: flex;
-  flex-direction: column;
-} */
 .second {
   /* background-color: whitesmoke; */
   width: 60%;
@@ -158,17 +167,20 @@ section {
   text-align: center;
   padding: 0 0 20px 0;
   color:rgb(172, 15, 15);
+  font-family: "Open Sans", sans-serif;
 }
 .second h2 {
   font-size: 20px;
   position: relative;
   text-align: center;
   padding: 0 0 20px 0;
+  font-family: "Open Sans", sans-serif;
 }
 .second .p1 {
   font-size: 15px;
   position: relative;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 .second form {
   margin-top: 5px;
@@ -176,6 +188,7 @@ section {
   display: flex; */
   padding: 20px 20px;
   justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
 }
 .card-details {
   align-items: center;
@@ -195,8 +208,13 @@ section {
   padding: 5px;
   min-width: max-content;
 }
+
+input{
+  border: none;
+}
+
 .card-2 input{
-  border: 1px grey solid;
+  /* border: 1px grey solid; */
   border-radius: 15px;
   padding: 20px;
   width: 280px;
@@ -324,6 +342,165 @@ section {
       margin-top: 600px;
       left: 80px;
     }
+}
+
+@media screen and (max-width: 500px) {
+
+  .body-1{
+      display: none;
+  }
+
+  .body-2{
+      display: block !important;
+      max-width: 500px;
+      overflow-x: hidden;
+  }
+
+  #mob-footer{
+    display: block;
+  }
+
+  nav{
+      background: none;
+  }
+
+  .logo-2{
+      text-align: left;
+  }
+
+  .navbar-2{
+    background: none !important;
+  }
+
+  #myLinks{
+      position: absolute;
+      top: 60px;
+      width: 100%;
+  }
+
+  #myLinks ul{
+      padding: 30px !important;
+      background: rgba(119, 106, 106, 0.082);
+      backdrop-filter: blur(50px);
+      width: 100% !important;
+      height: 55vh;
+  }
+
+  #myLinks ul li {
+      display: block;
+      text-align: center;
+  }
+
+  #myLinks .hide {
+      display: block;
+      text-align: center;
+  }
+
+  #myLinks ul li a{
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  .next{
+      background-color: #4F5162;
+  }
+
+  .next .info-1{
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .next .info-1{
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+  }
+  
+  .next-2{
+    width: 80%;
+    margin: auto;
+  }
+
+  .form-group{
+    min-width: max-content !important;
+    margin-right: -200px !important;
+  }
+
+  .main {
+    background-image: url("../images/about/mobile_rect2.png");
+    width: 100% !important;
+    position: fixed;
+    top: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(48, 28, 28, 0.829);
+    background-blend-mode: darken;
+    margin-top: 80px;
+}
+
+.sect-3 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'w w w w'
+    'x x x x'
+    'y y y y'
+    'z z z z'
+    ;
+    padding-top: 10px;
+}
+
+.blur {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 15px;
+}
+
+.subscribe {
+    margin-left: 90px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    width: 140px;
+    height: 27px;
+    background: none;
+    border: none;
+}
+
+.subscribe button {
+    padding: 12px;
+    color: white;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.contact-txt {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.item-1, .item-2, .item-3, .item-4 {
+    margin: 15px;
+}
+
+.copy {
+    display: block;
+    text-align: center;
+}
+
 }
 
 /* *********************** FOOTER ********************** */
@@ -601,161 +778,4 @@ nav {
      }
   }
 
-  @media screen and (max-width: 500px) {
-
-    .body-1{
-        display: none;
-    }
-
-    .body-2{
-        display: block !important;
-        max-width: 500px;
-        overflow-x: hidden;
-    }
-
-    #mob-footer{
-      display: block;
-    }
-
-    nav{
-        background: none;
-    }
-
-    .logo-2{
-        text-align: left;
-    }
-
-    .navbar-2{
-      background: none !important;
-    }
-
-    #myLinks{
-        position: absolute;
-        top: 60px;
-        width: 100%;
-    }
-
-    #myLinks ul{
-        padding: 30px !important;
-        background: rgba(119, 106, 106, 0.082);
-        backdrop-filter: blur(50px);
-        width: 100% !important;
-        height: 55vh;
-    }
-
-    #myLinks ul li {
-        display: block;
-        text-align: center;
-    }
-
-    #myLinks .hide {
-        display: block;
-        text-align: center;
-    }
-
-    #myLinks ul li a{
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-    }
-    .next{
-        background-color: #4F5162;
-    }
-
-    .next .info-1{
-      color: white;
-      margin: 10px;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .next .info-1{
-        color: white;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-    }
-    
-    .next-2{
-      width: 80%;
-      margin: auto;
-    }
-
-    .form-group{
-      min-width: max-content !important;
-      margin-right: -200px !important;
-    }
-
-    .main {
-      background-image: url("../images/about/mobile_rect2.png");
-      width: 100% !important;
-      position: fixed;
-      top: 800px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow: hidden;
-      position: relative;
-      background-color: rgba(48, 28, 28, 0.829);
-      background-blend-mode: darken;
-      margin-top: 80px;
-  }
-
-  .sect-3 {
-      width: 100%;
-      margin: auto;
-      display: grid;
-      grid-template-areas: 
-      'w w w w'
-      'x x x x'
-      'y y y y'
-      'z z z z'
-      ;
-      padding-top: 10px;
-  }
-
-  .blur {
-      margin-top: 20px;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      height: auto;
-      padding: 15px;
-  }
-
-  .subscribe {
-      margin-left: 90px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      padding: 8px 16px;
-      width: 140px;
-      height: 27px;
-      background: none;
-      border: none;
-  }
-
-  .subscribe button {
-      padding: 12px;
-      color: white;
-      margin-left: 60px;
-      margin-top: 10px;
-  }
-
-  .contact-txt {
-      padding-top: 50px;
-      width: 80%;
-      margin: auto;
-  }
-
-  .item-1, .item-2, .item-3, .item-4 {
-      margin: 15px;
-  }
-
-  .copy {
-      display: block;
-      text-align: center;
-  }
-
-}
+  
