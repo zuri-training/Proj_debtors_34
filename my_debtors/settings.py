@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+# from decouple import config
 import django_heroku
 import dj_database_url
 
@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-8l!obhkt(344xcl%8lb9_=_if5qb@w785&69a941i^sy532x!_')
+SECRET_KEY = 'django-insecure-8l!obhkt(344xcl%8lb9_=_if5qb@w785&69a941i^sy532x!_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,7 +41,7 @@ AUTH_USER_MODEL = 'authentication.CustomSchoolUser'
 # DEFAULT_FROM_EMAIL = 'Project.debtors@gmail.com'
 # SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
-SENDGRID_API_KEY = config('SENDGRID_API_KEY')
+# SENDGRID_API_KEY = config('SENDGRID_API_KEY')
 
 # Application definition
 
