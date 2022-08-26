@@ -90,6 +90,7 @@ user/dashboard/edit-profile/
 # Useful Links
 
 - Documentation: https://docs.google.com/document/d/1CMsdln7xQXHUH0glUV4wR03hu3sFIz7xyy6E5ETHjg0/edit?usp=drivesdk
--Figma board: https://www.figma.com/file/GGGwipSNujrUUDM3t81xxD/Zuri-Project_Team-34-(My_Debtors)
+- Figma board: https://www.figma.com/file/GGGwipSNujrUUDM3t81xxD/Zuri-Project_Team-34-(My_Debtors)
 - Database Schema: https://www.figma.com/file/Dibr1PDzskYQ6I4hTmT5is/Schema-(my_debtors_team_34)?node-i
--Figjam link: https://www.figma.com/file/Gacb6yEIaB24l7odGdQEYN/Zuri-Project_Team-34(My_Debtors)?node-id=0%3A1
+- Research plan: https://docs.google.com/document/d/1XNsLgY00QLjWfdMhQwqv31YATZzM8T82SNu9Xf_bpQo/edit?usp=drivesdk
+- Figjam link: https://www.figma.com/file/Gacb6yEIaB24l7odGdQEYN/Zuri-Project_Team-34(My_Debtors)?node-id=0%3A1
