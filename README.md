@@ -87,7 +87,7 @@ user/dashboard/profile/
 user/dashboard/edit-profile/
 
 
-# Useful Links
+# Useful Links👇
 
 - Documentation: https://docs.google.com/document/d/1CMsdln7xQXHUH0glUV4wR03hu3sFIz7xyy6E5ETHjg0/edit?usp=drivesdk
 -Figma board: https://www.figma.com/file/GGGwipSNujrUUDM3t81xxD/Zuri-Project_Team-34-(My_Debtors)
